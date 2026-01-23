@@ -1,0 +1,273 @@
+cls_model,backend,search_alg,status,error_detail
+AutoAutoformer,ray,None,OK,
+AutoAutoformer,ray,Basic,OK,
+AutoAutoformer,ray,Ray_Optuna,OK,
+AutoAutoformer,ray,Ray_HyperOpt,OK,
+AutoAutoformer,optuna,None,Error,Optuna Backend Requirement Error
+AutoAutoformer,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoAutoformer,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoAutoformer,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoBiTCN,ray,None,OK,
+AutoBiTCN,ray,Basic,OK,
+AutoBiTCN,ray,Ray_Optuna,OK,
+AutoBiTCN,ray,Ray_HyperOpt,OK,
+AutoBiTCN,optuna,None,Error,Optuna Backend Requirement Error
+AutoBiTCN,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoBiTCN,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoBiTCN,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoDLinear,ray,None,OK,
+AutoDLinear,ray,Basic,OK,
+AutoDLinear,ray,Ray_Optuna,OK,
+AutoDLinear,ray,Ray_HyperOpt,OK,
+AutoDLinear,optuna,None,Error,Optuna Backend Requirement Error
+AutoDLinear,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoDLinear,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoDLinear,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoDeepAR,ray,None,OK,
+AutoDeepAR,ray,Basic,OK,
+AutoDeepAR,ray,Ray_Optuna,OK,
+AutoDeepAR,ray,Ray_HyperOpt,OK,
+AutoDeepAR,optuna,None,Error,Optuna Backend Requirement Error
+AutoDeepAR,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoDeepAR,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoDeepAR,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoDeepNPTS,ray,None,OK,
+AutoDeepNPTS,ray,Basic,OK,
+AutoDeepNPTS,ray,Ray_Optuna,OK,
+AutoDeepNPTS,ray,Ray_HyperOpt,OK,
+AutoDeepNPTS,optuna,None,Error,Optuna Backend Requirement Error
+AutoDeepNPTS,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoDeepNPTS,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoDeepNPTS,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoDilatedRNN,ray,None,OK,
+AutoDilatedRNN,ray,Basic,OK,
+AutoDilatedRNN,ray,Ray_Optuna,OK,
+AutoDilatedRNN,ray,Ray_HyperOpt,OK,
+AutoDilatedRNN,optuna,None,Error,Optuna Backend Requirement Error
+AutoDilatedRNN,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoDilatedRNN,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoDilatedRNN,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoFEDformer,ray,None,OK,
+AutoFEDformer,ray,Basic,OK,
+AutoFEDformer,ray,Ray_Optuna,OK,
+AutoFEDformer,ray,Ray_HyperOpt,OK,
+AutoFEDformer,optuna,None,Error,Optuna Backend Requirement Error
+AutoFEDformer,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoFEDformer,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoFEDformer,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoGRU,ray,None,OK,
+AutoGRU,ray,Basic,OK,
+AutoGRU,ray,Ray_Optuna,OK,
+AutoGRU,ray,Ray_HyperOpt,OK,
+AutoGRU,optuna,None,Error,Optuna Backend Requirement Error
+AutoGRU,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoGRU,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoGRU,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoHINT,ray,None,Error,'NoneType' object has no attribute 'EXOGENOUS_FUTR'
+AutoHINT,ray,Basic,Error,'NoneType' object has no attribute 'EXOGENOUS_FUTR'
+AutoHINT,ray,Ray_Optuna,Error,'NoneType' object has no attribute 'EXOGENOUS_FUTR'
+AutoHINT,ray,Ray_HyperOpt,Error,'NoneType' object has no attribute 'EXOGENOUS_FUTR'
+AutoHINT,optuna,None,Error,Optuna Backend Requirement Error
+AutoHINT,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoHINT,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoHINT,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoInformer,ray,None,OK,
+AutoInformer,ray,Basic,OK,
+AutoInformer,ray,Ray_Optuna,OK,
+AutoInformer,ray,Ray_HyperOpt,OK,
+AutoInformer,optuna,None,Error,Optuna Backend Requirement Error
+AutoInformer,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoInformer,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoInformer,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoKAN,ray,None,OK,
+AutoKAN,ray,Basic,OK,
+AutoKAN,ray,Ray_Optuna,OK,
+AutoKAN,ray,Ray_HyperOpt,OK,
+AutoKAN,optuna,None,Error,Optuna Backend Requirement Error
+AutoKAN,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoKAN,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoKAN,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoLSTM,ray,None,OK,
+AutoLSTM,ray,Basic,OK,
+AutoLSTM,ray,Ray_Optuna,OK,
+AutoLSTM,ray,Ray_HyperOpt,OK,
+AutoLSTM,optuna,None,Error,Optuna Backend Requirement Error
+AutoLSTM,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoLSTM,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoLSTM,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoMLP,ray,None,OK,
+AutoMLP,ray,Basic,OK,
+AutoMLP,ray,Ray_Optuna,OK,
+AutoMLP,ray,Ray_HyperOpt,OK,
+AutoMLP,optuna,None,Error,Optuna Backend Requirement Error
+AutoMLP,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoMLP,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoMLP,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoMLPMultivariate,ray,None,OK,
+AutoMLPMultivariate,ray,Basic,OK,
+AutoMLPMultivariate,ray,Ray_Optuna,OK,
+AutoMLPMultivariate,ray,Ray_HyperOpt,OK,
+AutoMLPMultivariate,optuna,None,Error,Callable Expected Error
+AutoMLPMultivariate,optuna,Basic,Error,Callable Expected Error
+AutoMLPMultivariate,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoMLPMultivariate,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoNBEATS,ray,None,OK,
+AutoNBEATS,ray,Basic,OK,
+AutoNBEATS,ray,Ray_Optuna,OK,
+AutoNBEATS,ray,Ray_HyperOpt,OK,
+AutoNBEATS,optuna,None,Error,Optuna Backend Requirement Error
+AutoNBEATS,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoNBEATS,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoNBEATS,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoNBEATSx,ray,None,OK,
+AutoNBEATSx,ray,Basic,OK,
+AutoNBEATSx,ray,Ray_Optuna,OK,
+AutoNBEATSx,ray,Ray_HyperOpt,OK,
+AutoNBEATSx,optuna,None,Error,Optuna Backend Requirement Error
+AutoNBEATSx,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoNBEATSx,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoNBEATSx,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoNHITS,ray,None,OK,
+AutoNHITS,ray,Basic,OK,
+AutoNHITS,ray,Ray_Optuna,OK,
+AutoNHITS,ray,Ray_HyperOpt,OK,
+AutoNHITS,optuna,None,Error,Optuna Backend Requirement Error
+AutoNHITS,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoNHITS,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoNHITS,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoNLinear,ray,None,OK,
+AutoNLinear,ray,Basic,OK,
+AutoNLinear,ray,Ray_Optuna,OK,
+AutoNLinear,ray,Ray_HyperOpt,OK,
+AutoNLinear,optuna,None,Error,Optuna Backend Requirement Error
+AutoNLinear,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoNLinear,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoNLinear,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoPatchTST,ray,None,OK,
+AutoPatchTST,ray,Basic,OK,
+AutoPatchTST,ray,Ray_Optuna,OK,
+AutoPatchTST,ray,Ray_HyperOpt,OK,
+AutoPatchTST,optuna,None,Error,Optuna Backend Requirement Error
+AutoPatchTST,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoPatchTST,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoPatchTST,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoRMoK,ray,None,OK,
+AutoRMoK,ray,Basic,OK,
+AutoRMoK,ray,Ray_Optuna,OK,
+AutoRMoK,ray,Ray_HyperOpt,OK,
+AutoRMoK,optuna,None,Error,Callable Expected Error
+AutoRMoK,optuna,Basic,Error,Callable Expected Error
+AutoRMoK,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoRMoK,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoRNN,ray,None,OK,
+AutoRNN,ray,Basic,OK,
+AutoRNN,ray,Ray_Optuna,OK,
+AutoRNN,ray,Ray_HyperOpt,OK,
+AutoRNN,optuna,None,Error,Optuna Backend Requirement Error
+AutoRNN,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoRNN,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoRNN,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoSOFTS,ray,None,OK,
+AutoSOFTS,ray,Basic,OK,
+AutoSOFTS,ray,Ray_Optuna,OK,
+AutoSOFTS,ray,Ray_HyperOpt,OK,
+AutoSOFTS,optuna,None,Error,Callable Expected Error
+AutoSOFTS,optuna,Basic,Error,Callable Expected Error
+AutoSOFTS,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoSOFTS,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoStemGNN,ray,None,OK,
+AutoStemGNN,ray,Basic,OK,
+AutoStemGNN,ray,Ray_Optuna,OK,
+AutoStemGNN,ray,Ray_HyperOpt,OK,
+AutoStemGNN,optuna,None,Error,Callable Expected Error
+AutoStemGNN,optuna,Basic,Error,Callable Expected Error
+AutoStemGNN,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoStemGNN,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoTCN,ray,None,OK,
+AutoTCN,ray,Basic,OK,
+AutoTCN,ray,Ray_Optuna,OK,
+AutoTCN,ray,Ray_HyperOpt,OK,
+AutoTCN,optuna,None,Error,Optuna Backend Requirement Error
+AutoTCN,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoTCN,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoTCN,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoTFT,ray,None,OK,
+AutoTFT,ray,Basic,OK,
+AutoTFT,ray,Ray_Optuna,OK,
+AutoTFT,ray,Ray_HyperOpt,OK,
+AutoTFT,optuna,None,Error,Optuna Backend Requirement Error
+AutoTFT,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoTFT,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoTFT,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoTSMixer,ray,None,OK,
+AutoTSMixer,ray,Basic,OK,
+AutoTSMixer,ray,Ray_Optuna,OK,
+AutoTSMixer,ray,Ray_HyperOpt,OK,
+AutoTSMixer,optuna,None,Error,Callable Expected Error
+AutoTSMixer,optuna,Basic,Error,Callable Expected Error
+AutoTSMixer,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoTSMixer,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoTSMixerx,ray,None,OK,
+AutoTSMixerx,ray,Basic,OK,
+AutoTSMixerx,ray,Ray_Optuna,OK,
+AutoTSMixerx,ray,Ray_HyperOpt,OK,
+AutoTSMixerx,optuna,None,Error,Callable Expected Error
+AutoTSMixerx,optuna,Basic,Error,Callable Expected Error
+AutoTSMixerx,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoTSMixerx,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoTiDE,ray,None,OK,
+AutoTiDE,ray,Basic,OK,
+AutoTiDE,ray,Ray_Optuna,OK,
+AutoTiDE,ray,Ray_HyperOpt,OK,
+AutoTiDE,optuna,None,Error,Optuna Backend Requirement Error
+AutoTiDE,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoTiDE,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoTiDE,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoTimeMixer,ray,None,OK,
+AutoTimeMixer,ray,Basic,OK,
+AutoTimeMixer,ray,Ray_Optuna,OK,
+AutoTimeMixer,ray,Ray_HyperOpt,OK,
+AutoTimeMixer,optuna,None,Error,Callable Expected Error
+AutoTimeMixer,optuna,Basic,Error,Callable Expected Error
+AutoTimeMixer,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoTimeMixer,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoTimeXer,ray,None,OK,
+AutoTimeXer,ray,Basic,OK,
+AutoTimeXer,ray,Ray_Optuna,OK,
+AutoTimeXer,ray,Ray_HyperOpt,OK,
+AutoTimeXer,optuna,None,Error,Callable Expected Error
+AutoTimeXer,optuna,Basic,Error,Callable Expected Error
+AutoTimeXer,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoTimeXer,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoTimesNet,ray,None,OK,
+AutoTimesNet,ray,Basic,OK,
+AutoTimesNet,ray,Ray_Optuna,OK,
+AutoTimesNet,ray,Ray_HyperOpt,OK,
+AutoTimesNet,optuna,None,Error,Optuna Backend Requirement Error
+AutoTimesNet,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoTimesNet,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoTimesNet,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoVanillaTransformer,ray,None,OK,
+AutoVanillaTransformer,ray,Basic,OK,
+AutoVanillaTransformer,ray,Ray_Optuna,OK,
+AutoVanillaTransformer,ray,Ray_HyperOpt,OK,
+AutoVanillaTransformer,optuna,None,Error,Optuna Backend Requirement Error
+AutoVanillaTransformer,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoVanillaTransformer,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoVanillaTransformer,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error
+AutoiTransformer,ray,None,OK,
+AutoiTransformer,ray,Basic,OK,
+AutoiTransformer,ray,Ray_Optuna,OK,
+AutoiTransformer,ray,Ray_HyperOpt,OK,
+AutoiTransformer,optuna,None,Error,Callable Expected Error
+AutoiTransformer,optuna,Basic,Error,Callable Expected Error
+AutoiTransformer,optuna,Ray_Optuna,Error,Callable Expected Error
+AutoiTransformer,optuna,Ray_HyperOpt,Error,Callable Expected Error
+AutoxLSTM,ray,None,OK,
+AutoxLSTM,ray,Basic,OK,
+AutoxLSTM,ray,Ray_Optuna,OK,
+AutoxLSTM,ray,Ray_HyperOpt,OK,
+AutoxLSTM,optuna,None,Error,Optuna Backend Requirement Error
+AutoxLSTM,optuna,Basic,Error,Optuna Backend Requirement Error
+AutoxLSTM,optuna,Ray_Optuna,Error,Optuna Backend Requirement Error
+AutoxLSTM,optuna,Ray_HyperOpt,Error,Optuna Backend Requirement Error

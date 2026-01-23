@@ -1,0 +1,409 @@
+cls_model,backend,search_alg,status,limitation_detail
+AutoAutoformer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoAutoformer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoAutoformer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoAutoformer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoAutoformer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoAutoformer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoAutoformer,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoAutoformer,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoAutoformer,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoAutoformer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoAutoformer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoAutoformer,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoBiTCN,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoBiTCN,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoBiTCN,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoBiTCN,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoBiTCN,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoBiTCN,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoBiTCN,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoBiTCN,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoBiTCN,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoBiTCN,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoBiTCN,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoBiTCN,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDLinear,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoDLinear,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoDLinear,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoDLinear,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDLinear,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDLinear,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoDLinear,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDLinear,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDLinear,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDLinear,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDLinear,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDLinear,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepAR,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoDeepAR,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoDeepAR,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoDeepAR,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDeepAR,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDeepAR,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoDeepAR,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepAR,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepAR,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepAR,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDeepAR,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDeepAR,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepNPTS,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoDeepNPTS,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoDeepNPTS,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoDeepNPTS,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDeepNPTS,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDeepNPTS,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoDeepNPTS,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepNPTS,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepNPTS,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDeepNPTS,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDeepNPTS,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDeepNPTS,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDilatedRNN,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoDilatedRNN,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoDilatedRNN,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoDilatedRNN,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDilatedRNN,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDilatedRNN,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoDilatedRNN,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDilatedRNN,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDilatedRNN,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoDilatedRNN,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoDilatedRNN,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoDilatedRNN,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoFEDformer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoFEDformer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoFEDformer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoFEDformer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoFEDformer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoFEDformer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoFEDformer,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoFEDformer,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoFEDformer,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoFEDformer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoFEDformer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoFEDformer,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoGRU,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoGRU,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoGRU,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoGRU,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoGRU,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoGRU,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoGRU,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoGRU,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoGRU,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoGRU,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoGRU,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoGRU,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoHINT,ray,Basic,Init Error,Error: 'NoneType' object has no attribute 'EXOGENOUS_FUTR...
+AutoHINT,ray,Ray_Optuna,Init Error,Error: 'NoneType' object has no attribute 'EXOGENOUS_FUTR...
+AutoHINT,ray,Ray_HyperOpt,Init Error,Error: 'NoneType' object has no attribute 'EXOGENOUS_FUTR...
+AutoHINT,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoHINT,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoHINT,ray,None,Init Error,Error: 'NoneType' object has no attribute 'EXOGENOUS_FUTR...
+AutoHINT,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoHINT,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoHINT,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoHINT,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoHINT,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoHINT,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoInformer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoInformer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoInformer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoInformer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoInformer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoInformer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoInformer,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoInformer,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoInformer,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoInformer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoInformer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoInformer,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoKAN,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoKAN,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoKAN,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoKAN,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoKAN,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoKAN,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoKAN,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoKAN,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoKAN,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoKAN,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoKAN,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoKAN,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoLSTM,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoLSTM,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoLSTM,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoLSTM,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoLSTM,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoLSTM,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoLSTM,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoLSTM,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoLSTM,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoLSTM,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoLSTM,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoLSTM,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoMLP,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoMLP,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoMLP,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoMLP,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoMLP,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoMLP,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoMLP,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoMLP,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoMLP,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoMLP,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoMLP,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoMLP,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoMLPMultivariate,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoMLPMultivariate,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoMLPMultivariate,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoMLPMultivariate,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoMLPMultivariate,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoMLPMultivariate,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoMLPMultivariate,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoMLPMultivariate,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoMLPMultivariate,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoMLPMultivariate,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoMLPMultivariate,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoMLPMultivariate,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoNBEATS,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATS,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATS,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATS,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNBEATS,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNBEATS,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATS,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNBEATS,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNBEATS,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNBEATS,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNBEATS,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNBEATS,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNBEATSx,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATSx,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATSx,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATSx,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNBEATSx,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNBEATSx,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoNBEATSx,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNBEATSx,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNBEATSx,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNBEATSx,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNBEATSx,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNBEATSx,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNHITS,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoNHITS,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoNHITS,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoNHITS,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNHITS,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNHITS,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoNHITS,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNHITS,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNHITS,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNHITS,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNHITS,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNHITS,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNLinear,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoNLinear,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoNLinear,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoNLinear,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNLinear,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNLinear,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoNLinear,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNLinear,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNLinear,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoNLinear,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoNLinear,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoNLinear,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoPatchTST,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoPatchTST,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoPatchTST,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoPatchTST,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoPatchTST,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoPatchTST,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoPatchTST,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoPatchTST,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoPatchTST,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoPatchTST,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoPatchTST,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoPatchTST,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoRMoK,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoRMoK,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoRMoK,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoRMoK,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoRMoK,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoRMoK,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoRMoK,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoRMoK,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoRMoK,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoRMoK,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoRMoK,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoRMoK,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoRNN,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoRNN,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoRNN,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoRNN,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoRNN,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoRNN,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoRNN,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoRNN,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoRNN,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoRNN,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoRNN,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoRNN,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoSOFTS,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoSOFTS,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoSOFTS,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoSOFTS,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoSOFTS,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoSOFTS,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoSOFTS,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoSOFTS,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoSOFTS,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoSOFTS,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoSOFTS,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoSOFTS,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoStemGNN,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoStemGNN,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoStemGNN,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoStemGNN,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoStemGNN,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoStemGNN,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoStemGNN,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoStemGNN,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoStemGNN,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoStemGNN,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoStemGNN,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoStemGNN,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoTCN,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTCN,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTCN,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTCN,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTCN,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTCN,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTCN,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTCN,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTCN,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTCN,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTCN,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTCN,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTFT,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTFT,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTFT,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTFT,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTFT,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTFT,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTFT,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTFT,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTFT,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTFT,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTFT,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTFT,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTSMixer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTSMixer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTSMixer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixer,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoTSMixer,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoTSMixer,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoTSMixer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTSMixer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTSMixer,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoTSMixerx,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixerx,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixerx,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixerx,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTSMixerx,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTSMixerx,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTSMixerx,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoTSMixerx,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoTSMixerx,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoTSMixerx,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTSMixerx,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTSMixerx,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoTiDE,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTiDE,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTiDE,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTiDE,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTiDE,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTiDE,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTiDE,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTiDE,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTiDE,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTiDE,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTiDE,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTiDE,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTimeMixer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTimeMixer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTimeMixer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTimeMixer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTimeMixer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTimeMixer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTimeMixer,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoTimeMixer,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoTimeMixer,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoTimeMixer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTimeMixer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTimeMixer,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoTimeXer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTimeXer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTimeXer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTimeXer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTimeXer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTimeXer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTimeXer,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoTimeXer,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoTimeXer,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoTimeXer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTimeXer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTimeXer,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoTimesNet,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoTimesNet,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoTimesNet,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoTimesNet,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTimesNet,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTimesNet,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoTimesNet,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTimesNet,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTimesNet,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoTimesNet,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoTimesNet,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoTimesNet,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoVanillaTransformer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoVanillaTransformer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoVanillaTransformer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoVanillaTransformer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoVanillaTransformer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoVanillaTransformer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoVanillaTransformer,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoVanillaTransformer,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoVanillaTransformer,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoVanillaTransformer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoVanillaTransformer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoVanillaTransformer,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoiTransformer,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoiTransformer,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoiTransformer,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoiTransformer,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoiTransformer,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoiTransformer,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoiTransformer,optuna,Basic,Init Error,Error: 'dict' object is not callable...
+AutoiTransformer,optuna,Ray_Optuna,Init Error,Error: 'dict' object is not callable...
+AutoiTransformer,optuna,Ray_HyperOpt,Init Error,Error: 'dict' object is not callable...
+AutoiTransformer,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoiTransformer,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoiTransformer,optuna,None,Init Error,Error: 'dict' object is not callable...
+AutoxLSTM,ray,Basic,Init OK,No Restrictions (Full Ray Features)
+AutoxLSTM,ray,Ray_Optuna,Init OK,No Restrictions (Full Ray Features)
+AutoxLSTM,ray,Ray_HyperOpt,Init OK,No Restrictions (Full Ray Features)
+AutoxLSTM,ray,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoxLSTM,ray,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoxLSTM,ray,None,Init OK,No Restrictions (Full Ray Features)
+AutoxLSTM,optuna,Basic,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoxLSTM,optuna,Ray_Optuna,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoxLSTM,optuna,Ray_HyperOpt,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.
+AutoxLSTM,optuna,Ray_BayesOpt,Skipped,Library Missing (pip install needed)
+AutoxLSTM,optuna,Ray_BoHB,Skipped,Library Missing (pip install needed)
+AutoxLSTM,optuna,None,Init Error,CRITICAL: Optuna backend cannot accept Ray Searcher objects.

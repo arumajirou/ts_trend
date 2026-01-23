@@ -1,0 +1,459 @@
+
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ArXiv Trends: 'all:time series forecasting'</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; color: #333; }
+            .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+            h1 { border-bottom: 3px solid #007bff; padding-bottom: 10px; color: #2c3e50; font-size: 1.8em; }
+            .meta-info { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 25px; font-size: 0.9em; }
+            .card { border: 1px solid #e1e4e8; border-radius: 8px; padding: 20px; margin-bottom: 20px; background: #fff; transition: all 0.2s ease; }
+            .card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-color: #007bff; }
+            .header-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+            .title { font-size: 1.3em; font-weight: bold; margin: 0 0 5px 0; color: #34495e; }
+            .title a { text-decoration: none; color: inherit; }
+            .title a:hover { color: #007bff; }
+            .authors { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+            .badges { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
+            .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
+            .date-badge { background: #e2e6ea; color: #495057; }
+            .star-badge { background: #fff3cd; color: #856404; border: 1px solid #ffeeba; display: flex; align-items: center; gap: 5px; }
+            .summary { font-size: 0.95em; line-height: 1.6; color: #555; background: #f8f9fa; padding: 10px; border-radius: 4px; border-left: 4px solid #dee2e6; }
+            .actions { margin-top: 15px; display: flex; gap: 10px; }
+            .btn { text-decoration: none; padding: 8px 16px; border-radius: 5px; font-size: 0.9em; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: background 0.2s; }
+            .btn-arxiv { background-color: #b31b1b; color: white; }
+            .btn-arxiv:hover { background-color: #8e1616; }
+            .btn-code { background-color: #24292e; color: white; }
+            .btn-code:hover { background-color: #1b1f23; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1><i class="fas fa-search"></i> ArXiv Trend Report</h1>
+            <div class="meta-info">
+                <strong>Query:</strong> 'all:time series forecasting'<br>
+                <strong>Scanned:</strong> Latest 500 papers<br>
+                <strong>Generated:</strong> 2026-01-22 16:41:46
+            </div>
+    
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-08</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #1</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.11606v1" target="_blank">A Multimodal Data Processing Pipeline for MIMIC-IV Dataset</a></h2>
+                        <div class="authors">Farzana Islam Adiba, Varsha Danduri, Fahmida Liza Piya</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 291
+                    </div>
+                </div>
+                <div class="summary">
+                    The MIMIC-IV dataset is a large, publicly available electronic health record (EHR) resource widely used for clinical machine learning research. It comprises multiple modalities, including structured data, clinical notes, waveforms, and imaging data. Working with these disjointed modalities requires an extensive manual effort to preprocess and align them for downstream analysis. While several pipelines for MIMIC-IV data extraction are available, they target a small subset of modalities or do not fully support arbitrary downstream applications. In this work, we greatly expand our prior popular unimodal pipeline and present a comprehensive and customizable multimodal pipeline that can significantly reduce multimodal processing time and enhance the reproducibility of MIMIC-based studies. Our pipeline systematically integrates the listed modalities, enabling automated cohort selection, temporal alignment across modalities, and standardized multimodal output formats suitable for arbitrary static and time-series downstream applications. We release the code, a simple UI, and a Python package for selective integration (with embedding) at https://github.com/healthylaife/MIMIC-IV-Data-Pipeline.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.11606v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/healthylaife/MIMIC-IV-Data-Pipeline" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-09</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #2</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.05808v1" target="_blank">EnvScaler: Scaling Tool-Interactive Environments for LLM Agent via Programmatic Synthesis</a></h2>
+                        <div class="authors">Xiaoshuai Song, Haofei Chang, Guanting Dong</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 74
+                    </div>
+                </div>
+                <div class="summary">
+                    Large language models (LLMs) are expected to be trained to act as agents in various real-world environments, but this process relies on rich and varied tool-interaction sandboxes. However, access to real systems is often restricted; LLM-simulated environments are prone to hallucinations and inconsistencies; and manually built sandboxes are hard to scale. In this paper, we propose EnvScaler, an automated framework for scalable tool-interaction environments via programmatic synthesis. EnvScaler comprises two components. First, SkelBuilder constructs diverse environment skeletons through topic mining, logic modeling, and quality evaluation. Then, ScenGenerator generates multiple task scenarios and rule-based trajectory validation functions for each environment. With EnvScaler, we synthesize 191 environments and about 7K scenarios, and apply them to Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) for Qwen3 series models. Results on three benchmarks show that EnvScaler significantly improves LLMs' ability to solve tasks in complex environments involving multi-turn, multi-tool interactions. We release our code and data at https://github.com/RUC-NLPIR/EnvScaler.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.05808v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/RUC-NLPIR/EnvScaler" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-14</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #3</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.09088v1" target="_blank">Distribution-Aligned Sequence Distillation for Superior Long-CoT Reasoning</a></h2>
+                        <div class="authors">Shaotian Yan, Kaiyuan Liu, Chen Shen</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 45
+                    </div>
+                </div>
+                <div class="summary">
+                    In this report, we introduce DASD-4B-Thinking, a lightweight yet highly capable, fully open-source reasoning model. It achieves SOTA performance among open-source models of comparable scale across challenging benchmarks in mathematics, scientific reasoning, and code generation -- even outperforming several larger models. We begin by critically reexamining a widely adopted distillation paradigm in the community: SFT on teacher-generated responses, also known as sequence-level distillation. Although a series of recent works following this scheme have demonstrated remarkable efficiency and strong empirical performance, they are primarily grounded in the SFT perspective. Consequently, these approaches focus predominantly on designing heuristic rules for SFT data filtering, while largely overlooking the core principle of distillation itself -- enabling the student model to learn the teacher's full output distribution so as to inherit its generalization capability. Specifically, we identify three critical limitations in current practice: i) Inadequate representation of the teacher's sequence-level distribution; ii) Misalignment between the teacher's output distribution and the student's learning capacity; and iii) Exposure bias arising from teacher-forced training versus autoregressive inference. In summary, these shortcomings reflect a systemic absence of explicit teacher-student interaction throughout the distillation process, leaving the essence of distillation underexploited. To address these issues, we propose several methodological innovations that collectively form an enhanced sequence-level distillation training pipeline. Remarkably, DASD-4B-Thinking obtains competitive results using only 448K training samples -- an order of magnitude fewer than those employed by most existing open-source efforts. To support community research, we publicly release our models and the training dataset.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.09088v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/D2I-ai/dasd-thinking" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-11</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #4</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.06953v1" target="_blank">X-Coder: Advancing Competitive Programming with Fully Synthetic Tasks, Solutions, and Tests</a></h2>
+                        <div class="authors">Jie Wu, Haoling Li, Xin Zhang</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 16
+                    </div>
+                </div>
+                <div class="summary">
+                    Competitive programming presents great challenges for Code LLMs due to its intensive reasoning demands and high logical complexity. However, current Code LLMs still rely heavily on real-world data, which limits their scalability. In this paper, we explore a fully synthetic approach: training Code LLMs with entirely generated tasks, solutions, and test cases, to empower code reasoning models without relying on real-world data. To support this, we leverage feature-based synthesis to propose a novel data synthesis pipeline called SynthSmith. SynthSmith shows strong potential in producing diverse and challenging tasks, along with verified solutions and tests, supporting both supervised fine-tuning and reinforcement learning. Based on the proposed synthetic SFT and RL datasets, we introduce the X-Coder model series, which achieves a notable pass rate of 62.9 avg@8 on LiveCodeBench v5 and 55.8 on v6, outperforming DeepCoder-14B-Preview and AReal-boba2-14B despite having only 7B parameters. In-depth analysis reveals that scaling laws hold on our synthetic dataset, and we explore which dimensions are more effective to scale. We further provide insights into code-centric reinforcement learning and highlight the key factors that shape performance through detailed ablations and analysis. Our findings demonstrate that scaling high-quality synthetic data and adopting staged training can greatly advance code reasoning, while mitigating reliance on real-world coding data.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.06953v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/JieWu02/X-Coder" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-20</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #5</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.13836v1" target="_blank">FutureOmni: Evaluating Future Forecasting from Omni-Modal Context for Multimodal LLMs</a></h2>
+                        <div class="authors">Qian Chen, Jinlan Fu, Changsong Li</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 9
+                    </div>
+                </div>
+                <div class="summary">
+                    Although Multimodal Large Language Models (MLLMs) demonstrate strong omni-modal perception, their ability to forecast future events from audio-visual cues remains largely unexplored, as existing benchmarks focus mainly on retrospective understanding. To bridge this gap, we introduce FutureOmni, the first benchmark designed to evaluate omni-modal future forecasting from audio-visual environments. The evaluated models are required to perform cross-modal causal and temporal reasoning, as well as effectively leverage internal knowledge to predict future events. FutureOmni is constructed via a scalable LLM-assisted, human-in-the-loop pipeline and contains 919 videos and 1,034 multiple-choice QA pairs across 8 primary domains. Evaluations on 13 omni-modal and 7 video-only models show that current systems struggle with audio-visual future prediction, particularly in speech-heavy scenarios, with the best accuracy of 64.8% achieved by Gemini 3 Flash. To mitigate this limitation, we curate a 7K-sample instruction-tuning dataset and propose an Omni-Modal Future Forecasting (OFF) training strategy. Evaluations on FutureOmni and popular audio-visual and video-only benchmarks demonstrate that OFF enhances future forecasting and generalization. We publicly release all code (https://github.com/OpenMOSS/FutureOmni) and datasets (https://huggingface.co/datasets/OpenMOSS-Team/FutureOmni).
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.13836v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/OpenMOSS/FutureOmni" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-10</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #6</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.06406v1" target="_blank">Representing Sounds as Neural Amplitude Fields: A Benchmark of Coordinate-MLPs and A Fourier Kolmogorov-Arnold Framework</a></h2>
+                        <div class="authors">Linfei Li, Lin Zhang, Zhong Wang</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 7
+                    </div>
+                </div>
+                <div class="summary">
+                    Although Coordinate-MLP-based implicit neural representations have excelled in representing radiance fields, 3D shapes, and images, their application to audio signals remains underexplored. To fill this gap, we investigate existing implicit neural representations, from which we extract 3 types of positional encoding and 16 commonly used activation functions. Through combinatorial design, we establish the first benchmark for Coordinate-MLPs in audio signal representations. Our benchmark reveals that Coordinate-MLPs require complex hyperparameter tuning and frequency-dependent initialization, limiting their robustness. To address these issues, we propose Fourier-ASR, a novel framework based on the Fourier series theorem and the Kolmogorov-Arnold representation theorem. Fourier-ASR introduces Fourier Kolmogorov-Arnold Networks (Fourier-KAN), which leverage periodicity and strong nonlinearity to represent audio signals, eliminating the need for additional positional encoding. Furthermore, a Frequency-adaptive Learning Strategy (FaLS) is proposed to enhance the convergence of Fourier-KAN by capturing high-frequency components and preventing overfitting of low-frequency signals. Extensive experiments conducted on natural speech and music datasets reveal that: (1) well-designed positional encoding and activation functions in Coordinate-MLPs can effectively improve audio representation quality; and (2) Fourier-ASR can robustly represent complex audio signals without extensive hyperparameter tuning. Looking ahead, the continuity and infinite resolution of implicit audio representations make our research highly promising for tasks such as audio compression, synthesis, and generation. The source code will be released publicly to ensure reproducibility. The code is available at https://github.com/lif314/Fourier-ASR.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.06406v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/lif314/Fourier-ASR" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-06</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #7</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.03248v1" target="_blank">STReasoner: Empowering LLMs for Spatio-Temporal Reasoning in Time Series via Spatial-Aware Reinforcement Learning</a></h2>
+                        <div class="authors">Juntong Ni, Shiyu Wang, Ming Jin</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 7
+                    </div>
+                </div>
+                <div class="summary">
+                    Spatio-temporal reasoning in time series involves the explicit synthesis of temporal dynamics, spatial dependencies, and textual context. This capability is vital for high-stakes decision-making in systems such as traffic networks, power grids, and disease propagation. However, the field remains underdeveloped because most existing works prioritize predictive accuracy over reasoning. To address the gap, we introduce ST-Bench, a benchmark consisting of four core tasks, including etiological reasoning, entity identification, correlation reasoning, and in-context forecasting, developed via a network SDE-based multi-agent data synthesis pipeline. We then propose STReasoner, which empowers LLM to integrate time series, graph structure, and text for explicit reasoning. To promote spatially grounded logic, we introduce S-GRPO, a reinforcement learning algorithm that rewards performance gains specifically attributable to spatial information. Experiments show that STReasoner achieves average accuracy gains between 17% and 135% at only 0.004X the cost of proprietary models and generalizes robustly to real-world data.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.03248v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/LingFengGold/STReasoner" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-06</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #8</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.03325v1" target="_blank">On the Identifiability of Regime-Switching Models with Multi-Lag Dependencies</a></h2>
+                        <div class="authors">Carles Balsells-Rodas, Toshiko Matsui, Pedro A. M. Mediano</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 6
+                    </div>
+                </div>
+                <div class="summary">
+                    Identifiability is central to the interpretability of deep latent variable models, ensuring parameterisations are uniquely determined by the data-generating distribution. However, it remains underexplored for deep regime-switching time series. We develop a general theoretical framework for multi-lag Regime-Switching Models (RSMs), encompassing Markov Switching Models (MSMs) and Switching Dynamical Systems (SDSs). For MSMs, we formulate the model as a temporally structured finite mixture and prove identifiability of both the number of regimes and the multi-lag transitions in a nonlinear-Gaussian setting. For SDSs, we establish identifiability of the latent variables up to permutation and scaling via temporal structure, which in turn yields conditions for identifiability of regime-dependent latent causal graphs (up to regime/node permutations). Our results hold in a fully unsupervised setting through architectural and noise assumptions that are directly enforceable via neural network design. We complement the theory with a flexible variational estimator that satisfies the assumptions and validate the results on synthetic benchmarks. Across real-world datasets from neuroscience, finance, and climate, identifiability leads to more trustworthy interpretability analysis, which is crucial for scientific discovery.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.03325v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/charlio23/identifiable-SDS" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-08</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #9</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.04956v1" target="_blank">TEA: Temporal Adaptive Satellite Image Semantic Segmentation</a></h2>
+                        <div class="authors">Juyuan Kang, Hao Zhu, Yan Zhu</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 5
+                    </div>
+                </div>
+                <div class="summary">
+                    Crop mapping based on satellite images time-series (SITS) holds substantial economic value in agricultural production settings, in which parcel segmentation is an essential step. Existing approaches have achieved notable advancements in SITS segmentation with predetermined sequence lengths. However, we found that these approaches overlooked the generalization capability of models across scenarios with varying temporal length, leading to markedly poor segmentation results in such cases. To address this issue, we propose TEA, a TEmporal Adaptive SITS semantic segmentation method to enhance the model's resilience under varying sequence lengths. We introduce a teacher model that encapsulates the global sequence knowledge to guide a student model with adaptive temporal input lengths. Specifically, teacher shapes the student's feature space via intermediate embedding, prototypes and soft label perspectives to realize knowledge transfer, while dynamically aggregating student model to mitigate knowledge forgetting. Finally, we introduce full-sequence reconstruction as an auxiliary task to further enhance the quality of representations across inputs of varying temporal lengths. Through extensive experiments, we demonstrate that our method brings remarkable improvements across inputs of different temporal lengths on common benchmarks. Our code will be publicly available.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.04956v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/KeplerKang/TEA" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-12</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #10</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.07778v1" target="_blank">DT-ICU: Towards Explainable Digital Twins for ICU Patient Monitoring via Multi-Modal and Multi-Task Iterative Inference</a></h2>
+                        <div class="authors">Wen Guo</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 1
+                    </div>
+                </div>
+                <div class="summary">
+                    We introduce DT-ICU, a multimodal digital twin framework for continuous risk estimation in intensive care. DT-ICU integrates variable-length clinical time series with static patient information in a unified multitask architecture, enabling predictions to be updated as new observations accumulate over the ICU stay. We evaluate DT-ICU on the large, publicly available MIMIC-IV dataset, where it consistently outperforms established baseline models under different evaluation settings. Our test-length analysis shows that meaningful discrimination is achieved shortly after admission, while longer observation windows further improve the ranking of high-risk patients in highly imbalanced cohorts. To examine how the model leverages heterogeneous data sources, we perform systematic modality ablations, revealing that the model learnt a reasonable structured reliance on interventions, physiological response observations, and contextual information. These analyses provide interpretable insights into how multimodal signals are combined and how trade-offs between sensitivity and precision emerge. Together, these results demonstrate that DT-ICU delivers accurate, temporally robust, and interpretable predictions, supporting its potential as a practical digital twin framework for continuous patient monitoring in critical care. The source code and trained model weights for DT-ICU are publicly available at https://github.com/GUO-W/DT-ICU-release.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.07778v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/GUO-W/DT-ICU-release" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-19</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #11</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.12785v1" target="_blank">Distilling Time Series Foundation Models for Efficient Forecasting</a></h2>
+                        <div class="authors">Yuqi Li, Kuiye Ding, Chuanguang Yang</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    Time Series foundation models (TSFMs) deliver strong forecasting performance through large-scale pretraining, but their large parameter sizes make deployment costly. While knowledge distillation offers a natural and effective approach for model compression, techniques developed for general machine learning tasks are not directly applicable to time series forecasting due to the unique characteristics. To address this, we present DistilTS, the first distillation framework specifically designed for TSFMs. DistilTS addresses two key challenges: (1) task difficulty discrepancy, specific to forecasting, where uniform weighting makes optimization dominated by easier short-term horizons, while long-term horizons receive weaker supervision; and (2) architecture discrepancy, a general challenge in distillation, for which we design an alignment mechanism in the time series forecasting. To overcome these issues, DistilTS introduces horizon-weighted objectives to balance learning across horizons, and a temporal alignment strategy that reduces architectural mismatch, enabling compact models. Experiments on multiple benchmarks demonstrate that DistilTS achieves forecasting performance comparable to full-sized TSFMs, while reducing parameters by up to 1/150 and accelerating inference by up to 6000x. Code is available at: https://github.com/itsnotacie/DistilTS-ICASSP2026.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.12785v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/itsnotacie/DistilTS-ICASSP2026" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-14</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #12</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.09701v1" target="_blank">Evaluating GAN-LSTM for Smart Meter Anomaly Detection in Power Systems</a></h2>
+                        <div class="authors">Fahimeh Orvati Nia, Shima Salehi, Joshua Peeples</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    Advanced metering infrastructure (AMI) provides high-resolution electricity consumption data that can enhance monitoring, diagnosis, and decision making in modern power distribution systems. Detecting anomalies in these time-series measurements is challenging due to nonlinear, nonstationary, and multi-scale temporal behavior across diverse building types and operating conditions. This work presents a systematic, power-system-oriented evaluation of a GAN-LSTM framework for smart meter anomaly detection using the Large-scale Energy Anomaly Detection (LEAD) dataset, which contains one year of hourly measurements from 406 buildings. The proposed pipeline applies consistent preprocessing, temporal windowing, and threshold selection across all methods, and compares the GAN-LSTM approach against six widely used baselines, including statistical, kernel-based, reconstruction-based, and GAN-based models. Experimental results demonstrate that the GAN-LSTM significantly improves detection performance, achieving an F1-score of 0.89. These findings highlight the potential of adversarial temporal modeling as a practical tool for supporting asset monitoring, non-technical loss detection, and situational awareness in real-world power distribution networks. The code for this work is publicly available
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.09701v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/fahimehorvatinia/GAN-LSTM-Smart-Meter-Anomaly-Detection" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-13</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #13</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.08584v1" target="_blank">Ministral 3</a></h2>
+                        <div class="authors">Alexander H. Liu, Kartik Khandelwal, Sandeep Subramanian</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    We introduce the Ministral 3 series, a family of parameter-efficient dense language models designed for compute and memory constrained applications, available in three model sizes: 3B, 8B, and 14B parameters. For each model size, we release three variants: a pretrained base model for general-purpose use, an instruction finetuned, and a reasoning model for complex problem-solving. In addition, we present our recipe to derive the Ministral 3 models through Cascade Distillation, an iterative pruning and continued training with distillation technique. Each model comes with image understanding capabilities, all under the Apache 2.0 license.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.08584v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://huggingface.co/collections/mistralai" target="_blank" class="btn btn-code"><i class="fas fa-laptop-code"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-13</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #14</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.08509v1" target="_blank">What If TSF: A Benchmark for Reframing Forecasting as Scenario-Guided Multimodal Forecasting</a></h2>
+                        <div class="authors">Jinkwan Jang, Hyunbin Jin, Hyungjin Park</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    Time series forecasting is critical to real-world decision making, yet most existing approaches remain unimodal and rely on extrapolating historical patterns. While recent progress in large language models (LLMs) highlights the potential for multimodal forecasting, existing benchmarks largely provide retrospective or misaligned raw context, making it unclear whether such models meaningfully leverage textual inputs. In practice, human experts incorporate what-if scenarios with historical evidence, often producing distinct forecasts from the same observations under different scenarios. Inspired by this, we introduce What If TSF (WIT), a multimodal forecasting benchmark designed to evaluate whether models can condition their forecasts on contextual text, especially future scenarios. By providing expert-crafted plausible or counterfactual scenarios, WIT offers a rigorous testbed for scenario-guided multimodal forecasting. The benchmark is available at https://github.com/jinkwan1115/WhatIfTSF.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.08509v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/jinkwan1115/WhatIfTSF" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-12</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #15</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.07812v1" target="_blank">More Images, More Problems? A Controlled Analysis of VLM Failure Modes</a></h2>
+                        <div class="authors">Anurag Das, Adrian Bulat, Alberto Baldrati</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    Large Vision Language Models (LVLMs) have demonstrated remarkable capabilities, yet their proficiency in understanding and reasoning over multiple images remains largely unexplored. While existing benchmarks have initiated the evaluation of multi-image models, a comprehensive analysis of their core weaknesses and their causes is still lacking. In this work, we introduce MIMIC (Multi-Image Model Insights and Challenges), a new benchmark designed to rigorously evaluate the multi-image capabilities of LVLMs. Using MIMIC, we conduct a series of diagnostic experiments that reveal pervasive issues: LVLMs often fail to aggregate information across images and struggle to track or attend to multiple concepts simultaneously. To address these failures, we propose two novel complementary remedies. On the data side, we present a procedural data-generation strategy that composes single-image annotations into rich, targeted multi-image training examples. On the optimization side, we analyze layer-wise attention patterns and derive an attention-masking scheme tailored for multi-image inputs. Experiments substantially improved cross-image aggregation, while also enhancing performance on existing multi-image benchmarks, outperforming prior state of the art across tasks. Data and code will be made available at https://github.com/anurag-198/MIMIC.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.07812v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/anurag-198/MIMIC" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-12</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #16</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.07550v1" target="_blank">TFEC: Multivariate Time-Series Clustering via Temporal-Frequency Enhanced Contrastive Learning</a></h2>
+                        <div class="authors">Zexi Tan, Tao Xie, Haoyi Xiao</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    Multivariate Time-Series (MTS) clustering is crucial for signal processing and data analysis. Although deep learning approaches, particularly those leveraging Contrastive Learning (CL), are prominent for MTS representation, existing CL-based models face two key limitations: 1) neglecting clustering information during positive/negative sample pair construction, and 2) introducing unreasonable inductive biases, e.g., destroying time dependence and periodicity through augmentation strategies, compromising representation quality. This paper, therefore, proposes a Temporal-Frequency Enhanced Contrastive (TFEC) learning framework. To preserve temporal structure while generating low-distortion representations, a temporal-frequency Co-EnHancement (CoEH) mechanism is introduced. Accordingly, a synergistic dual-path representation and cluster distribution learning framework is designed to jointly optimize cluster structure and representation fidelity. Experiments on six real-world benchmark datasets demonstrate TFEC's superiority, achieving 4.48% average NMI gains over SOTA methods, with ablation studies validating the design. The code of the paper is available at: https://github.com/yueliangy/TFEC.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.07550v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/yueliangy/TFEC" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-11</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #17</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.06867v1" target="_blank">U-MASK: User-adaptive Spatio-Temporal Masking for Personalized Mobile AI Applications</a></h2>
+                        <div class="authors">Shiyuan Zhang, Yilai Liu, Yuwei Du</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    Personalized mobile artificial intelligence applications are widely deployed, yet they are expected to infer user behavior from sparse and irregular histories under a continuously evolving spatio-temporal context. This setting induces a fundamental tension among three requirements, i.e., immediacy to adapt to recent behavior, stability to resist transient noise, and generalization to support long-horizon prediction and cold-start users. Most existing approaches satisfy at most two of these requirements, resulting in an inherent impossibility triangle in data-scarce, non-stationary personalization. To address this challenge, we model mobile behavior as a partially observed spatio-temporal tensor and unify short-term adaptation, long-horizon forecasting, and cold-start recommendation as a conditional completion problem, where a user- and task-specific mask specifies which coordinates are treated as evidence. We propose U-MASK, a user-adaptive spatio-temporal masking method that allocates evidence budgets based on user reliability and task sensitivity. To enable mask generation under sparse observations, U-MASK learns a compact, task-agnostic user representation from app and location histories via U-SCOPE, which serves as the sole semantic conditioning signal. A shared diffusion transformer then performs mask-guided generative completion while preserving observed evidence, so personalization and task differentiation are governed entirely by the mask and the user representation. Experiments on real-world mobile datasets demonstrate consistent improvements over state-of-the-art methods across short-term prediction, long-horizon forecasting, and cold-start settings, with the largest gains under severe data sparsity. The code and dataset will be available at https://github.com/NICE-HKU/U-MASK.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.06867v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/NICE-HKU/U-MASK" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="header-row">
+                    <div style="flex: 1;">
+                        <div class="badges">
+                            <span class="badge date-badge"><i class="far fa-calendar-alt"></i> 2026-01-08</span>
+                            <span style="color:#888; font-size:0.9em;">Rank #18</span>
+                        </div>
+                        <h2 class="title"><a href="http://arxiv.org/abs/2601.05174v1" target="_blank">FaST: Efficient and Effective Long-Horizon Forecasting for Large-Scale Spatial-Temporal Graphs via Mixture-of-Experts</a></h2>
+                        <div class="authors">Yiji Zhao, Zihao Zhong, Ao Wang</div>
+                    </div>
+                    <div class="badge star-badge">
+                        <i class="fas fa-star"></i> 0
+                    </div>
+                </div>
+                <div class="summary">
+                    Spatial-Temporal Graph (STG) forecasting on large-scale networks has garnered significant attention. However, existing models predominantly focus on short-horizon predictions and suffer from notorious computational costs and memory consumption when scaling to long-horizon predictions and large graphs. Targeting the above challenges, we present FaST, an effective and efficient framework based on heterogeneity-aware Mixture-of-Experts (MoEs) for long-horizon and large-scale STG forecasting, which unlocks one-week-ahead (672 steps at a 15-minute granularity) prediction with thousands of nodes. FaST is underpinned by two key innovations. First, an adaptive graph agent attention mechanism is proposed to alleviate the computational burden inherent in conventional graph convolution and self-attention modules when applied to large-scale graphs. Second, we propose a new parallel MoE module that replaces traditional feed-forward networks with Gated Linear Units (GLUs), enabling an efficient and scalable parallel structure. Extensive experiments on real-world datasets demonstrate that FaST not only delivers superior long-horizon predictive accuracy but also achieves remarkable computational efficiency compared to state-of-the-art baselines. Our source code is available at: https://github.com/yijizhao/FaST.
+                </div>
+                <div class="actions">
+                    <a href="http://arxiv.org/abs/2601.05174v1" target="_blank" class="btn btn-arxiv"><i class="fas fa-file-pdf"></i> ArXiv</a>
+                    <a href="https://github.com/yijizhao/FaST" target="_blank" class="btn btn-code"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+    </html>
+    

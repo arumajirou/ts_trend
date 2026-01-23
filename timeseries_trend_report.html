@@ -1,0 +1,1140 @@
+
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Time Series Analysis Trends</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f5f7fa; color: #333; }
+            header { background: #2b3137; color: white; padding: 20px; text-align: center; }
+            h1 { margin: 0; font-size: 1.8rem; }
+            .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+            .tabs { display: flex; cursor: pointer; background: white; border-radius: 8px 8px 0 0; overflow: hidden; margin-top: 20px; }
+            .tab { flex: 1; padding: 15px; text-align: center; font-weight: bold; background: #eee; border-bottom: 3px solid transparent; transition: 0.3s; }
+            .tab:hover { background: #e1e4e8; }
+            .tab.active { background: white; border-bottom: 3px solid #0366d6; color: #0366d6; }
+            .content { display: none; background: white; padding: 20px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+            .content.active { display: block; }
+            table { width: 100%; border-collapse: collapse; }
+            th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
+            th { background-color: #f8f9fa; color: #666; font-size: 0.9em; }
+            tr:hover { background-color: #fcfcfc; }
+            .title a { text-decoration: none; color: #0366d6; font-weight: bold; font-size: 1.1em; }
+            .desc { font-size: 0.9em; color: #555; margin-top: 5px; max-width: 800px; }
+            .stars { font-weight: bold; width: 80px; }
+            .date { color: #888; font-size: 0.85em; width: 100px; }
+            .tags-container { margin-top: 8px; }
+            .tag { background: #eff3f6; color: #0366d6; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; margin-right: 5px; display: inline-block; }
+            .gh-color { color: #24292e; }
+            .hf-color { color: #ff9d00; }
+        </style>
+        <script>
+            function openTab(tabName) {
+                var i;
+                var x = document.getElementsByClassName("content");
+                for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+                var tabs = document.getElementsByClassName("tab");
+                for (i = 0; i < tabs.length; i++) { tabs[i].classList.remove("active"); }
+                document.getElementById(tabName).style.display = "block";
+                document.getElementById("btn-" + tabName).classList.add("active");
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Time Series Analysis Trends</h1>
+            <p style="font-size: 0.9em; opacity: 0.8;">Latest & Trending Resources from GitHub & Hugging Face</p>
+        </header>
+
+        <div class="container">
+            <div class="tabs">
+                <div id="btn-github" class="tab active" onclick="openTab('github')"><i class="fab fa-github"></i> GitHub Repositories (50)</div>
+                <div id="btn-hf" class="tab" onclick="openTab('hf')"><i class="fas fa-brain"></i> Hugging Face Models (25)</div>
+            </div>
+
+            <div id="github" class="content active">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="50">#</th>
+                            <th>Stars</th>
+                            <th>Created</th>
+                            <th>Repository Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+            <tr>
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 465</td>
+                <td class="date">2025-10-07</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/Basekick-Labs/arc" target="_blank">Basekick-Labs/arc</a>
+                    </div>
+                    <div class="desc">High-performance time-series database for Industrial IoT and Analytics. 18.6M records/sec. Racing telemetry, smart cities, mining sensors, medical devices. DuckDB SQL + Parquet + Arrow. AGPL-3.0</div>
+                    <div class="tags-container"><span class="tag">arrow</span><span class="tag">database</span><span class="tag">duckdb</span><span class="tag">events</span><span class="tag">go</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 277</td>
+                <td class="date">2025-09-10</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/nival/Blitzkrieg-2" target="_blank">nival/Blitzkrieg-2</a>
+                    </div>
+                    <div class="desc">Blitzkrieg 2 is a 2005 real-time tactics video game based on the events of World War II and is the second title in the Blitzkrieg series. The game was developed on an in-house game engine by the company Nival, primarily written in C and C++.</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 207</td>
+                <td class="date">2025-09-12</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/h2337/tsink" target="_blank">h2337/tsink</a>
+                    </div>
+                    <div class="desc">Embedded time-series database for Rust</div>
+                    <div class="tags-container"><span class="tag">database</span><span class="tag">embedded-database</span><span class="tag">rust</span><span class="tag">time-series</span><span class="tag">timeseries</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 188</td>
+                <td class="date">2025-08-30</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/ScaleFree-Tech/yishape-math" target="_blank">ScaleFree-Tech/yishape-math</a>
+                    </div>
+                    <div class="desc">YiShape-Math is a Java math library that provides NumPy-like functionalities including vector & matrix operations, data visualization, statistics, optimization, time series, signal processing, audio analysis, image processing and machine learning models.</div>
+                    <div class="tags-container"><span class="tag">audio-analysis</span><span class="tag">image-processing</span><span class="tag">java-math-library</span><span class="tag">java-statistics</span><span class="tag">machine-learning</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>5</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 158</td>
+                <td class="date">2025-08-27</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/William-Liwei/shuprophet" target="_blank">William-Liwei/shuprophet</a>
+                    </div>
+                    <div class="desc">SHU Prophet - A New Generation of time series intelligent prediction and decision-making platform</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 99</td>
+                <td class="date">2025-08-23</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/Y-Research-SBU/TimeSeriesScientist" target="_blank">Y-Research-SBU/TimeSeriesScientist</a>
+                    </div>
+                    <div class="desc">Official Repository for TimeSeriesScientist</div>
+                    <div class="tags-container"><span class="tag">agentic-ai</span><span class="tag">large-language-models</span><span class="tag">time-series-analysis</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>7</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 87</td>
+                <td class="date">2025-08-20</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/vincent05r/FinCast-fts" target="_blank">vincent05r/FinCast-fts</a>
+                    </div>
+                    <div class="desc">This is the official implementation of CIKM 2025 FinCast Financial Time series foundation model</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>8</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 87</td>
+                <td class="date">2025-10-10</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/S-FM/faim-python-client" target="_blank">S-FM/faim-python-client</a>
+                    </div>
+                    <div class="desc">Python sdk for zero-shot time-series forecasting</div>
+                    <div class="tags-container"><span class="tag">anomaly-detection</span><span class="tag">demand-forecasting</span><span class="tag">python-sdk</span><span class="tag">time-series-forecasting</span><span class="tag">time-series-foundation-models</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>9</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 84</td>
+                <td class="date">2025-10-07</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/FTF1990/Industrial-digital-twin-by-transformer" target="_blank">FTF1990/Industrial-digital-twin-by-transformer</a>
+                    </div>
+                    <div class="desc">Industrial time series forecasting with Static Transformer (R²>0.9, <5ms inference）</div>
+                    <div class="tags-container"><span class="tag">digital-twin</span><span class="tag">predictive-maintenance</span><span class="tag">time-series-forecasting-pipeline</span><span class="tag">transformer-architecture</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>10</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 81</td>
+                <td class="date">2025-08-03</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/FabianoDicheti/dqtimes" target="_blank">FabianoDicheti/dqtimes</a>
+                    </div>
+                    <div class="desc">Time Series Forecasting</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>11</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 56</td>
+                <td class="date">2025-09-19</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/ruvnet/sublinear-time-solver" target="_blank">ruvnet/sublinear-time-solver</a>
+                    </div>
+                    <div class="desc">Rust + WASM sublinear-time solver for asymmetric diagonally dominant systems. Exposes Neumann series, push, and hybrid random-walk algorithms with npm/npx CLI and Flow-Nexus HTTP streaming for swarm cost propagation and verification.</div>
+                    <div class="tags-container"><span class="tag">asymmetric-matrices</span><span class="tag">conjugate-gradient-method</span><span class="tag">diagonally-dominant</span><span class="tag">distributed-solvers</span><span class="tag">edge-computing-algorithms</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 44</td>
+                <td class="date">2025-07-30</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/DavieObi/Demand-Forecasting-and-Inventory-Optimization" target="_blank">DavieObi/Demand-Forecasting-and-Inventory-Optimization</a>
+                    </div>
+                    <div class="desc">This project applies time series forecasting (ARIMA) to predict product demand and optimize inventory management. By analyzing historical demand and stock levels, it calculates reorder points, safety stock, and optimal order quantities to minimize costs, prevent stockouts, and improve service efficiency.</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 42</td>
+                <td class="date">2025-07-31</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/DavieObi/Electricity-Price-Prediction-Project" target="_blank">DavieObi/Electricity-Price-Prediction-Project</a>
+                    </div>
+                    <div class="desc">This project uses a Random Forest model to predict electricity prices (SMPEP2) from environmental, market, and time-series data. Through data cleaning, feature engineering, and cross-validation, we developed a robust model that achieved an R-squared of over 0.61, providing a reliable forecast.</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>14</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 41</td>
+                <td class="date">2025-10-10</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/decisionintelligence/SRSNet" target="_blank">decisionintelligence/SRSNet</a>
+                    </div>
+                    <div class="desc">[NeurIPS 2025 Spotlight] Enhancing Time Series Forecasting through Selective Representation Spaces: A Patch Perspective </div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>15</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 40</td>
+                <td class="date">2025-08-19</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/microsoft/MIRA" target="_blank">microsoft/MIRA</a>
+                    </div>
+                    <div class="desc">MIRA: Medical Time Series Foundation Model for Real-World Health Data</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>16</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 40</td>
+                <td class="date">2025-08-04</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/DavieObi/Stock-Data-Analysis" target="_blank">DavieObi/Stock-Data-Analysis</a>
+                    </div>
+                    <div class="desc">An in-depth stock data analysis project covering descriptive stats, time series, correlation, and a risk-return profile for AAPL, GOOG, MSFT, and NFLX. This project helps in understanding volatility, performance, and diversification opportunities.</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>17</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 38</td>
+                <td class="date">2025-09-25</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/Sachithx/EntroPE" target="_blank">Sachithx/EntroPE</a>
+                    </div>
+                    <div class="desc">This includes the codebase for EntroPE (Entropy-Guided Dynamic Patch Encoder for Time Series Forecasting) paper.</div>
+                    <div class="tags-container"><span class="tag">anomaly-detection</span><span class="tag">classification</span><span class="tag">entropy</span><span class="tag">forecasting</span><span class="tag">foundation-models</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>18</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 37</td>
+                <td class="date">2025-09-09</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/Hazrat-Ali9/Bike-Sharing-Demand-Forecasting-Using-Time-Series-Analysis" target="_blank">Hazrat-Ali9/Bike-Sharing-Demand-Forecasting-Using-Time-Series-Analysis</a>
+                    </div>
+                    <div class="desc">⚽ Bike ⚾ Sharing 🥎 Demand 🏀Forecasting 🏐 Time 🎮 Series 🥌 Analysis is 🎳 a data ⛸ science ✈ focused on 🚁 predicting 🚀 bike 🛸 demand 🚟 time 🚠 series 🚞 techniques ⛴ analyzing 🚢 historical 🚒 bike 🛺 weather 🚋 data 🚂 seasonal 🚃 trends this 🚅 helps 🏩 optimize 🏦 planning 🕍 resource 🏠 allocation 🕌 and 🔐 operational 🪣 efficiency 💶</div>
+                    <div class="tags-container"><span class="tag">algorithms</span><span class="tag">analysis</span><span class="tag">bike</span><span class="tag">demand</span><span class="tag">html</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>19</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 35</td>
+                <td class="date">2025-09-11</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/blacksnail789521/Time-Series-Reasoning-Survey" target="_blank">blacksnail789521/Time-Series-Reasoning-Survey</a>
+                    </div>
+                    <div class="desc">A Survey of Reasoning and Agentic Systems in Time Series with Large Language Models</div>
+                    <div class="tags-container"><span class="tag">agents</span><span class="tag">benchmarks</span><span class="tag">datasets</span><span class="tag">large-language-models</span><span class="tag">llm</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>20</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 34</td>
+                <td class="date">2025-10-24</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/automl/TempoPFN" target="_blank">automl/TempoPFN</a>
+                    </div>
+                    <div class="desc">TempoPFN: Zero-shot Time Series Forecasting (accepted at EurIPS 2025 AI for Tabular Data Workshop) </div>
+                    <div class="tags-container"><span class="tag">forecasting</span><span class="tag">foundation-models</span><span class="tag">synthetic-data</span><span class="tag">synthetic-dataset-generation</span><span class="tag">time-series</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>21</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 33</td>
+                <td class="date">2025-09-16</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/UConn-DSIS/TS-RAG" target="_blank">UConn-DSIS/TS-RAG</a>
+                    </div>
+                    <div class="desc">[NeurIPS 2025] Official website for code and models of Time Series RAG (TS-RAG)</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>22</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 31</td>
+                <td class="date">2025-11-14</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/decisionintelligence/DTAF" target="_blank">decisionintelligence/DTAF</a>
+                    </div>
+                    <div class="desc">[AAAI 2026] Towards Non-Stationary Time Series Forecasting with Temporal Stabilization and Frequency Differencing</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>23</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 29</td>
+                <td class="date">2025-09-07</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/TonyLu786/tsfm-mre" target="_blank">TonyLu786/tsfm-mre</a>
+                    </div>
+                    <div class="desc">TSFM-MRE: Minimal Reproducible Experiment for Time-Series Foundation Models in Finance</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>24</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 28</td>
+                <td class="date">2025-11-11</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/PlanckChang/EMAformer" target="_blank">PlanckChang/EMAformer</a>
+                    </div>
+                    <div class="desc">[AAAI 2026] Official repository of the EMAformer paper: "EMAformer: Enhancing Transformer through Embedding Armor for Time Series Forecasting". </div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>25</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 27</td>
+                <td class="date">2025-09-02</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/realMoana/awesome-time-series-explanation-papers" target="_blank">realMoana/awesome-time-series-explanation-papers</a>
+                    </div>
+                    <div class="desc">Collection of research papers on time series explainability</div>
+                    <div class="tags-container"><span class="tag">llm</span><span class="tag">mllm</span><span class="tag">time-series</span><span class="tag">time-series-explanation</span><span class="tag">timeseries-analysis</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>26</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 27</td>
+                <td class="date">2025-10-09</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/decisionintelligence/CrossAD" target="_blank">decisionintelligence/CrossAD</a>
+                    </div>
+                    <div class="desc">[NeurIPS 2025] CrossAD: Time Series Anomaly Detection with Cross-scale Associations and Cross-window Modeling</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>27</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 27</td>
+                <td class="date">2026-01-05</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/ZLiu21/awesome-tsfms-from-pre-training-to-post-training" target="_blank">ZLiu21/awesome-tsfms-from-pre-training-to-post-training</a>
+                    </div>
+                    <div class="desc">This repository collects awesome representative papers and resources for "From Pre-training to Post-training: A Survey on Time Series Foundation Models" (TechRxiv-26).</div>
+                    <div class="tags-container"><span class="tag">fine-tuning</span><span class="tag">foundation-models</span><span class="tag">post-training</span><span class="tag">pre-trained-model</span><span class="tag">pre-training</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>28</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 26</td>
+                <td class="date">2025-10-09</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/D2I-Group/dmmv" target="_blank">D2I-Group/dmmv</a>
+                    </div>
+                    <div class="desc">This is an official repository for "Multi-Modal View Enhanced Large Vision Models for Long-Term Time Series Forecasting".</div>
+                    <div class="tags-container"><span class="tag">multi-modal</span><span class="tag">timeseries-forecasting</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>29</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 25</td>
+                <td class="date">2025-10-20</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/BosonHwang/ShapeX" target="_blank">BosonHwang/ShapeX</a>
+                    </div>
+                    <div class="desc">Shapelet-Driven Post Hoc Explanations for Time Series Classification Models</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>30</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 24</td>
+                <td class="date">2025-11-10</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/leonardokong486/interPDN" target="_blank">leonardokong486/interPDN</a>
+                    </div>
+                    <div class="desc">[AAAI 2026] Official implementation of "Time Series Forecasting via Direct Per-Step Probability Distribution Modeling"</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>31</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 24</td>
+                <td class="date">2025-09-09</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/AmirhosseinHonardoust/Demand-Forecasting" target="_blank">AmirhosseinHonardoust/Demand-Forecasting</a>
+                    </div>
+                    <div class="desc">End-to-end demand forecasting with Python using synthetic time-series sales data. Includes data generation, cleaning, ARIMA/SARIMA model selection by AIC, evaluation with RMSE and MAPE, and 90-day forecasts with confidence intervals. Reproducible scripts and visualizations for portfolio showcase.</div>
+                    <div class="tags-container"><span class="tag">arima</span><span class="tag">data-science</span><span class="tag">data-visualization</span><span class="tag">demand-forecasting</span><span class="tag">forecasting</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>32</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 23</td>
+                <td class="date">2025-09-11</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/AmirhosseinHonardoust/LSTM-Time-Series-Forecasting" target="_blank">AmirhosseinHonardoust/LSTM-Time-Series-Forecasting</a>
+                    </div>
+                    <div class="desc">A hands-on project for forecasting time-series with PyTorch LSTMs. It creates realistic daily data (trend, seasonality, events, noise), prepares it with sliding windows, and trains an LSTM to make multi-step predictions. The project tracks errors with RMSE, MAE, MAPE and shows clear plots of training progress and forecast results.</div>
+                    <div class="tags-container"><span class="tag">data-science</span><span class="tag">deep-learning</span><span class="tag">forecasting</span><span class="tag">lstm</span><span class="tag">machine-learning</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>33</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 21</td>
+                <td class="date">2025-11-15</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/decisionintelligence/APN" target="_blank">decisionintelligence/APN</a>
+                    </div>
+                    <div class="desc">[AAAI 2026 Oral] Rethinking Irregular Time Series Forecasting: A Simple yet Effective Baseline</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>34</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 21</td>
+                <td class="date">2026-01-04</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/2308087369/mHC-iTransformer" target="_blank">2308087369/mHC-iTransformer</a>
+                    </div>
+                    <div class="desc">Based on the mHC architecture proposed by deepseek, the residual links of the existing iTransformer are replaced and updated to obtain a new time series SOTA</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>35</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 18</td>
+                <td class="date">2025-11-11</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/DeepIntoStreams/TSFM_Finance" target="_blank">DeepIntoStreams/TSFM_Finance</a>
+                    </div>
+                    <div class="desc">the official implementation of the paper “Re(visiting) Time Series Foundation Models in Finance” </div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>36</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 18</td>
+                <td class="date">2025-10-04</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/mala-lab/SEMPO" target="_blank">mala-lab/SEMPO</a>
+                    </div>
+                    <div class="desc">[NeurIPS 2025] Official implementation of "SEMPO: Lightweight Foundation Models for Time Series Forecasting"</div>
+                    <div class="tags-container"><span class="tag">pretrained-models</span><span class="tag">time-series</span><span class="tag">time-series-forecasting</span><span class="tag">time-series-foundation-model</span><span class="tag">transformers</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>37</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 18</td>
+                <td class="date">2025-09-02</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/DC-research/TSorchestra" target="_blank">DC-research/TSorchestra</a>
+                    </div>
+                    <div class="desc">Time Series Orchestra (TSorchestra) is a novel ensemble framework designed for zero-shot time series forecasting. It is built upon a curated collection of time series foundation models. The architecture is designed to leverage the specialized capabilities of its constituent models to deliver SOTA performance and generalization across datasets.</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>38</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 18</td>
+                <td class="date">2025-08-14</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/quest-lab-iisc/CNDiff" target="_blank">quest-lab-iisc/CNDiff</a>
+                    </div>
+                    <div class="desc">Official code of the ICML 2025 Paper titled "Conditional Diffusion Model with Nonlinear Data Transformation for Time Series Forecasting" https://openreview.net/forum?id=kcUNMKqrCg</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>39</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 17</td>
+                <td class="date">2025-08-20</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/Gowri053/An-interactive-Time-Series-Analysis-Dashboard-built-using-R-and-Shiny." target="_blank">Gowri053/An-interactive-Time-Series-Analysis-Dashboard-built-using-R-and-Shiny.</a>
+                    </div>
+                    <div class="desc">No description provided.</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>40</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 16</td>
+                <td class="date">2025-10-13</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/Rose-STL-Lab/CPTC" target="_blank">Rose-STL-Lab/CPTC</a>
+                    </div>
+                    <div class="desc">Conformal Prediction for Time-series Forecasting with Change Points</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>41</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 16</td>
+                <td class="date">2025-11-27</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/xenodrive/timescope" target="_blank">xenodrive/timescope</a>
+                    </div>
+                    <div class="desc">Canvas for Time-Series Visualization</div>
+                    <div class="tags-container"><span class="tag">chart</span><span class="tag">time-series</span><span class="tag">timeline</span><span class="tag">typescript</span><span class="tag">visualization</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>42</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 16</td>
+                <td class="date">2025-07-29</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/yyysjz1997/Time-RA" target="_blank">yyysjz1997/Time-RA</a>
+                    </div>
+                    <div class="desc">Time-RA: Towards Time Series Reasoning for Anomaly with LLM Feedback</div>
+                    <div class="tags-container"><span class="tag">anomaly-detection</span><span class="tag">data-mining</span><span class="tag">decision-making</span><span class="tag">llm</span><span class="tag">reasoning</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>43</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 15</td>
+                <td class="date">2025-11-19</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/splunk/cisco-time-series-model" target="_blank">splunk/cisco-time-series-model</a>
+                    </div>
+                    <div class="desc">Cisco Time Series Model is a continued pretrained time series forecasting model developed by Cisco.</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>44</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 15</td>
+                <td class="date">2025-11-06</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/sinancan34/chronomaly" target="_blank">sinancan34/chronomaly</a>
+                    </div>
+                    <div class="desc">A modular Python library for time-series forecasting built on Google TimesFM</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>45</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 15</td>
+                <td class="date">2025-09-07</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/dyneth02/Air-Quality-Trends-Analysis-Project" target="_blank">dyneth02/Air-Quality-Trends-Analysis-Project</a>
+                    </div>
+                    <div class="desc">Full-stack air quality analytics platform built with FastAPI, React, and MySQL. Aggregates multi-source PM2.5/PM10 data, performs multi-city comparison and time-series forecasting (SARIMAX), and integrates an LLM-based planning agent with tiered access, secure APIs, and PDF reporting.</div>
+                    <div class="tags-container"><span class="tag">academic-project</span><span class="tag">agentic-ai</span><span class="tag">air-quality</span><span class="tag">api-development</span><span class="tag">data-engineering</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>46</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 13</td>
+                <td class="date">2025-10-05</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/MasterZhou1/ICL-Time-Series" target="_blank">MasterZhou1/ICL-Time-Series</a>
+                    </div>
+                    <div class="desc">Code for paper "Why Do Transformers Fail to Forecast Time Series In-Context?"</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>47</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 13</td>
+                <td class="date">2025-10-01</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/foundation-model-research/Kairos" target="_blank">foundation-model-research/Kairos</a>
+                    </div>
+                    <div class="desc">Official code for "Kairos: Towards Adaptive and Generalizable Time Series Foundation Models"</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>48</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 13</td>
+                <td class="date">2025-11-13</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/poly-mcp/IoT-Edge-MCP-Server" target="_blank">poly-mcp/IoT-Edge-MCP-Server</a>
+                    </div>
+                    <div class="desc">MCP server for Industrial IoT, SCADA and PLC systems. Unifies MQTT sensors, Modbus devices and industrial equipment into a single AI-orchestrable API. Features real-time monitoring, alarms, time-series storage and actuator control.</div>
+                    <div class="tags-container"><span class="tag">ai-agents</span><span class="tag">ai-tools</span><span class="tag">api-server</span><span class="tag">automation</span><span class="tag">industrial-iot</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>49</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 13</td>
+                <td class="date">2025-11-20</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/YuxiangZhang-BIT/UniTS" target="_blank">YuxiangZhang-BIT/UniTS</a>
+                    </div>
+                    <div class="desc">UniTS: Unified Time Series Generative Model for Remote Sensing</div>
+                    <div class="tags-container"></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>50</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 13</td>
+                <td class="date">2025-09-22</td>
+                <td>
+                    <div class="title">
+                        <i class="fab fa-github gh-color"></i> 
+                        <a href="https://github.com/zqiao11/MSFT" target="_blank">zqiao11/MSFT</a>
+                    </div>
+                    <div class="desc">Multi-scale Finetuning for Encoder-based Time Series Foundation Models</div>
+                    <div class="tags-container"><span class="tag">deep-learning</span><span class="tag">fine-tuning</span><span class="tag">forecasting</span><span class="tag">multiscale-modeling</span><span class="tag">time-series</span></div>
+                </td>
+            </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="hf" class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th width="50">#</th>
+                            <th>Likes</th>
+                            <th>Date</th>
+                            <th>Model / Dataset Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+            <tr>
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 70</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/ronantakizawa/github-top-developers" target="_blank">ronantakizawa/github-top-developers</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">task_categories:text-retrieval</span><span class="tag">language:en</span><span class="tag">license:mit</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 49</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/Brianferrell787/financial-news-multisource" target="_blank">Brianferrell787/financial-news-multisource</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">task_categories:text-retrieval</span><span class="tag">task_categories:other</span><span class="tag">task_ids:language-modeling</span><span class="tag">task_ids:document-retrieval</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 36</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/AutonLab/Timeseries-PILE" target="_blank">AutonLab/Timeseries-PILE</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:time-series-forecasting</span><span class="tag">license:mit</span><span class="tag">arxiv:1703.07015</span><span class="tag">arxiv:2402.03885</span><span class="tag">region:us</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 33</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/Maple728/Time-300B" target="_blank">Maple728/Time-300B</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:time-series-forecasting</span><span class="tag">license:apache-2.0</span><span class="tag">size_categories:n>1T</span><span class="tag">arxiv:2409.16040</span><span class="tag">region:us</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>5</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 31</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/Datadog/BOOM" target="_blank">Datadog/BOOM</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:time-series-forecasting</span><span class="tag">license:apache-2.0</span><span class="tag">size_categories:100M<n<1B</span><span class="tag">modality:timeseries</span><span class="tag">arxiv:2505.14766</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 20</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/sebdg/crypto_data" target="_blank">sebdg/crypto_data</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:time-series-forecasting</span><span class="tag">multilinguality:monolingual</span><span class="tag">language:en</span><span class="tag">license:apache-2.0</span><span class="tag">region:us</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>7</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 10</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/Ehsanrs2/Forex_Factory_Calendar" target="_blank">Ehsanrs2/Forex_Factory_Calendar</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:time-series-forecasting</span><span class="tag">task_categories:tabular-classification</span><span class="tag">task_categories:tabular-regression</span><span class="tag">language:en</span><span class="tag">license:mit</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>8</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 9</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/mnemoraorg/smartphone-and-smartwatch-activity-and-biometrics-15m6" target="_blank">mnemoraorg/smartphone-and-smartwatch-activity-and-biometrics-15m6</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">task_categories:feature-extraction</span><span class="tag">language:en</span><span class="tag">license:ecl-2.0</span><span class="tag">size_categories:10M<n<100M</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>9</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 8</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/IGNF/TreeSatAI-Time-Series" target="_blank">IGNF/TreeSatAI-Time-Series</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:image-classification</span><span class="tag">license:cc-by-4.0</span><span class="tag">modality:image</span><span class="tag">modality:geospatial</span><span class="tag">arxiv:2404.08351</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>10</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 8</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/nyu-dice-lab/wavepulse-radio-raw-transcripts" target="_blank">nyu-dice-lab/wavepulse-radio-raw-transcripts</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-generation</span><span class="tag">task_categories:text-classification</span><span class="tag">task_ids:news-articles-summarization</span><span class="tag">task_ids:topic-classification</span><span class="tag">task_ids:sentiment-analysis</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>11</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 7</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/ronantakizawa/github-top-projects" target="_blank">ronantakizawa/github-top-projects</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">language:en</span><span class="tag">license:mit</span><span class="tag">size_categories:100K<n<1M</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 6</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/tarekmasryo/youtube-tiktok-trends-dataset-2025" target="_blank">tarekmasryo/youtube-tiktok-trends-dataset-2025</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:tabular-regression</span><span class="tag">task_categories:tabular-classification</span><span class="tag">task_categories:text-classification</span><span class="tag">language:en</span><span class="tag">license:cc-by-4.0</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 6</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/glopardo/sp500-earnings-transcripts" target="_blank">glopardo/sp500-earnings-transcripts</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">task_categories:question-answering</span><span class="tag">task_categories:summarization</span><span class="tag">task_categories:feature-extraction</span><span class="tag">task_categories:text-retrieval</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>14</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 5</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/stasvinokur/cve-and-cwe-dataset-1999-2025" target="_blank">stasvinokur/cve-and-cwe-dataset-1999-2025</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">language:en</span><span class="tag">license:cc0-1.0</span><span class="tag">size_categories:100K<n<1M</span><span class="tag">format:csv</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>15</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 5</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/ronantakizawa/trending-stocks-yahoo-finance" target="_blank">ronantakizawa/trending-stocks-yahoo-finance</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">task_categories:tabular-regression</span><span class="tag">language:en</span><span class="tag">license:mit</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>16</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 4</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/HachiML/Timeseries-QA" target="_blank">HachiML/Timeseries-QA</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-generation</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">language:en</span><span class="tag">language:ja</span><span class="tag">license:mit</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>17</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 4</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/thomaswmitch/kalshi-prediction-markets-betting" target="_blank">thomaswmitch/kalshi-prediction-markets-betting</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:other</span><span class="tag">language:en</span><span class="tag">license:mit</span><span class="tag">size_categories:1M<n<10M</span><span class="tag">format:parquet</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>18</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/AisotTechnologies/aisot_btc_lob_trades" target="_blank">AisotTechnologies/aisot_btc_lob_trades</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">license:cc-by-nc-sa-4.0</span><span class="tag">size_categories:100M<n<1B</span><span class="tag">format:csv</span><span class="tag">modality:tabular</span><span class="tag">modality:text</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>19</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/rugds/ditec-wdn" target="_blank">rugds/ditec-wdn</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:graph-ml</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">language:en</span><span class="tag">license:cc-by-4.0</span><span class="tag">size_categories:1B<n<10B</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>20</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/harpertoken/harpertokenSysMon" target="_blank">harpertoken/harpertokenSysMon</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">language:en</span><span class="tag">license:mit</span><span class="tag">size_categories:n<1K</span><span class="tag">format:parquet</span><span class="tag">modality:tabular</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>21</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/kapr/trading-bot-backtesting" target="_blank">kapr/trading-bot-backtesting</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">language:en</span><span class="tag">license:cc-by-4.0</span><span class="tag">size_categories:1M<n<10M</span><span class="tag">format:csv</span><span class="tag">modality:tabular</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>22</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/maknee/league-of-legends-decoded-replay-packets" target="_blank">maknee/league-of-legends-decoded-replay-packets</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:reinforcement-learning</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">task_categories:other</span><span class="tag">language:en</span><span class="tag">license:apache-2.0</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>23</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/thuml/Time-Series-Library" target="_blank">thuml/Time-Series-Library</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:time-series-forecasting</span><span class="tag">language:en</span><span class="tag">license:cc-by-4.0</span><span class="tag">size_categories:1M<n<10M</span><span class="tag">modality:tabular</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>24</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/ronantakizawa/huggingface-top-papers" target="_blank">ronantakizawa/huggingface-top-papers</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:text-classification</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">task_categories:text-retrieval</span><span class="tag">language:en</span><span class="tag">license:mit</span></div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>25</td>
+                <td class="stars"><i class="fas fa-star" style="color:#e6ac00"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/datasets/zhykoties/time-series-language-alignment" target="_blank">zhykoties/time-series-language-alignment</a>
+                    </div>
+                    <div class="desc">Time Series Dataset</div>
+                    <div class="tags-container"><span class="tag">task_categories:visual-question-answering</span><span class="tag">task_categories:text-generation</span><span class="tag">task_categories:time-series-forecasting</span><span class="tag">language:en</span><span class="tag">license:cc-by-4.0</span></div>
+                </td>
+            </tr>
+            
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+    </html>
+    

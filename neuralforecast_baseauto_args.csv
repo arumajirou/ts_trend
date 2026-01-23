@@ -1,0 +1,15 @@
+Argument,Default,Type_Hint,Description,Possible_Values
+cls_model,REQUIRED,inspect._empty,,
+h,REQUIRED,inspect._empty,,
+loss,REQUIRED,inspect._empty,Optimization objective function (PyTorch module).,"MAE(), MSE(), MQLoss(), DistributionLoss(), etc."
+valid_loss,REQUIRED,inspect._empty,"Validation loss function. If None, uses 'loss'.",Same as 'loss'.
+config,REQUIRED,inspect._empty,,
+search_alg,<ray.tune.search.basic_variant.BasicVariantGenerator object at 0x000002953031E090>,inspect._empty,Search algorithm for hyperparameter optimization. Default is BasicVariantGenerator (Random Search).,"BasicVariantGenerator (Grid/Random), BayesOptSearch, OptunaSearch, HyperOptSearch"
+num_samples,10,inspect._empty,Number of hyperparameter combinations to try.,"Integer > 0 (e.g., 10, 20, 50)"
+cpus,12,inspect._empty,Resources allocated per trial.,"Integer (e.g., 1, 2, 4)"
+gpus,0,inspect._empty,Resources allocated per trial.,"Integer (e.g., 1, 2, 4)"
+refit_with_val,False,inspect._empty,"If True, refits the best model on (Train + Validation) data.","True, False"
+verbose,False,inspect._empty,Logging verbosity.,"True (print logs), False (silent)"
+alias,None,inspect._empty,,
+backend,ray,inspect._empty,Execution backend for HPO.,"'ray' (default), 'optuna'"
+callbacks,None,inspect._empty,List of callbacks for the search process.,List of Ray/Optuna callbacks

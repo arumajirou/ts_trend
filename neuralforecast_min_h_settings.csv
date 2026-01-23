@@ -1,0 +1,35 @@
+Auto_Model,Base_Model,Min_h,Status,Note
+AutoAutoformer,Not Found,Unknown,Skipped (Base model not found),
+AutoBiTCN,BiTCN,1,OK,Verified at h=1
+AutoDLinear,DLinear,1,OK,Verified at h=1
+AutoDeepAR,DeepAR,1,OK,Verified at h=1
+AutoDeepNPTS,DeepNPTS,1,OK,Verified at h=1
+AutoDilatedRNN,DilatedRNN,1,OK,Verified at h=1
+AutoFEDformer,FEDformer,1,OK,Verified at h=1
+AutoGRU,GRU,1,OK,Verified at h=1
+AutoHINT,HINT,> 96,Failed,Last Error: HINT.__init__() got an unexpected keyword argument...
+AutoInformer,Informer,1,OK,Verified at h=1
+AutoKAN,KAN,1,OK,Verified at h=1
+AutoLSTM,LSTM,1,OK,Verified at h=1
+AutoMLP,MLP,> 96,Failed,Last Error: MLP.__init__() got an unexpected keyword argument ...
+AutoMLPMultivariate,MLPMultivariate,1,OK,Verified at h=1
+AutoNBEATS,NBEATS,2,OK,Verified at h=2
+AutoNBEATSx,NBEATSx,2,OK,Verified at h=2
+AutoNHITS,NHITS,1,OK,Verified at h=1
+AutoNLinear,NLinear,1,OK,Verified at h=1
+AutoPatchTST,PatchTST,1,OK,Verified at h=1
+AutoRMoK,RMoK,1,OK,Verified at h=1
+AutoRNN,RNN,1,OK,Verified at h=1
+AutoSOFTS,SOFTS,1,OK,Verified at h=1
+AutoStemGNN,StemGNN,1,OK,Verified at h=1
+AutoTCN,TCN,1,OK,Verified at h=1
+AutoTFT,TFT,1,OK,Verified at h=1
+AutoTSMixer,TSMixer,1,OK,Verified at h=1
+AutoTSMixerx,TSMixerx,1,OK,Verified at h=1
+AutoTiDE,TiDE,1,OK,Verified at h=1
+AutoTimeMixer,TimeMixer,1,OK,Verified at h=1
+AutoTimeXer,TimeXer,16,OK,Verified at h=16
+AutoTimesNet,TimesNet,1,OK,Verified at h=1
+AutoVanillaTransformer,VanillaTransformer,1,OK,Verified at h=1
+AutoiTransformer,iTransformer,1,OK,Verified at h=1
+AutoxLSTM,xLSTM,> 96,Failed,Last Error: Please install `xlstm`. You also need to install `...

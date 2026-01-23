@@ -1,0 +1,1048 @@
+Auto_Model,Config_Argument,Is_Required,Default_Value,Category,Type_Hint,In_Default_Search,Search_Space_Example
+AutoBiTCN,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoBiTCN,hidden_size,0,16,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556135F10>
+AutoBiTCN,dropout,0,0.5,Architecture (Model Structure),float,1,<Float object at 0x00000295561345D0>
+AutoBiTCN,futr_exog_list,0,None,Data / Features,Any,0,
+AutoBiTCN,hist_exog_list,0,None,Data / Features,Any,0,
+AutoBiTCN,stat_exog_list,0,None,Data / Features,Any,0,
+AutoBiTCN,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoBiTCN,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556134950>
+AutoBiTCN,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556137F10>
+AutoBiTCN,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoBiTCN,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoBiTCN,val_check_steps,0,100,Optimization (Training),int,0,
+AutoBiTCN,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556134A90>
+AutoBiTCN,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoBiTCN,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x0000029556134B50>
+AutoBiTCN,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoBiTCN,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoBiTCN,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoBiTCN,step_size,0,1,Optimization (Training),int,0,
+AutoBiTCN,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x00000295561341D0>
+AutoBiTCN,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x00000295561347D0>
+AutoBiTCN,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoBiTCN,optimizer,0,None,Optimization (Training),Any,0,
+AutoBiTCN,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoBiTCN,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoBiTCN,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoBiTCN,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoBiTCN,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoDLinear,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoDLinear,stat_exog_list,0,None,Data / Features,Any,0,
+AutoDLinear,hist_exog_list,0,None,Data / Features,Any,0,
+AutoDLinear,futr_exog_list,0,None,Data / Features,Any,0,
+AutoDLinear,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoDLinear,moving_avg_window,0,25,Other / Miscellaneous,int,1,<Categorical object at 0x000002955612F650>
+AutoDLinear,max_steps,0,5000,Optimization (Training),int,1,<Float object at 0x000002955612F590>
+AutoDLinear,learning_rate,0,0.0001,Optimization (Training),float,1,<Float object at 0x000002955612F7D0>
+AutoDLinear,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoDLinear,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoDLinear,val_check_steps,0,100,Optimization (Training),int,0,
+AutoDLinear,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955612FB10>
+AutoDLinear,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoDLinear,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x000002955612F690>
+AutoDLinear,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoDLinear,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoDLinear,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoDLinear,step_size,0,1,Optimization (Training),int,0,
+AutoDLinear,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955612E110>
+AutoDLinear,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955612E410>
+AutoDLinear,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoDLinear,optimizer,0,None,Optimization (Training),Any,0,
+AutoDLinear,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoDLinear,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoDLinear,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoDLinear,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoDLinear,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoDeepAR,input_size,0,-1,Data / Features,int,0,
+AutoDeepAR,h_train,0,1,Data / Features,int,0,
+AutoDeepAR,lstm_n_layers,0,2,Architecture (Model Structure),int,1,<Integer object at 0x0000029556137190>
+AutoDeepAR,lstm_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556134150>
+AutoDeepAR,lstm_dropout,0,0.1,Architecture (Model Structure),float,1,<Float object at 0x0000029556135850>
+AutoDeepAR,decoder_hidden_layers,0,0,Architecture (Model Structure),int,0,
+AutoDeepAR,decoder_hidden_size,0,0,Architecture (Model Structure),int,0,
+AutoDeepAR,trajectory_samples,0,100,Other / Miscellaneous,int,0,
+AutoDeepAR,stat_exog_list,0,None,Data / Features,Any,0,
+AutoDeepAR,hist_exog_list,0,None,Data / Features,Any,0,
+AutoDeepAR,futr_exog_list,0,None,Data / Features,Any,0,
+AutoDeepAR,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoDeepAR,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556136890>
+AutoDeepAR,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x00000295561361D0>
+AutoDeepAR,num_lr_decays,0,3,Optimization (Training),int,0,
+AutoDeepAR,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoDeepAR,val_check_steps,0,100,Optimization (Training),int,0,
+AutoDeepAR,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556136950>
+AutoDeepAR,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoDeepAR,windows_batch_size,0,1024,Optimization (Training),int,1,<Categorical object at 0x0000029556136350>
+AutoDeepAR,inference_windows_batch_size,0,-1,Optimization (Training),int,0,
+AutoDeepAR,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoDeepAR,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoDeepAR,step_size,0,1,Optimization (Training),int,0,
+AutoDeepAR,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556136590>
+AutoDeepAR,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556137150>
+AutoDeepAR,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoDeepAR,optimizer,0,None,Optimization (Training),Any,0,
+AutoDeepAR,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoDeepAR,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoDeepAR,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoDeepAR,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoDeepAR,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoDeepNPTS,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoDeepNPTS,hidden_size,0,32,Architecture (Model Structure),int,1,<Categorical object at 0x000002955603A4D0>
+AutoDeepNPTS,batch_norm,0,True,Optimization (Training),bool,0,
+AutoDeepNPTS,dropout,0,0.1,Architecture (Model Structure),float,1,<Float object at 0x000002955603ABD0>
+AutoDeepNPTS,n_layers,0,2,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556039990>
+AutoDeepNPTS,stat_exog_list,0,None,Data / Features,Any,0,
+AutoDeepNPTS,hist_exog_list,0,None,Data / Features,Any,0,
+AutoDeepNPTS,futr_exog_list,0,None,Data / Features,Any,0,
+AutoDeepNPTS,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoDeepNPTS,max_steps,0,1000,Optimization (Training),int,1,<Float object at 0x00000295560381D0>
+AutoDeepNPTS,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556038810>
+AutoDeepNPTS,num_lr_decays,0,3,Optimization (Training),int,0,
+AutoDeepNPTS,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoDeepNPTS,val_check_steps,0,100,Optimization (Training),int,0,
+AutoDeepNPTS,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556038AD0>
+AutoDeepNPTS,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoDeepNPTS,windows_batch_size,0,1024,Optimization (Training),int,1,<Categorical object at 0x000002955603B450>
+AutoDeepNPTS,inference_windows_batch_size,0,1024,Optimization (Training),int,0,
+AutoDeepNPTS,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoDeepNPTS,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoDeepNPTS,step_size,0,1,Optimization (Training),int,0,
+AutoDeepNPTS,scaler_type,0,standard,Other / Miscellaneous,str,1,<Categorical object at 0x000002955603A550>
+AutoDeepNPTS,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955603AD90>
+AutoDeepNPTS,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoDeepNPTS,optimizer,0,None,Optimization (Training),Any,0,
+AutoDeepNPTS,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoDeepNPTS,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoDeepNPTS,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoDeepNPTS,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoDeepNPTS,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoDilatedRNN,input_size,0,-1,Data / Features,int,0,
+AutoDilatedRNN,inference_input_size,0,None,Data / Features,Optional[int],0,
+AutoDilatedRNN,cell_type,0,LSTM,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556137050>
+AutoDilatedRNN,dilations,0,"[[1, 2], [4, 8]]",Other / Miscellaneous,List[List[int]],1,<Categorical object at 0x00000295561376D0>
+AutoDilatedRNN,encoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556137310>
+AutoDilatedRNN,context_size,0,10,Data / Features,int,1,<Categorical object at 0x00000295561375D0>
+AutoDilatedRNN,decoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x00000295561379D0>
+AutoDilatedRNN,decoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoDilatedRNN,futr_exog_list,0,None,Data / Features,Any,0,
+AutoDilatedRNN,hist_exog_list,0,None,Data / Features,Any,0,
+AutoDilatedRNN,stat_exog_list,0,None,Data / Features,Any,0,
+AutoDilatedRNN,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoDilatedRNN,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556137450>
+AutoDilatedRNN,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556137B50>
+AutoDilatedRNN,num_lr_decays,0,3,Optimization (Training),int,0,
+AutoDilatedRNN,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoDilatedRNN,val_check_steps,0,100,Optimization (Training),int,0,
+AutoDilatedRNN,batch_size,0,32,Optimization (Training),Any,1,<Categorical object at 0x0000029556137C90>
+AutoDilatedRNN,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoDilatedRNN,windows_batch_size,0,128,Optimization (Training),Any,0,
+AutoDilatedRNN,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoDilatedRNN,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoDilatedRNN,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoDilatedRNN,step_size,0,1,Optimization (Training),int,0,
+AutoDilatedRNN,scaler_type,0,robust,Other / Miscellaneous,str,0,
+AutoDilatedRNN,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556137C50>
+AutoDilatedRNN,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoDilatedRNN,optimizer,0,None,Optimization (Training),Any,0,
+AutoDilatedRNN,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoDilatedRNN,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoDilatedRNN,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoDilatedRNN,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoDilatedRNN,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoFEDformer,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoFEDformer,stat_exog_list,0,None,Data / Features,Any,0,
+AutoFEDformer,hist_exog_list,0,None,Data / Features,Any,0,
+AutoFEDformer,futr_exog_list,0,None,Data / Features,Any,0,
+AutoFEDformer,decoder_input_size_multiplier,0,0.5,Data / Features,float,0,
+AutoFEDformer,version,0,Fourier,Other / Miscellaneous,str,0,
+AutoFEDformer,modes,0,64,Other / Miscellaneous,int,0,
+AutoFEDformer,mode_select,0,random,Other / Miscellaneous,str,0,
+AutoFEDformer,hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x000002955613FB10>
+AutoFEDformer,dropout,0,0.05,Architecture (Model Structure),float,0,
+AutoFEDformer,n_head,0,8,Architecture (Model Structure),int,0,
+AutoFEDformer,conv_hidden_size,0,32,Architecture (Model Structure),int,0,
+AutoFEDformer,activation,0,gelu,Architecture (Model Structure),str,0,
+AutoFEDformer,encoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoFEDformer,decoder_layers,0,1,Architecture (Model Structure),int,0,
+AutoFEDformer,MovingAvg_window,0,25,Other / Miscellaneous,int,0,
+AutoFEDformer,max_steps,0,5000,Optimization (Training),int,1,<Categorical object at 0x000002955614CE50>
+AutoFEDformer,learning_rate,0,0.0001,Optimization (Training),float,1,<Float object at 0x000002955613E790>
+AutoFEDformer,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoFEDformer,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoFEDformer,val_check_steps,0,100,Optimization (Training),int,0,
+AutoFEDformer,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955614E010>
+AutoFEDformer,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoFEDformer,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x000002955614E910>
+AutoFEDformer,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoFEDformer,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoFEDformer,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoFEDformer,step_size,0,1,Optimization (Training),int,0,
+AutoFEDformer,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955613EB10>
+AutoFEDformer,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955614E950>
+AutoFEDformer,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoFEDformer,optimizer,0,None,Optimization (Training),Any,0,
+AutoFEDformer,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoFEDformer,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoFEDformer,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoFEDformer,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoFEDformer,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoGRU,input_size,0,-1,Data / Features,int,0,
+AutoGRU,inference_input_size,0,None,Data / Features,Optional[int],0,
+AutoGRU,h_train,0,1,Data / Features,int,0,
+AutoGRU,encoder_n_layers,0,2,Architecture (Model Structure),int,1,<Integer object at 0x0000029556131A50>
+AutoGRU,encoder_hidden_size,0,200,Architecture (Model Structure),int,1,<Categorical object at 0x00000295561334D0>
+AutoGRU,encoder_activation,0,None,Architecture (Model Structure),Optional[str],0,
+AutoGRU,encoder_bias,0,True,Other / Miscellaneous,bool,0,
+AutoGRU,encoder_dropout,0,0.0,Architecture (Model Structure),float,0,
+AutoGRU,context_size,0,None,Data / Features,Optional[int],1,<Categorical object at 0x0000029556131FD0>
+AutoGRU,decoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556133650>
+AutoGRU,decoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoGRU,futr_exog_list,0,None,Data / Features,Any,0,
+AutoGRU,hist_exog_list,0,None,Data / Features,Any,0,
+AutoGRU,stat_exog_list,0,None,Data / Features,Any,0,
+AutoGRU,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoGRU,recurrent,0,False,Other / Miscellaneous,Any,0,
+AutoGRU,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x00000295561329D0>
+AutoGRU,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x00000295561323D0>
+AutoGRU,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoGRU,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoGRU,val_check_steps,0,100,Optimization (Training),int,0,
+AutoGRU,batch_size,0,32,Optimization (Training),Any,1,<Categorical object at 0x0000029556133950>
+AutoGRU,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoGRU,windows_batch_size,0,128,Optimization (Training),Any,0,
+AutoGRU,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoGRU,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoGRU,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoGRU,step_size,0,1,Optimization (Training),int,0,
+AutoGRU,scaler_type,0,robust,Other / Miscellaneous,str,0,
+AutoGRU,random_seed,0,1,Other / Miscellaneous,Any,1,<Integer object at 0x0000029556133B50>
+AutoGRU,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoGRU,optimizer,0,None,Optimization (Training),Any,0,
+AutoGRU,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoGRU,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoGRU,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoGRU,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoGRU,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoHINT,S,1,REQUIRED (必須),Other / Miscellaneous,numpy.ndarray,0,
+AutoHINT,model,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoHINT,reconciliation,1,REQUIRED (必須),Other / Miscellaneous,str,0,
+AutoInformer,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoInformer,futr_exog_list,0,None,Data / Features,Any,0,
+AutoInformer,hist_exog_list,0,None,Data / Features,Any,0,
+AutoInformer,stat_exog_list,0,None,Data / Features,Any,0,
+AutoInformer,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoInformer,decoder_input_size_multiplier,0,0.5,Data / Features,float,0,
+AutoInformer,hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x000002955613CF50>
+AutoInformer,dropout,0,0.05,Architecture (Model Structure),float,0,
+AutoInformer,factor,0,3,Other / Miscellaneous,int,0,
+AutoInformer,n_head,0,4,Architecture (Model Structure),int,1,<Categorical object at 0x000002955613DE90>
+AutoInformer,conv_hidden_size,0,32,Architecture (Model Structure),int,0,
+AutoInformer,activation,0,gelu,Architecture (Model Structure),str,0,
+AutoInformer,encoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoInformer,decoder_layers,0,1,Architecture (Model Structure),int,0,
+AutoInformer,distil,0,True,Other / Miscellaneous,bool,0,
+AutoInformer,max_steps,0,5000,Optimization (Training),int,1,<Categorical object at 0x000002955613E310>
+AutoInformer,learning_rate,0,0.0001,Optimization (Training),float,1,<Float object at 0x000002955613E110>
+AutoInformer,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoInformer,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoInformer,val_check_steps,0,100,Optimization (Training),int,0,
+AutoInformer,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955613E5D0>
+AutoInformer,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoInformer,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x000002955613E9D0>
+AutoInformer,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoInformer,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoInformer,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoInformer,step_size,0,1,Optimization (Training),int,0,
+AutoInformer,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955613E210>
+AutoInformer,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955613EA10>
+AutoInformer,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoInformer,optimizer,0,None,Optimization (Training),Any,0,
+AutoInformer,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoInformer,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoInformer,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoInformer,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoInformer,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoKAN,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoKAN,grid_size,0,5,Other / Miscellaneous,int,1,<Categorical object at 0x000002955603A110>
+AutoKAN,spline_order,0,3,Other / Miscellaneous,int,1,<Categorical object at 0x000002955603AA50>
+AutoKAN,scale_noise,0,0.1,Other / Miscellaneous,float,0,
+AutoKAN,scale_base,0,1.0,Other / Miscellaneous,float,0,
+AutoKAN,scale_spline,0,1.0,Other / Miscellaneous,float,0,
+AutoKAN,enable_standalone_scale_spline,0,True,Other / Miscellaneous,bool,0,
+AutoKAN,grid_eps,0,0.02,Other / Miscellaneous,float,0,
+AutoKAN,grid_range,0,"[-1, 1]",Other / Miscellaneous,list,0,
+AutoKAN,n_hidden_layers,0,1,Architecture (Model Structure),int,0,
+AutoKAN,hidden_size,0,512,Architecture (Model Structure),"Union[int, list]",1,<Categorical object at 0x00000295560384D0>
+AutoKAN,stat_exog_list,0,None,Data / Features,Any,0,
+AutoKAN,hist_exog_list,0,None,Data / Features,Any,0,
+AutoKAN,futr_exog_list,0,None,Data / Features,Any,0,
+AutoKAN,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoKAN,max_steps,0,1000,Optimization (Training),int,1,<Float object at 0x000002955603A950>
+AutoKAN,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955603A0D0>
+AutoKAN,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoKAN,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoKAN,val_check_steps,0,100,Optimization (Training),int,0,
+AutoKAN,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x00000295560394D0>
+AutoKAN,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoKAN,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x000002955603AE90>
+AutoKAN,inference_windows_batch_size,0,-1,Optimization (Training),Any,0,
+AutoKAN,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoKAN,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoKAN,step_size,0,1,Optimization (Training),int,0,
+AutoKAN,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556039650>
+AutoKAN,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556038590>
+AutoKAN,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoKAN,optimizer,0,None,Optimization (Training),Any,0,
+AutoKAN,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoKAN,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoKAN,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoLSTM,input_size,0,-1,Data / Features,int,0,
+AutoLSTM,inference_input_size,0,None,Data / Features,Optional[int],0,
+AutoLSTM,h_train,0,1,Data / Features,int,0,
+AutoLSTM,encoder_n_layers,0,2,Architecture (Model Structure),int,1,<Integer object at 0x00000295561309D0>
+AutoLSTM,encoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x000002955306ED90>
+AutoLSTM,encoder_bias,0,True,Other / Miscellaneous,bool,0,
+AutoLSTM,encoder_dropout,0,0.0,Architecture (Model Structure),float,0,
+AutoLSTM,context_size,0,None,Data / Features,Optional[int],1,<Categorical object at 0x0000029556130B10>
+AutoLSTM,decoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x00000295561306D0>
+AutoLSTM,decoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoLSTM,futr_exog_list,0,None,Data / Features,Any,0,
+AutoLSTM,hist_exog_list,0,None,Data / Features,Any,0,
+AutoLSTM,stat_exog_list,0,None,Data / Features,Any,0,
+AutoLSTM,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoLSTM,recurrent,0,False,Other / Miscellaneous,Any,0,
+AutoLSTM,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556130C50>
+AutoLSTM,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955371C8D0>
+AutoLSTM,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoLSTM,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoLSTM,val_check_steps,0,100,Optimization (Training),int,0,
+AutoLSTM,batch_size,0,32,Optimization (Training),Any,1,<Categorical object at 0x0000029556131390>
+AutoLSTM,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoLSTM,windows_batch_size,0,128,Optimization (Training),Any,0,
+AutoLSTM,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoLSTM,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoLSTM,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoLSTM,step_size,0,1,Optimization (Training),int,0,
+AutoLSTM,scaler_type,0,robust,Other / Miscellaneous,str,0,
+AutoLSTM,random_seed,0,1,Other / Miscellaneous,Any,1,<Integer object at 0x0000029556130FD0>
+AutoLSTM,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoLSTM,optimizer,0,None,Optimization (Training),Any,0,
+AutoLSTM,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoLSTM,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoLSTM,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoLSTM,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoLSTM,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoMLP,in_features,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoMLP,out_features,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoMLP,activation,1,REQUIRED (必須),Architecture (Model Structure),Any,0,
+AutoMLP,hidden_size,1,REQUIRED (必須),Architecture (Model Structure),Any,1,<Categorical object at 0x0000029556137510>
+AutoMLP,num_layers,1,REQUIRED (必須),Architecture (Model Structure),Any,1,<Integer object at 0x0000029556136090>
+AutoMLP,dropout,1,REQUIRED (必須),Architecture (Model Structure),Any,0,
+AutoMLPMultivariate,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoMLPMultivariate,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoMLPMultivariate,stat_exog_list,0,None,Data / Features,Any,0,
+AutoMLPMultivariate,hist_exog_list,0,None,Data / Features,Any,0,
+AutoMLPMultivariate,futr_exog_list,0,None,Data / Features,Any,0,
+AutoMLPMultivariate,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoMLPMultivariate,num_layers,0,2,Architecture (Model Structure),Any,1,<Integer object at 0x00000295561962D0>
+AutoMLPMultivariate,hidden_size,0,1024,Architecture (Model Structure),Any,1,<Categorical object at 0x0000029556196210>
+AutoMLPMultivariate,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556196590>
+AutoMLPMultivariate,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556196390>
+AutoMLPMultivariate,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoMLPMultivariate,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoMLPMultivariate,val_check_steps,0,100,Optimization (Training),int,0,
+AutoMLPMultivariate,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556196690>
+AutoMLPMultivariate,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoMLPMultivariate,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoMLPMultivariate,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoMLPMultivariate,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoMLPMultivariate,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoMLPMultivariate,step_size,0,1,Optimization (Training),int,0,
+AutoMLPMultivariate,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556196490>
+AutoMLPMultivariate,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556196750>
+AutoMLPMultivariate,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoMLPMultivariate,optimizer,0,None,Optimization (Training),Any,0,
+AutoMLPMultivariate,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoMLPMultivariate,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoMLPMultivariate,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoMLPMultivariate,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoMLPMultivariate,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoNBEATS,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoNBEATS,n_harmonics,0,2,Other / Miscellaneous,int,0,
+AutoNBEATS,n_polynomials,0,None,Other / Miscellaneous,Optional[int],0,
+AutoNBEATS,n_basis,0,2,Other / Miscellaneous,int,0,
+AutoNBEATS,basis,0,polynomial,Other / Miscellaneous,str,0,
+AutoNBEATS,stack_types,0,"['identity', 'trend', 'seasonality']",Other / Miscellaneous,list,0,
+AutoNBEATS,n_blocks,0,"[1, 1, 1]",Other / Miscellaneous,list,0,
+AutoNBEATS,mlp_units,0,"[[512, 512], [512, 512], [512, 512]]",Other / Miscellaneous,list,0,
+AutoNBEATS,dropout_prob_theta,0,0.0,Architecture (Model Structure),float,0,
+AutoNBEATS,activation,0,ReLU,Architecture (Model Structure),str,0,
+AutoNBEATS,shared_weights,0,False,Other / Miscellaneous,bool,0,
+AutoNBEATS,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955612C910>
+AutoNBEATS,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955612C750>
+AutoNBEATS,num_lr_decays,0,3,Optimization (Training),int,0,
+AutoNBEATS,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoNBEATS,val_check_steps,0,100,Optimization (Training),int,0,
+AutoNBEATS,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955612D010>
+AutoNBEATS,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoNBEATS,windows_batch_size,0,1024,Optimization (Training),int,1,<Categorical object at 0x000002955612D250>
+AutoNBEATS,inference_windows_batch_size,0,-1,Optimization (Training),int,0,
+AutoNBEATS,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoNBEATS,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoNBEATS,step_size,0,1,Optimization (Training),int,0,
+AutoNBEATS,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955612EA90>
+AutoNBEATS,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955612D290>
+AutoNBEATS,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoNBEATS,optimizer,0,None,Optimization (Training),Any,0,
+AutoNBEATS,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoNBEATS,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoNBEATS,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoNBEATS,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoNBEATS,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoNBEATSx,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoNBEATSx,futr_exog_list,0,None,Data / Features,Any,0,
+AutoNBEATSx,hist_exog_list,0,None,Data / Features,Any,0,
+AutoNBEATSx,stat_exog_list,0,None,Data / Features,Any,0,
+AutoNBEATSx,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoNBEATSx,n_harmonics,0,2,Other / Miscellaneous,Any,0,
+AutoNBEATSx,n_polynomials,0,2,Other / Miscellaneous,Any,0,
+AutoNBEATSx,stack_types,0,"['identity', 'trend', 'seasonality']",Other / Miscellaneous,list,0,
+AutoNBEATSx,n_blocks,0,"[1, 1, 1]",Other / Miscellaneous,list,0,
+AutoNBEATSx,mlp_units,0,"[[512, 512], [512, 512], [512, 512]]",Other / Miscellaneous,list,0,
+AutoNBEATSx,dropout_prob_theta,0,0.0,Architecture (Model Structure),Any,0,
+AutoNBEATSx,activation,0,ReLU,Architecture (Model Structure),Any,0,
+AutoNBEATSx,shared_weights,0,False,Other / Miscellaneous,Any,0,
+AutoNBEATSx,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955612DA50>
+AutoNBEATSx,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955612C810>
+AutoNBEATSx,num_lr_decays,0,3,Optimization (Training),int,0,
+AutoNBEATSx,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoNBEATSx,val_check_steps,0,100,Optimization (Training),int,0,
+AutoNBEATSx,batch_size,0,32,Optimization (Training),Any,1,<Categorical object at 0x000002955612D510>
+AutoNBEATSx,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoNBEATSx,windows_batch_size,0,1024,Optimization (Training),int,1,<Categorical object at 0x000002955612DB50>
+AutoNBEATSx,inference_windows_batch_size,0,-1,Optimization (Training),int,0,
+AutoNBEATSx,start_padding_enabled,0,False,Other / Miscellaneous,bool,0,
+AutoNBEATSx,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoNBEATSx,step_size,0,1,Optimization (Training),int,0,
+AutoNBEATSx,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955612D8D0>
+AutoNBEATSx,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955612E490>
+AutoNBEATSx,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoNBEATSx,optimizer,0,None,Optimization (Training),Any,0,
+AutoNBEATSx,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoNBEATSx,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoNBEATSx,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoNBEATSx,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoNBEATSx,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoNHITS,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoNHITS,futr_exog_list,0,None,Data / Features,Any,0,
+AutoNHITS,hist_exog_list,0,None,Data / Features,Any,0,
+AutoNHITS,stat_exog_list,0,None,Data / Features,Any,0,
+AutoNHITS,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoNHITS,stack_types,0,"['identity', 'identity', 'identity']",Other / Miscellaneous,list,0,
+AutoNHITS,n_blocks,0,"[1, 1, 1]",Other / Miscellaneous,list,0,
+AutoNHITS,mlp_units,0,"[[512, 512], [512, 512], [512, 512]]",Other / Miscellaneous,list,0,
+AutoNHITS,n_pool_kernel_size,0,"[2, 2, 1]",Architecture (Model Structure),list,1,<Categorical object at 0x000002955612C390>
+AutoNHITS,n_freq_downsample,0,"[4, 2, 1]",Other / Miscellaneous,list,1,<Categorical object at 0x000002955612E790>
+AutoNHITS,pooling_mode,0,MaxPool1d,Other / Miscellaneous,str,0,
+AutoNHITS,interpolation_mode,0,linear,Other / Miscellaneous,str,0,
+AutoNHITS,dropout_prob_theta,0,0.0,Architecture (Model Structure),Any,0,
+AutoNHITS,activation,0,ReLU,Architecture (Model Structure),Any,0,
+AutoNHITS,max_steps,0,1000,Optimization (Training),int,1,<Float object at 0x0000029552FB5E90>
+AutoNHITS,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955612E150>
+AutoNHITS,num_lr_decays,0,3,Optimization (Training),int,0,
+AutoNHITS,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoNHITS,val_check_steps,0,100,Optimization (Training),int,0,
+AutoNHITS,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955612E990>
+AutoNHITS,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoNHITS,windows_batch_size,0,1024,Optimization (Training),int,1,<Categorical object at 0x000002955612E7D0>
+AutoNHITS,inference_windows_batch_size,0,-1,Optimization (Training),int,0,
+AutoNHITS,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoNHITS,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoNHITS,step_size,0,1,Optimization (Training),int,0,
+AutoNHITS,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955612EF50>
+AutoNHITS,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955612EF90>
+AutoNHITS,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoNHITS,optimizer,0,None,Optimization (Training),Any,0,
+AutoNHITS,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoNHITS,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoNHITS,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoNHITS,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoNHITS,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoNLinear,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoNLinear,stat_exog_list,0,None,Data / Features,Any,0,
+AutoNLinear,hist_exog_list,0,None,Data / Features,Any,0,
+AutoNLinear,futr_exog_list,0,None,Data / Features,Any,0,
+AutoNLinear,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoNLinear,max_steps,0,5000,Optimization (Training),int,1,<Float object at 0x000002955612FD10>
+AutoNLinear,learning_rate,0,0.0001,Optimization (Training),float,1,<Float object at 0x000002955612FF50>
+AutoNLinear,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoNLinear,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoNLinear,val_check_steps,0,100,Optimization (Training),int,0,
+AutoNLinear,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556023510>
+AutoNLinear,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoNLinear,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x0000029556020710>
+AutoNLinear,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoNLinear,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoNLinear,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoNLinear,step_size,0,1,Optimization (Training),int,0,
+AutoNLinear,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955612D790>
+AutoNLinear,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556022990>
+AutoNLinear,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoNLinear,optimizer,0,None,Optimization (Training),Any,0,
+AutoNLinear,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoNLinear,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoNLinear,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoNLinear,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoNLinear,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoPatchTST,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoPatchTST,stat_exog_list,0,None,Data / Features,Any,0,
+AutoPatchTST,hist_exog_list,0,None,Data / Features,Any,0,
+AutoPatchTST,futr_exog_list,0,None,Data / Features,Any,0,
+AutoPatchTST,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoPatchTST,encoder_layers,0,3,Architecture (Model Structure),int,0,
+AutoPatchTST,n_heads,0,16,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614C750>
+AutoPatchTST,hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614C650>
+AutoPatchTST,linear_hidden_size,0,256,Architecture (Model Structure),int,0,
+AutoPatchTST,dropout,0,0.2,Architecture (Model Structure),float,0,
+AutoPatchTST,fc_dropout,0,0.2,Architecture (Model Structure),float,0,
+AutoPatchTST,head_dropout,0,0.0,Architecture (Model Structure),float,0,
+AutoPatchTST,attn_dropout,0,0.0,Architecture (Model Structure),float,0,
+AutoPatchTST,patch_len,0,16,Data / Features,int,1,<Categorical object at 0x000002955614C850>
+AutoPatchTST,stride,0,8,Other / Miscellaneous,int,0,
+AutoPatchTST,revin,0,True,Other / Miscellaneous,bool,1,<Categorical object at 0x000002955614C710>
+AutoPatchTST,revin_affine,0,False,Other / Miscellaneous,bool,0,
+AutoPatchTST,revin_subtract_last,0,True,Other / Miscellaneous,bool,0,
+AutoPatchTST,activation,0,gelu,Architecture (Model Structure),str,0,
+AutoPatchTST,res_attention,0,True,Other / Miscellaneous,bool,0,
+AutoPatchTST,batch_normalization,0,False,Optimization (Training),bool,0,
+AutoPatchTST,learn_pos_embed,0,True,Other / Miscellaneous,bool,0,
+AutoPatchTST,max_steps,0,5000,Optimization (Training),int,1,<Categorical object at 0x000002955614CB50>
+AutoPatchTST,learning_rate,0,0.0001,Optimization (Training),float,1,<Float object at 0x000002955614C950>
+AutoPatchTST,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoPatchTST,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoPatchTST,val_check_steps,0,100,Optimization (Training),int,0,
+AutoPatchTST,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955614CC50>
+AutoPatchTST,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoPatchTST,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x000002955614CF50>
+AutoPatchTST,inference_windows_batch_size,0,1024,Optimization (Training),int,0,
+AutoPatchTST,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoPatchTST,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoPatchTST,step_size,0,1,Optimization (Training),int,0,
+AutoPatchTST,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955614CA10>
+AutoPatchTST,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955614CFD0>
+AutoPatchTST,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoPatchTST,optimizer,0,None,Optimization (Training),Any,0,
+AutoPatchTST,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoPatchTST,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoPatchTST,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoPatchTST,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoPatchTST,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoRMoK,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoRMoK,n_series,1,REQUIRED (必須),Data / Features,int,1,None
+AutoRMoK,futr_exog_list,0,None,Data / Features,Any,0,
+AutoRMoK,hist_exog_list,0,None,Data / Features,Any,0,
+AutoRMoK,stat_exog_list,0,None,Data / Features,Any,0,
+AutoRMoK,taylor_order,0,3,Other / Miscellaneous,int,1,<Categorical object at 0x00000295561A44D0>
+AutoRMoK,jacobi_degree,0,6,Other / Miscellaneous,int,1,<Categorical object at 0x00000295561A45D0>
+AutoRMoK,wavelet_function,0,mexican_hat,Other / Miscellaneous,str,1,<Categorical object at 0x00000295561A46D0>
+AutoRMoK,dropout,0,0.1,Architecture (Model Structure),float,0,
+AutoRMoK,revin_affine,0,True,Other / Miscellaneous,bool,0,
+AutoRMoK,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x00000295561A4990>
+AutoRMoK,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x00000295561A4790>
+AutoRMoK,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoRMoK,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoRMoK,val_check_steps,0,100,Optimization (Training),int,0,
+AutoRMoK,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x00000295561A4A90>
+AutoRMoK,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoRMoK,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoRMoK,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoRMoK,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoRMoK,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoRMoK,step_size,0,1,Optimization (Training),int,0,
+AutoRMoK,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x00000295561A4890>
+AutoRMoK,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x00000295561A4B50>
+AutoRMoK,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoRMoK,optimizer,0,None,Optimization (Training),Any,0,
+AutoRMoK,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoRMoK,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoRMoK,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoRMoK,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoRMoK,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoRNN,input_size,0,-1,Data / Features,int,0,
+AutoRNN,inference_input_size,0,None,Data / Features,Optional[int],0,
+AutoRNN,h_train,0,1,Data / Features,int,0,
+AutoRNN,encoder_n_layers,0,2,Architecture (Model Structure),int,1,<Integer object at 0x0000029555ACA990>
+AutoRNN,encoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x00000295560055D0>
+AutoRNN,encoder_activation,0,tanh,Architecture (Model Structure),str,0,
+AutoRNN,encoder_bias,0,True,Other / Miscellaneous,bool,0,
+AutoRNN,encoder_dropout,0,0.0,Architecture (Model Structure),float,0,
+AutoRNN,context_size,0,None,Data / Features,Optional[int],1,<Categorical object at 0x0000029553A0CE50>
+AutoRNN,decoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x00000295539F4DD0>
+AutoRNN,decoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoRNN,futr_exog_list,0,None,Data / Features,Any,0,
+AutoRNN,hist_exog_list,0,None,Data / Features,Any,0,
+AutoRNN,stat_exog_list,0,None,Data / Features,Any,0,
+AutoRNN,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoRNN,recurrent,0,False,Other / Miscellaneous,Any,0,
+AutoRNN,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955362CB10>
+AutoRNN,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029553365650>
+AutoRNN,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoRNN,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoRNN,val_check_steps,0,100,Optimization (Training),int,0,
+AutoRNN,batch_size,0,32,Optimization (Training),Any,1,<Categorical object at 0x000002955362CC10>
+AutoRNN,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoRNN,windows_batch_size,0,128,Optimization (Training),Any,0,
+AutoRNN,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoRNN,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoRNN,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoRNN,step_size,0,1,Optimization (Training),int,0,
+AutoRNN,scaler_type,0,robust,Other / Miscellaneous,str,0,
+AutoRNN,random_seed,0,1,Other / Miscellaneous,Any,1,<Integer object at 0x0000029553366610>
+AutoRNN,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoRNN,optimizer,0,None,Optimization (Training),Any,0,
+AutoRNN,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoRNN,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoRNN,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoRNN,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoRNN,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoSOFTS,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoSOFTS,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoSOFTS,futr_exog_list,0,None,Data / Features,Any,0,
+AutoSOFTS,hist_exog_list,0,None,Data / Features,Any,0,
+AutoSOFTS,stat_exog_list,0,None,Data / Features,Any,0,
+AutoSOFTS,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoSOFTS,hidden_size,0,512,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556196D50>
+AutoSOFTS,d_core,0,512,Other / Miscellaneous,int,1,<Categorical object at 0x0000029556196E50>
+AutoSOFTS,e_layers,0,2,Architecture (Model Structure),int,0,
+AutoSOFTS,d_ff,0,2048,Other / Miscellaneous,int,0,
+AutoSOFTS,dropout,0,0.1,Architecture (Model Structure),float,0,
+AutoSOFTS,use_norm,0,True,Other / Miscellaneous,bool,0,
+AutoSOFTS,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556197110>
+AutoSOFTS,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556196F10>
+AutoSOFTS,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoSOFTS,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoSOFTS,val_check_steps,0,100,Optimization (Training),int,0,
+AutoSOFTS,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556197210>
+AutoSOFTS,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoSOFTS,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoSOFTS,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoSOFTS,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoSOFTS,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoSOFTS,step_size,0,1,Optimization (Training),int,0,
+AutoSOFTS,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556197010>
+AutoSOFTS,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x00000295561972D0>
+AutoSOFTS,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoSOFTS,optimizer,0,None,Optimization (Training),Any,0,
+AutoSOFTS,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoSOFTS,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoSOFTS,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoSOFTS,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoSOFTS,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoStemGNN,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoStemGNN,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoStemGNN,futr_exog_list,0,None,Data / Features,Any,0,
+AutoStemGNN,hist_exog_list,0,None,Data / Features,Any,0,
+AutoStemGNN,stat_exog_list,0,None,Data / Features,Any,0,
+AutoStemGNN,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoStemGNN,n_stacks,0,2,Other / Miscellaneous,Any,1,<Categorical object at 0x000002955614FBD0>
+AutoStemGNN,multi_layer,0,5,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614FCD0>
+AutoStemGNN,dropout_rate,0,0.5,Architecture (Model Structure),float,0,
+AutoStemGNN,leaky_rate,0,0.2,Other / Miscellaneous,float,0,
+AutoStemGNN,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955614FF90>
+AutoStemGNN,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955614FD90>
+AutoStemGNN,num_lr_decays,0,3,Optimization (Training),int,0,
+AutoStemGNN,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoStemGNN,val_check_steps,0,100,Optimization (Training),int,0,
+AutoStemGNN,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x00000295561940D0>
+AutoStemGNN,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoStemGNN,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoStemGNN,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoStemGNN,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoStemGNN,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoStemGNN,step_size,0,1,Optimization (Training),int,0,
+AutoStemGNN,scaler_type,0,robust,Other / Miscellaneous,str,1,<Categorical object at 0x000002955614FE90>
+AutoStemGNN,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556194190>
+AutoStemGNN,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoStemGNN,optimizer,0,None,Optimization (Training),Any,0,
+AutoStemGNN,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoStemGNN,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoStemGNN,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoStemGNN,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoStemGNN,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTCN,input_size,0,-1,Data / Features,int,0,
+AutoTCN,inference_input_size,0,None,Data / Features,Optional[int],0,
+AutoTCN,kernel_size,0,2,Architecture (Model Structure),int,0,
+AutoTCN,dilations,0,"[1, 2, 4, 8, 16]",Other / Miscellaneous,List[int],0,
+AutoTCN,encoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556130A50>
+AutoTCN,encoder_activation,0,ReLU,Architecture (Model Structure),str,0,
+AutoTCN,context_size,0,10,Data / Features,int,1,<Categorical object at 0x0000029556133290>
+AutoTCN,decoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556132490>
+AutoTCN,decoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoTCN,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTCN,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTCN,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTCN,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556131490>
+AutoTCN,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556131C90>
+AutoTCN,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTCN,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTCN,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTCN,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x00000295561328D0>
+AutoTCN,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTCN,windows_batch_size,0,128,Optimization (Training),Any,0,
+AutoTCN,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoTCN,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTCN,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTCN,step_size,0,1,Optimization (Training),int,0,
+AutoTCN,scaler_type,0,robust,Other / Miscellaneous,str,0,
+AutoTCN,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x00000295561333D0>
+AutoTCN,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoTCN,optimizer,0,None,Optimization (Training),Any,0,
+AutoTCN,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTCN,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTCN,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTCN,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTCN,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTFT,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoTFT,tgt_size,0,1,Other / Miscellaneous,int,0,
+AutoTFT,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTFT,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTFT,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTFT,hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x000002955613C1D0>
+AutoTFT,n_head,0,4,Architecture (Model Structure),int,1,<Categorical object at 0x000002955613CA10>
+AutoTFT,attn_dropout,0,0.0,Architecture (Model Structure),float,0,
+AutoTFT,grn_activation,0,ELU,Architecture (Model Structure),str,0,
+AutoTFT,n_rnn_layers,0,1,Architecture (Model Structure),int,0,
+AutoTFT,rnn_type,0,lstm,Other / Miscellaneous,str,0,
+AutoTFT,one_rnn_initial_state,0,False,Other / Miscellaneous,bool,0,
+AutoTFT,dropout,0,0.1,Architecture (Model Structure),float,0,
+AutoTFT,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955613CA90>
+AutoTFT,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955613C710>
+AutoTFT,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTFT,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTFT,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTFT,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955613C850>
+AutoTFT,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTFT,windows_batch_size,0,1024,Optimization (Training),int,1,<Categorical object at 0x000002955613C810>
+AutoTFT,inference_windows_batch_size,0,1024,Optimization (Training),int,0,
+AutoTFT,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTFT,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTFT,step_size,0,1,Optimization (Training),int,0,
+AutoTFT,scaler_type,0,robust,Other / Miscellaneous,str,1,<Categorical object at 0x000002955613CA50>
+AutoTFT,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955613E850>
+AutoTFT,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoTFT,optimizer,0,None,Optimization (Training),Any,0,
+AutoTFT,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTFT,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTFT,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTFT,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTFT,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTSMixer,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoTSMixer,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoTSMixer,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTSMixer,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTSMixer,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTSMixer,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoTSMixer,n_block,0,2,Other / Miscellaneous,Any,1,<Categorical object at 0x0000029556194A10>
+AutoTSMixer,ff_dim,0,64,Other / Miscellaneous,Any,1,<Categorical object at 0x0000029556194BD0>
+AutoTSMixer,dropout,0,0.9,Architecture (Model Structure),Any,1,<Float object at 0x0000029556194F90>
+AutoTSMixer,revin,0,True,Other / Miscellaneous,Any,0,
+AutoTSMixer,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556194DD0>
+AutoTSMixer,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556194AD0>
+AutoTSMixer,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTSMixer,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTSMixer,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTSMixer,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556194ED0>
+AutoTSMixer,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTSMixer,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTSMixer,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTSMixer,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTSMixer,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTSMixer,step_size,0,1,Optimization (Training),int,0,
+AutoTSMixer,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556194CD0>
+AutoTSMixer,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556195050>
+AutoTSMixer,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoTSMixer,optimizer,0,None,Optimization (Training),Any,0,
+AutoTSMixer,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTSMixer,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTSMixer,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTSMixer,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTSMixer,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTSMixerx,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoTSMixerx,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoTSMixerx,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTSMixerx,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTSMixerx,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTSMixerx,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoTSMixerx,n_block,0,2,Other / Miscellaneous,Any,1,<Categorical object at 0x0000029556195610>
+AutoTSMixerx,ff_dim,0,64,Other / Miscellaneous,Any,1,<Categorical object at 0x00000295561957D0>
+AutoTSMixerx,dropout,0,0.0,Architecture (Model Structure),Any,1,<Float object at 0x0000029556195B90>
+AutoTSMixerx,revin,0,True,Other / Miscellaneous,Any,0,
+AutoTSMixerx,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x00000295561959D0>
+AutoTSMixerx,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x00000295561956D0>
+AutoTSMixerx,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTSMixerx,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTSMixerx,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTSMixerx,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556195AD0>
+AutoTSMixerx,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTSMixerx,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTSMixerx,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTSMixerx,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTSMixerx,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTSMixerx,step_size,0,1,Optimization (Training),int,0,
+AutoTSMixerx,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x00000295561958D0>
+AutoTSMixerx,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556195C50>
+AutoTSMixerx,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoTSMixerx,optimizer,0,None,Optimization (Training),Any,0,
+AutoTSMixerx,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTSMixerx,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTSMixerx,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTSMixerx,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTSMixerx,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTiDE,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoTiDE,hidden_size,0,512,Architecture (Model Structure),Any,1,<Categorical object at 0x0000029556023F50>
+AutoTiDE,decoder_output_dim,0,32,Other / Miscellaneous,Any,1,<Categorical object at 0x0000029556022DD0>
+AutoTiDE,temporal_decoder_dim,0,128,Other / Miscellaneous,Any,1,<Categorical object at 0x00000295560200D0>
+AutoTiDE,dropout,0,0.3,Architecture (Model Structure),Any,1,<Categorical object at 0x0000029556023D50>
+AutoTiDE,layernorm,0,True,Architecture (Model Structure),Any,1,<Categorical object at 0x0000029556020050>
+AutoTiDE,num_encoder_layers,0,1,Architecture (Model Structure),Any,1,<Categorical object at 0x0000029556021E10>
+AutoTiDE,num_decoder_layers,0,1,Architecture (Model Structure),Any,1,<Categorical object at 0x0000029556023CD0>
+AutoTiDE,temporal_width,0,4,Other / Miscellaneous,Any,1,<Categorical object at 0x0000029556020510>
+AutoTiDE,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTiDE,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTiDE,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTiDE,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoTiDE,max_steps,0,1000,Optimization (Training),int,1,<Float object at 0x0000029556021190>
+AutoTiDE,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556023AD0>
+AutoTiDE,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTiDE,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTiDE,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTiDE,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556039B50>
+AutoTiDE,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTiDE,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x000002955603A090>
+AutoTiDE,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoTiDE,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTiDE,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTiDE,step_size,0,1,Optimization (Training),int,0,
+AutoTiDE,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556022CD0>
+AutoTiDE,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x00000295560399D0>
+AutoTiDE,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoTiDE,optimizer,0,None,Optimization (Training),Any,0,
+AutoTiDE,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTiDE,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTiDE,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTiDE,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTiDE,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTimeMixer,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoTimeMixer,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoTimeMixer,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTimeMixer,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTimeMixer,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTimeMixer,d_model,0,32,Other / Miscellaneous,int,1,<Categorical object at 0x0000029556197850>
+AutoTimeMixer,d_ff,0,32,Other / Miscellaneous,int,1,<Categorical object at 0x0000029556197950>
+AutoTimeMixer,dropout,0,0.1,Architecture (Model Structure),float,0,
+AutoTimeMixer,e_layers,0,4,Architecture (Model Structure),int,0,
+AutoTimeMixer,top_k,0,5,Other / Miscellaneous,int,0,
+AutoTimeMixer,decomp_method,0,moving_avg,Other / Miscellaneous,str,0,
+AutoTimeMixer,moving_avg,0,25,Other / Miscellaneous,int,0,
+AutoTimeMixer,channel_independence,0,0,Other / Miscellaneous,int,0,
+AutoTimeMixer,down_sampling_layers,0,1,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556197A50>
+AutoTimeMixer,down_sampling_window,0,2,Other / Miscellaneous,int,0,
+AutoTimeMixer,down_sampling_method,0,avg,Other / Miscellaneous,str,0,
+AutoTimeMixer,use_norm,0,True,Other / Miscellaneous,bool,0,
+AutoTimeMixer,decoder_input_size_multiplier,0,0.5,Data / Features,float,0,
+AutoTimeMixer,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556197D10>
+AutoTimeMixer,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556197B10>
+AutoTimeMixer,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTimeMixer,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTimeMixer,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTimeMixer,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x0000029556197E10>
+AutoTimeMixer,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTimeMixer,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTimeMixer,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTimeMixer,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTimeMixer,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTimeMixer,step_size,0,1,Optimization (Training),int,0,
+AutoTimeMixer,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556197C10>
+AutoTimeMixer,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x0000029556197ED0>
+AutoTimeMixer,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoTimeMixer,optimizer,0,None,Optimization (Training),Any,0,
+AutoTimeMixer,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTimeMixer,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTimeMixer,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTimeMixer,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTimeMixer,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTimeXer,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoTimeXer,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoTimeXer,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTimeXer,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTimeXer,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTimeXer,exclude_insample_y,0,False,Other / Miscellaneous,bool,0,
+AutoTimeXer,patch_len,0,16,Data / Features,int,0,
+AutoTimeXer,hidden_size,0,512,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614E310>
+AutoTimeXer,n_heads,0,8,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614E410>
+AutoTimeXer,e_layers,0,2,Architecture (Model Structure),int,0,
+AutoTimeXer,d_ff,0,2048,Other / Miscellaneous,int,0,
+AutoTimeXer,factor,0,1,Other / Miscellaneous,int,0,
+AutoTimeXer,dropout,0,0.1,Architecture (Model Structure),float,0,
+AutoTimeXer,use_norm,0,True,Other / Miscellaneous,bool,0,
+AutoTimeXer,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955614E690>
+AutoTimeXer,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955614DB90>
+AutoTimeXer,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTimeXer,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTimeXer,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTimeXer,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955614E7D0>
+AutoTimeXer,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTimeXer,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTimeXer,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoTimeXer,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTimeXer,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTimeXer,step_size,0,1,Optimization (Training),int,0,
+AutoTimeXer,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955614E4D0>
+AutoTimeXer,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955614E890>
+AutoTimeXer,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoTimeXer,optimizer,0,None,Optimization (Training),Any,0,
+AutoTimeXer,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTimeXer,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTimeXer,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTimeXer,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTimeXer,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoTimesNet,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoTimesNet,stat_exog_list,0,None,Data / Features,Any,0,
+AutoTimesNet,hist_exog_list,0,None,Data / Features,Any,0,
+AutoTimesNet,futr_exog_list,0,None,Data / Features,Any,0,
+AutoTimesNet,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoTimesNet,hidden_size,0,64,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614EF90>
+AutoTimesNet,dropout,0,0.1,Architecture (Model Structure),float,0,
+AutoTimesNet,conv_hidden_size,0,64,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614F090>
+AutoTimesNet,top_k,0,5,Other / Miscellaneous,int,0,
+AutoTimesNet,num_kernels,0,6,Architecture (Model Structure),int,0,
+AutoTimesNet,encoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoTimesNet,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955614F350>
+AutoTimesNet,learning_rate,0,0.0001,Optimization (Training),float,1,<Float object at 0x000002955614F150>
+AutoTimesNet,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoTimesNet,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoTimesNet,val_check_steps,0,100,Optimization (Training),int,0,
+AutoTimesNet,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955614F450>
+AutoTimesNet,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoTimesNet,windows_batch_size,0,64,Optimization (Training),Any,1,<Categorical object at 0x000002955614F550>
+AutoTimesNet,inference_windows_batch_size,0,256,Optimization (Training),Any,0,
+AutoTimesNet,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoTimesNet,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoTimesNet,step_size,0,1,Optimization (Training),int,0,
+AutoTimesNet,scaler_type,0,standard,Other / Miscellaneous,str,1,<Categorical object at 0x000002955614F250>
+AutoTimesNet,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955614F610>
+AutoTimesNet,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoTimesNet,optimizer,0,None,Optimization (Training),Any,0,
+AutoTimesNet,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoTimesNet,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoTimesNet,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoTimesNet,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoTimesNet,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoVanillaTransformer,input_size,1,REQUIRED (必須),Data / Features,int,0,
+AutoVanillaTransformer,stat_exog_list,0,None,Data / Features,Any,0,
+AutoVanillaTransformer,hist_exog_list,0,None,Data / Features,Any,0,
+AutoVanillaTransformer,futr_exog_list,0,None,Data / Features,Any,0,
+AutoVanillaTransformer,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoVanillaTransformer,decoder_input_size_multiplier,0,0.5,Data / Features,float,0,
+AutoVanillaTransformer,hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x000002955613CDD0>
+AutoVanillaTransformer,dropout,0,0.05,Architecture (Model Structure),float,0,
+AutoVanillaTransformer,n_head,0,4,Architecture (Model Structure),int,1,<Categorical object at 0x000002955613CB90>
+AutoVanillaTransformer,conv_hidden_size,0,32,Architecture (Model Structure),int,0,
+AutoVanillaTransformer,activation,0,gelu,Architecture (Model Structure),str,0,
+AutoVanillaTransformer,encoder_layers,0,2,Architecture (Model Structure),int,0,
+AutoVanillaTransformer,decoder_layers,0,1,Architecture (Model Structure),int,0,
+AutoVanillaTransformer,max_steps,0,5000,Optimization (Training),int,1,<Categorical object at 0x000002955613D490>
+AutoVanillaTransformer,learning_rate,0,0.0001,Optimization (Training),float,1,<Float object at 0x000002955613D150>
+AutoVanillaTransformer,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoVanillaTransformer,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoVanillaTransformer,val_check_steps,0,100,Optimization (Training),int,0,
+AutoVanillaTransformer,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955613D6D0>
+AutoVanillaTransformer,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoVanillaTransformer,windows_batch_size,0,1024,Optimization (Training),Any,1,<Categorical object at 0x000002955613D550>
+AutoVanillaTransformer,inference_windows_batch_size,0,1024,Optimization (Training),int,0,
+AutoVanillaTransformer,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoVanillaTransformer,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoVanillaTransformer,step_size,0,1,Optimization (Training),int,0,
+AutoVanillaTransformer,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955613D3D0>
+AutoVanillaTransformer,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955613D750>
+AutoVanillaTransformer,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoVanillaTransformer,optimizer,0,None,Optimization (Training),Any,0,
+AutoVanillaTransformer,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoVanillaTransformer,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoVanillaTransformer,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoVanillaTransformer,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoVanillaTransformer,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoiTransformer,input_size,1,REQUIRED (必須),Data / Features,Any,0,
+AutoiTransformer,n_series,1,REQUIRED (必須),Data / Features,Any,1,None
+AutoiTransformer,futr_exog_list,0,None,Data / Features,Any,0,
+AutoiTransformer,hist_exog_list,0,None,Data / Features,Any,0,
+AutoiTransformer,stat_exog_list,0,None,Data / Features,Any,0,
+AutoiTransformer,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoiTransformer,hidden_size,0,512,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614D4D0>
+AutoiTransformer,n_heads,0,8,Architecture (Model Structure),int,1,<Categorical object at 0x000002955614D650>
+AutoiTransformer,e_layers,0,2,Architecture (Model Structure),int,0,
+AutoiTransformer,d_layers,0,1,Architecture (Model Structure),int,0,
+AutoiTransformer,d_ff,0,2048,Other / Miscellaneous,int,0,
+AutoiTransformer,factor,0,1,Other / Miscellaneous,int,0,
+AutoiTransformer,dropout,0,0.1,Architecture (Model Structure),float,0,
+AutoiTransformer,use_norm,0,True,Other / Miscellaneous,bool,0,
+AutoiTransformer,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x000002955614D950>
+AutoiTransformer,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x000002955614D750>
+AutoiTransformer,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoiTransformer,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoiTransformer,val_check_steps,0,100,Optimization (Training),int,0,
+AutoiTransformer,batch_size,0,32,Optimization (Training),int,1,<Categorical object at 0x000002955614D990>
+AutoiTransformer,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoiTransformer,windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoiTransformer,inference_windows_batch_size,0,32,Optimization (Training),Any,0,
+AutoiTransformer,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoiTransformer,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoiTransformer,step_size,0,1,Optimization (Training),int,0,
+AutoiTransformer,scaler_type,0,identity,Other / Miscellaneous,str,1,<Categorical object at 0x000002955614D550>
+AutoiTransformer,random_seed,0,1,Other / Miscellaneous,int,1,<Integer object at 0x000002955614DED0>
+AutoiTransformer,drop_last_loader,0,False,Other / Miscellaneous,bool,0,
+AutoiTransformer,optimizer,0,None,Optimization (Training),Any,0,
+AutoiTransformer,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoiTransformer,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoiTransformer,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoiTransformer,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoiTransformer,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,
+AutoxLSTM,input_size,0,-1,Data / Features,int,0,
+AutoxLSTM,inference_input_size,0,None,Data / Features,Optional[int],0,
+AutoxLSTM,h_train,0,1,Data / Features,int,0,
+AutoxLSTM,encoder_n_blocks,0,2,Other / Miscellaneous,int,1,<Integer object at 0x00000295561346D0>
+AutoxLSTM,encoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556135110>
+AutoxLSTM,encoder_bias,0,True,Other / Miscellaneous,bool,0,
+AutoxLSTM,encoder_dropout,0,0.1,Architecture (Model Structure),float,1,<Float object at 0x0000029556134190>
+AutoxLSTM,decoder_hidden_size,0,128,Architecture (Model Structure),int,1,<Categorical object at 0x0000029556135910>
+AutoxLSTM,decoder_layers,0,1,Architecture (Model Structure),int,0,
+AutoxLSTM,decoder_dropout,0,0.0,Architecture (Model Structure),float,0,
+AutoxLSTM,decoder_activation,0,GELU,Architecture (Model Structure),str,0,
+AutoxLSTM,backbone,0,mLSTM,Other / Miscellaneous,str,0,
+AutoxLSTM,futr_exog_list,0,None,Data / Features,Any,0,
+AutoxLSTM,hist_exog_list,0,None,Data / Features,Any,0,
+AutoxLSTM,stat_exog_list,0,None,Data / Features,Any,0,
+AutoxLSTM,exclude_insample_y,0,False,Other / Miscellaneous,Any,0,
+AutoxLSTM,recurrent,0,False,Other / Miscellaneous,Any,0,
+AutoxLSTM,max_steps,0,1000,Optimization (Training),int,1,<Categorical object at 0x0000029556135A50>
+AutoxLSTM,learning_rate,0,0.001,Optimization (Training),float,1,<Float object at 0x0000029556135610>
+AutoxLSTM,num_lr_decays,0,-1,Optimization (Training),int,0,
+AutoxLSTM,early_stop_patience_steps,0,-1,Optimization (Training),int,0,
+AutoxLSTM,val_check_steps,0,100,Optimization (Training),int,0,
+AutoxLSTM,batch_size,0,32,Optimization (Training),Any,1,<Categorical object at 0x0000029556135C90>
+AutoxLSTM,valid_batch_size,0,None,Optimization (Training),Optional[int],0,
+AutoxLSTM,windows_batch_size,0,128,Optimization (Training),Any,1,<Categorical object at 0x0000029556135ED0>
+AutoxLSTM,inference_windows_batch_size,0,1024,Optimization (Training),Any,0,
+AutoxLSTM,start_padding_enabled,0,False,Other / Miscellaneous,Any,0,
+AutoxLSTM,training_data_availability_threshold,0,0.0,Other / Miscellaneous,Any,0,
+AutoxLSTM,step_size,0,1,Optimization (Training),int,0,
+AutoxLSTM,scaler_type,0,robust,Other / Miscellaneous,str,1,<Categorical object at 0x0000029556135710>
+AutoxLSTM,random_seed,0,1,Other / Miscellaneous,Any,1,<Integer object at 0x0000029556136010>
+AutoxLSTM,drop_last_loader,0,False,Other / Miscellaneous,Any,0,
+AutoxLSTM,optimizer,0,None,Optimization (Training),Any,0,
+AutoxLSTM,optimizer_kwargs,0,None,Optimization (Training),Any,0,
+AutoxLSTM,lr_scheduler,0,None,Optimization (Training),Any,0,
+AutoxLSTM,lr_scheduler_kwargs,0,None,Optimization (Training),Any,0,
+AutoxLSTM,dataloader_kwargs,0,None,Other / Miscellaneous,Any,0,
+AutoxLSTM,trainer_kwargs,1,REQUIRED (必須),Other / Miscellaneous,Any,0,

@@ -1,0 +1,378 @@
+Model,Hyperparameter,Default_Search_Space
+AutoAutoformer,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoAutoformer,h,None
+AutoAutoformer,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955613F010>
+AutoAutoformer,n_head,<ray.tune.search.sample.Categorical object at 0x000002955613F2D0>
+AutoAutoformer,learning_rate,<ray.tune.search.sample.Float object at 0x000002955613F510>
+AutoAutoformer,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955613F5D0>
+AutoAutoformer,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955613EED0>
+AutoAutoformer,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613FCD0>
+AutoAutoformer,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613FC50>
+AutoAutoformer,loss,None
+AutoAutoformer,random_seed,<ray.tune.search.sample.Integer object at 0x000002955613FD90>
+AutoBiTCN,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoBiTCN,h,None
+AutoBiTCN,hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556135F10>
+AutoBiTCN,dropout,<ray.tune.search.sample.Float object at 0x00000295561345D0>
+AutoBiTCN,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556137F10>
+AutoBiTCN,scaler_type,<ray.tune.search.sample.Categorical object at 0x00000295561341D0>
+AutoBiTCN,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556134950>
+AutoBiTCN,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556134A90>
+AutoBiTCN,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556134B50>
+AutoBiTCN,loss,None
+AutoBiTCN,random_seed,<ray.tune.search.sample.Integer object at 0x00000295561347D0>
+AutoDLinear,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoDLinear,h,None
+AutoDLinear,moving_avg_window,<ray.tune.search.sample.Categorical object at 0x000002955612F650>
+AutoDLinear,learning_rate,<ray.tune.search.sample.Float object at 0x000002955612F7D0>
+AutoDLinear,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955612E110>
+AutoDLinear,max_steps,<ray.tune.search.sample.Float object at 0x000002955612F590>
+AutoDLinear,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612FB10>
+AutoDLinear,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612F690>
+AutoDLinear,loss,None
+AutoDLinear,random_seed,<ray.tune.search.sample.Integer object at 0x000002955612E410>
+AutoDeepAR,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoDeepAR,h,None
+AutoDeepAR,lstm_hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556134150>
+AutoDeepAR,lstm_n_layers,<ray.tune.search.sample.Integer object at 0x0000029556137190>
+AutoDeepAR,lstm_dropout,<ray.tune.search.sample.Float object at 0x0000029556135850>
+AutoDeepAR,learning_rate,<ray.tune.search.sample.Float object at 0x00000295561361D0>
+AutoDeepAR,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556136590>
+AutoDeepAR,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556136890>
+AutoDeepAR,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556136950>
+AutoDeepAR,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556136350>
+AutoDeepAR,loss,None
+AutoDeepAR,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556137150>
+AutoDeepNPTS,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoDeepNPTS,h,None
+AutoDeepNPTS,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955603A4D0>
+AutoDeepNPTS,dropout,<ray.tune.search.sample.Float object at 0x000002955603ABD0>
+AutoDeepNPTS,n_layers,<ray.tune.search.sample.Categorical object at 0x0000029556039990>
+AutoDeepNPTS,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556038810>
+AutoDeepNPTS,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955603A550>
+AutoDeepNPTS,max_steps,<ray.tune.search.sample.Float object at 0x00000295560381D0>
+AutoDeepNPTS,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556038AD0>
+AutoDeepNPTS,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955603B450>
+AutoDeepNPTS,loss,None
+AutoDeepNPTS,random_seed,<ray.tune.search.sample.Integer object at 0x000002955603AD90>
+AutoDilatedRNN,input_size_multiplier,"[-1, 4, 16, 64]"
+AutoDilatedRNN,inference_input_size_multiplier,[-1]
+AutoDilatedRNN,h,None
+AutoDilatedRNN,cell_type,<ray.tune.search.sample.Categorical object at 0x0000029556137050>
+AutoDilatedRNN,encoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556137310>
+AutoDilatedRNN,dilations,<ray.tune.search.sample.Categorical object at 0x00000295561376D0>
+AutoDilatedRNN,context_size,<ray.tune.search.sample.Categorical object at 0x00000295561375D0>
+AutoDilatedRNN,decoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x00000295561379D0>
+AutoDilatedRNN,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556137B50>
+AutoDilatedRNN,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556137450>
+AutoDilatedRNN,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556137C90>
+AutoDilatedRNN,loss,None
+AutoDilatedRNN,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556137C50>
+AutoFEDformer,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoFEDformer,h,None
+AutoFEDformer,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955613FB10>
+AutoFEDformer,learning_rate,<ray.tune.search.sample.Float object at 0x000002955613E790>
+AutoFEDformer,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955613EB10>
+AutoFEDformer,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955614CE50>
+AutoFEDformer,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614E010>
+AutoFEDformer,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614E910>
+AutoFEDformer,loss,None
+AutoFEDformer,random_seed,<ray.tune.search.sample.Integer object at 0x000002955614E950>
+AutoGRU,input_size_multiplier,"[-1, 4, 16, 64]"
+AutoGRU,inference_input_size_multiplier,[-1]
+AutoGRU,h,None
+AutoGRU,encoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x00000295561334D0>
+AutoGRU,encoder_n_layers,<ray.tune.search.sample.Integer object at 0x0000029556131A50>
+AutoGRU,context_size,<ray.tune.search.sample.Categorical object at 0x0000029556131FD0>
+AutoGRU,decoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556133650>
+AutoGRU,learning_rate,<ray.tune.search.sample.Float object at 0x00000295561323D0>
+AutoGRU,max_steps,<ray.tune.search.sample.Categorical object at 0x00000295561329D0>
+AutoGRU,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556133950>
+AutoGRU,loss,None
+AutoGRU,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556133B50>
+AutoInformer,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoInformer,h,None
+AutoInformer,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955613CF50>
+AutoInformer,n_head,<ray.tune.search.sample.Categorical object at 0x000002955613DE90>
+AutoInformer,learning_rate,<ray.tune.search.sample.Float object at 0x000002955613E110>
+AutoInformer,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955613E210>
+AutoInformer,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955613E310>
+AutoInformer,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613E5D0>
+AutoInformer,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613E9D0>
+AutoInformer,loss,None
+AutoInformer,random_seed,<ray.tune.search.sample.Integer object at 0x000002955613EA10>
+AutoKAN,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoKAN,h,None
+AutoKAN,grid_size,<ray.tune.search.sample.Categorical object at 0x000002955603A110>
+AutoKAN,spline_order,<ray.tune.search.sample.Categorical object at 0x000002955603AA50>
+AutoKAN,hidden_size,<ray.tune.search.sample.Categorical object at 0x00000295560384D0>
+AutoKAN,learning_rate,<ray.tune.search.sample.Float object at 0x000002955603A0D0>
+AutoKAN,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556039650>
+AutoKAN,max_steps,<ray.tune.search.sample.Float object at 0x000002955603A950>
+AutoKAN,batch_size,<ray.tune.search.sample.Categorical object at 0x00000295560394D0>
+AutoKAN,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955603AE90>
+AutoKAN,loss,None
+AutoKAN,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556038590>
+AutoLSTM,input_size_multiplier,"[-1, 4, 16, 64]"
+AutoLSTM,inference_input_size_multiplier,[-1]
+AutoLSTM,h,None
+AutoLSTM,encoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955306ED90>
+AutoLSTM,encoder_n_layers,<ray.tune.search.sample.Integer object at 0x00000295561309D0>
+AutoLSTM,context_size,<ray.tune.search.sample.Categorical object at 0x0000029556130B10>
+AutoLSTM,decoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x00000295561306D0>
+AutoLSTM,learning_rate,<ray.tune.search.sample.Float object at 0x000002955371C8D0>
+AutoLSTM,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556130C50>
+AutoLSTM,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556131390>
+AutoLSTM,loss,None
+AutoLSTM,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556130FD0>
+AutoMLP,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoMLP,h,None
+AutoMLP,hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556137510>
+AutoMLP,num_layers,<ray.tune.search.sample.Integer object at 0x0000029556136090>
+AutoMLP,learning_rate,<ray.tune.search.sample.Float object at 0x000002955612E250>
+AutoMLP,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955612C250>
+AutoMLP,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955612C410>
+AutoMLP,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612C4D0>
+AutoMLP,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612CA90>
+AutoMLP,loss,None
+AutoMLP,random_seed,<ray.tune.search.sample.Integer object at 0x000002955612CB90>
+AutoMLPMultivariate,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoMLPMultivariate,h,None
+AutoMLPMultivariate,n_series,None
+AutoMLPMultivariate,hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556196210>
+AutoMLPMultivariate,num_layers,<ray.tune.search.sample.Integer object at 0x00000295561962D0>
+AutoMLPMultivariate,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556196390>
+AutoMLPMultivariate,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556196490>
+AutoMLPMultivariate,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556196590>
+AutoMLPMultivariate,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556196690>
+AutoMLPMultivariate,loss,None
+AutoMLPMultivariate,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556196750>
+AutoNBEATS,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoNBEATS,h,None
+AutoNBEATS,learning_rate,<ray.tune.search.sample.Float object at 0x000002955612C750>
+AutoNBEATS,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955612EA90>
+AutoNBEATS,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955612C910>
+AutoNBEATS,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612D010>
+AutoNBEATS,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612D250>
+AutoNBEATS,loss,None
+AutoNBEATS,random_seed,<ray.tune.search.sample.Integer object at 0x000002955612D290>
+AutoNBEATSx,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoNBEATSx,h,None
+AutoNBEATSx,learning_rate,<ray.tune.search.sample.Float object at 0x000002955612C810>
+AutoNBEATSx,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955612D8D0>
+AutoNBEATSx,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955612DA50>
+AutoNBEATSx,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612D510>
+AutoNBEATSx,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612DB50>
+AutoNBEATSx,loss,None
+AutoNBEATSx,random_seed,<ray.tune.search.sample.Integer object at 0x000002955612E490>
+AutoNHITS,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoNHITS,h,None
+AutoNHITS,n_pool_kernel_size,<ray.tune.search.sample.Categorical object at 0x000002955612C390>
+AutoNHITS,n_freq_downsample,<ray.tune.search.sample.Categorical object at 0x000002955612E790>
+AutoNHITS,learning_rate,<ray.tune.search.sample.Float object at 0x000002955612E150>
+AutoNHITS,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955612EF50>
+AutoNHITS,max_steps,<ray.tune.search.sample.Float object at 0x0000029552FB5E90>
+AutoNHITS,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612E990>
+AutoNHITS,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955612E7D0>
+AutoNHITS,loss,None
+AutoNHITS,random_seed,<ray.tune.search.sample.Integer object at 0x000002955612EF90>
+AutoNLinear,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoNLinear,h,None
+AutoNLinear,learning_rate,<ray.tune.search.sample.Float object at 0x000002955612FF50>
+AutoNLinear,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955612D790>
+AutoNLinear,max_steps,<ray.tune.search.sample.Float object at 0x000002955612FD10>
+AutoNLinear,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556023510>
+AutoNLinear,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556020710>
+AutoNLinear,loss,None
+AutoNLinear,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556022990>
+AutoPatchTST,input_size_multiplier,"[1, 2, 3]"
+AutoPatchTST,h,None
+AutoPatchTST,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955614C650>
+AutoPatchTST,n_heads,<ray.tune.search.sample.Categorical object at 0x000002955614C750>
+AutoPatchTST,patch_len,<ray.tune.search.sample.Categorical object at 0x000002955614C850>
+AutoPatchTST,learning_rate,<ray.tune.search.sample.Float object at 0x000002955614C950>
+AutoPatchTST,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955614CA10>
+AutoPatchTST,revin,<ray.tune.search.sample.Categorical object at 0x000002955614C710>
+AutoPatchTST,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955614CB50>
+AutoPatchTST,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614CC50>
+AutoPatchTST,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614CF50>
+AutoPatchTST,loss,None
+AutoPatchTST,random_seed,<ray.tune.search.sample.Integer object at 0x000002955614CFD0>
+AutoRMoK,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoRMoK,h,None
+AutoRMoK,n_series,None
+AutoRMoK,taylor_order,<ray.tune.search.sample.Categorical object at 0x00000295561A44D0>
+AutoRMoK,jacobi_degree,<ray.tune.search.sample.Categorical object at 0x00000295561A45D0>
+AutoRMoK,wavelet_function,<ray.tune.search.sample.Categorical object at 0x00000295561A46D0>
+AutoRMoK,learning_rate,<ray.tune.search.sample.Float object at 0x00000295561A4790>
+AutoRMoK,scaler_type,<ray.tune.search.sample.Categorical object at 0x00000295561A4890>
+AutoRMoK,max_steps,<ray.tune.search.sample.Categorical object at 0x00000295561A4990>
+AutoRMoK,batch_size,<ray.tune.search.sample.Categorical object at 0x00000295561A4A90>
+AutoRMoK,loss,None
+AutoRMoK,random_seed,<ray.tune.search.sample.Integer object at 0x00000295561A4B50>
+AutoRNN,input_size_multiplier,"[-1, 4, 16, 64]"
+AutoRNN,inference_input_size_multiplier,[-1]
+AutoRNN,h,None
+AutoRNN,encoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x00000295560055D0>
+AutoRNN,encoder_n_layers,<ray.tune.search.sample.Integer object at 0x0000029555ACA990>
+AutoRNN,context_size,<ray.tune.search.sample.Categorical object at 0x0000029553A0CE50>
+AutoRNN,decoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x00000295539F4DD0>
+AutoRNN,learning_rate,<ray.tune.search.sample.Float object at 0x0000029553365650>
+AutoRNN,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955362CB10>
+AutoRNN,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955362CC10>
+AutoRNN,loss,None
+AutoRNN,random_seed,<ray.tune.search.sample.Integer object at 0x0000029553366610>
+AutoSOFTS,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoSOFTS,h,None
+AutoSOFTS,n_series,None
+AutoSOFTS,hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556196D50>
+AutoSOFTS,d_core,<ray.tune.search.sample.Categorical object at 0x0000029556196E50>
+AutoSOFTS,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556196F10>
+AutoSOFTS,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556197010>
+AutoSOFTS,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556197110>
+AutoSOFTS,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556197210>
+AutoSOFTS,loss,None
+AutoSOFTS,random_seed,<ray.tune.search.sample.Integer object at 0x00000295561972D0>
+AutoStemGNN,input_size_multiplier,"[1, 2, 3, 4]"
+AutoStemGNN,h,None
+AutoStemGNN,n_series,None
+AutoStemGNN,n_stacks,<ray.tune.search.sample.Categorical object at 0x000002955614FBD0>
+AutoStemGNN,multi_layer,<ray.tune.search.sample.Categorical object at 0x000002955614FCD0>
+AutoStemGNN,learning_rate,<ray.tune.search.sample.Float object at 0x000002955614FD90>
+AutoStemGNN,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955614FE90>
+AutoStemGNN,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955614FF90>
+AutoStemGNN,batch_size,<ray.tune.search.sample.Categorical object at 0x00000295561940D0>
+AutoStemGNN,loss,None
+AutoStemGNN,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556194190>
+AutoTCN,input_size_multiplier,"[-1, 4, 16, 64]"
+AutoTCN,inference_input_size_multiplier,[-1]
+AutoTCN,h,None
+AutoTCN,encoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556130A50>
+AutoTCN,context_size,<ray.tune.search.sample.Categorical object at 0x0000029556133290>
+AutoTCN,decoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556132490>
+AutoTCN,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556131C90>
+AutoTCN,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556131490>
+AutoTCN,batch_size,<ray.tune.search.sample.Categorical object at 0x00000295561328D0>
+AutoTCN,loss,None
+AutoTCN,random_seed,<ray.tune.search.sample.Integer object at 0x00000295561333D0>
+AutoTFT,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoTFT,h,None
+AutoTFT,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955613C1D0>
+AutoTFT,n_head,<ray.tune.search.sample.Categorical object at 0x000002955613CA10>
+AutoTFT,learning_rate,<ray.tune.search.sample.Float object at 0x000002955613C710>
+AutoTFT,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955613CA50>
+AutoTFT,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955613CA90>
+AutoTFT,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613C850>
+AutoTFT,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613C810>
+AutoTFT,loss,None
+AutoTFT,random_seed,<ray.tune.search.sample.Integer object at 0x000002955613E850>
+AutoTSMixer,input_size_multiplier,"[1, 2, 3, 4]"
+AutoTSMixer,h,None
+AutoTSMixer,n_series,None
+AutoTSMixer,n_block,<ray.tune.search.sample.Categorical object at 0x0000029556194A10>
+AutoTSMixer,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556194AD0>
+AutoTSMixer,ff_dim,<ray.tune.search.sample.Categorical object at 0x0000029556194BD0>
+AutoTSMixer,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556194CD0>
+AutoTSMixer,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556194DD0>
+AutoTSMixer,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556194ED0>
+AutoTSMixer,dropout,<ray.tune.search.sample.Float object at 0x0000029556194F90>
+AutoTSMixer,loss,None
+AutoTSMixer,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556195050>
+AutoTSMixerx,input_size_multiplier,"[1, 2, 3, 4]"
+AutoTSMixerx,h,None
+AutoTSMixerx,n_series,None
+AutoTSMixerx,n_block,<ray.tune.search.sample.Categorical object at 0x0000029556195610>
+AutoTSMixerx,learning_rate,<ray.tune.search.sample.Float object at 0x00000295561956D0>
+AutoTSMixerx,ff_dim,<ray.tune.search.sample.Categorical object at 0x00000295561957D0>
+AutoTSMixerx,scaler_type,<ray.tune.search.sample.Categorical object at 0x00000295561958D0>
+AutoTSMixerx,max_steps,<ray.tune.search.sample.Categorical object at 0x00000295561959D0>
+AutoTSMixerx,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556195AD0>
+AutoTSMixerx,dropout,<ray.tune.search.sample.Float object at 0x0000029556195B90>
+AutoTSMixerx,loss,None
+AutoTSMixerx,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556195C50>
+AutoTiDE,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoTiDE,h,None
+AutoTiDE,hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556023F50>
+AutoTiDE,decoder_output_dim,<ray.tune.search.sample.Categorical object at 0x0000029556022DD0>
+AutoTiDE,temporal_decoder_dim,<ray.tune.search.sample.Categorical object at 0x00000295560200D0>
+AutoTiDE,num_encoder_layers,<ray.tune.search.sample.Categorical object at 0x0000029556021E10>
+AutoTiDE,num_decoder_layers,<ray.tune.search.sample.Categorical object at 0x0000029556023CD0>
+AutoTiDE,temporal_width,<ray.tune.search.sample.Categorical object at 0x0000029556020510>
+AutoTiDE,dropout,<ray.tune.search.sample.Categorical object at 0x0000029556023D50>
+AutoTiDE,layernorm,<ray.tune.search.sample.Categorical object at 0x0000029556020050>
+AutoTiDE,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556023AD0>
+AutoTiDE,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556022CD0>
+AutoTiDE,max_steps,<ray.tune.search.sample.Float object at 0x0000029556021190>
+AutoTiDE,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556039B50>
+AutoTiDE,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955603A090>
+AutoTiDE,loss,None
+AutoTiDE,random_seed,<ray.tune.search.sample.Integer object at 0x00000295560399D0>
+AutoTimeMixer,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoTimeMixer,h,None
+AutoTimeMixer,n_series,None
+AutoTimeMixer,d_model,<ray.tune.search.sample.Categorical object at 0x0000029556197850>
+AutoTimeMixer,d_ff,<ray.tune.search.sample.Categorical object at 0x0000029556197950>
+AutoTimeMixer,down_sampling_layers,<ray.tune.search.sample.Categorical object at 0x0000029556197A50>
+AutoTimeMixer,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556197B10>
+AutoTimeMixer,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556197C10>
+AutoTimeMixer,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556197D10>
+AutoTimeMixer,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556197E10>
+AutoTimeMixer,loss,None
+AutoTimeMixer,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556197ED0>
+AutoTimeXer,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoTimeXer,h,None
+AutoTimeXer,n_series,None
+AutoTimeXer,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955614E310>
+AutoTimeXer,n_heads,<ray.tune.search.sample.Categorical object at 0x000002955614E410>
+AutoTimeXer,learning_rate,<ray.tune.search.sample.Float object at 0x000002955614DB90>
+AutoTimeXer,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955614E4D0>
+AutoTimeXer,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955614E690>
+AutoTimeXer,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614E7D0>
+AutoTimeXer,loss,None
+AutoTimeXer,random_seed,<ray.tune.search.sample.Integer object at 0x000002955614E890>
+AutoTimesNet,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoTimesNet,h,None
+AutoTimesNet,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955614EF90>
+AutoTimesNet,conv_hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955614F090>
+AutoTimesNet,learning_rate,<ray.tune.search.sample.Float object at 0x000002955614F150>
+AutoTimesNet,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955614F250>
+AutoTimesNet,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955614F350>
+AutoTimesNet,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614F450>
+AutoTimesNet,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614F550>
+AutoTimesNet,loss,None
+AutoTimesNet,random_seed,<ray.tune.search.sample.Integer object at 0x000002955614F610>
+AutoVanillaTransformer,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoVanillaTransformer,h,None
+AutoVanillaTransformer,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955613CDD0>
+AutoVanillaTransformer,n_head,<ray.tune.search.sample.Categorical object at 0x000002955613CB90>
+AutoVanillaTransformer,learning_rate,<ray.tune.search.sample.Float object at 0x000002955613D150>
+AutoVanillaTransformer,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955613D3D0>
+AutoVanillaTransformer,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955613D490>
+AutoVanillaTransformer,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613D6D0>
+AutoVanillaTransformer,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x000002955613D550>
+AutoVanillaTransformer,loss,None
+AutoVanillaTransformer,random_seed,<ray.tune.search.sample.Integer object at 0x000002955613D750>
+AutoiTransformer,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoiTransformer,h,None
+AutoiTransformer,n_series,None
+AutoiTransformer,hidden_size,<ray.tune.search.sample.Categorical object at 0x000002955614D4D0>
+AutoiTransformer,n_heads,<ray.tune.search.sample.Categorical object at 0x000002955614D650>
+AutoiTransformer,learning_rate,<ray.tune.search.sample.Float object at 0x000002955614D750>
+AutoiTransformer,scaler_type,<ray.tune.search.sample.Categorical object at 0x000002955614D550>
+AutoiTransformer,max_steps,<ray.tune.search.sample.Categorical object at 0x000002955614D950>
+AutoiTransformer,batch_size,<ray.tune.search.sample.Categorical object at 0x000002955614D990>
+AutoiTransformer,loss,None
+AutoiTransformer,random_seed,<ray.tune.search.sample.Integer object at 0x000002955614DED0>
+AutoxLSTM,input_size_multiplier,"[1, 2, 3, 4, 5]"
+AutoxLSTM,h,None
+AutoxLSTM,encoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556135110>
+AutoxLSTM,encoder_n_blocks,<ray.tune.search.sample.Integer object at 0x00000295561346D0>
+AutoxLSTM,encoder_dropout,<ray.tune.search.sample.Float object at 0x0000029556134190>
+AutoxLSTM,decoder_hidden_size,<ray.tune.search.sample.Categorical object at 0x0000029556135910>
+AutoxLSTM,learning_rate,<ray.tune.search.sample.Float object at 0x0000029556135610>
+AutoxLSTM,scaler_type,<ray.tune.search.sample.Categorical object at 0x0000029556135710>
+AutoxLSTM,max_steps,<ray.tune.search.sample.Categorical object at 0x0000029556135A50>
+AutoxLSTM,batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556135C90>
+AutoxLSTM,windows_batch_size,<ray.tune.search.sample.Categorical object at 0x0000029556135ED0>
+AutoxLSTM,loss,None
+AutoxLSTM,random_seed,<ray.tune.search.sample.Integer object at 0x0000029556136010>

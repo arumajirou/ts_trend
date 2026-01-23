@@ -1,0 +1,378 @@
+﻿Auto_Model,Parameter,Base_Default,Auto_Search_Space
+AutoAutoformer,batch_size,Not in Base Init,"[32, 64, 128, 256]"
+AutoAutoformer,h,Not in Base Init,None
+AutoAutoformer,hidden_size,Not in Base Init,"[64, 128, 256]"
+AutoAutoformer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoAutoformer,learning_rate,Not in Base Init,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoAutoformer,loss,Not in Base Init,None
+AutoAutoformer,max_steps,Not in Base Init,"[500, 1000, 2000]"
+AutoAutoformer,n_head,Not in Base Init,"[4, 8]"
+AutoAutoformer,random_seed,Not in Base Init,Integer(1 ~ 20)
+AutoAutoformer,scaler_type,Not in Base Init,"[None, 'robust', 'standard']"
+AutoAutoformer,windows_batch_size,Not in Base Init,"[128, 256, 512, 1024]"
+AutoBiTCN,batch_size,32,"[32, 64, 128, 256]"
+AutoBiTCN,dropout,0.5,"Float(0.0 ~ 0.99, Uniform)"
+AutoBiTCN,h,REQUIRED,None
+AutoBiTCN,hidden_size,16,"[16, 32]"
+AutoBiTCN,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoBiTCN,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoBiTCN,loss,MAE(),None
+AutoBiTCN,max_steps,1000,"[500, 1000, 2000]"
+AutoBiTCN,random_seed,1,Integer(1 ~ 20)
+AutoBiTCN,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoBiTCN,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoDLinear,batch_size,32,"[32, 64, 128, 256]"
+AutoDLinear,h,REQUIRED,None
+AutoDLinear,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoDLinear,learning_rate,0.0001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoDLinear,loss,MAE(),None
+AutoDLinear,max_steps,5000,"Float(500 ~ 1500, Uniform)"
+AutoDLinear,moving_avg_window,25,"[11, 25, 51]"
+AutoDLinear,random_seed,1,Integer(1 ~ 20)
+AutoDLinear,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoDLinear,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoDeepAR,batch_size,32,"[32, 64, 128, 256]"
+AutoDeepAR,h,REQUIRED,None
+AutoDeepAR,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoDeepAR,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoDeepAR,loss,DistributionLoss(),None
+AutoDeepAR,lstm_dropout,0.1,"Float(0.0 ~ 0.5, Uniform)"
+AutoDeepAR,lstm_hidden_size,128,"[32, 64, 128, 256]"
+AutoDeepAR,lstm_n_layers,2,Integer(1 ~ 4)
+AutoDeepAR,max_steps,1000,"[500, 1000, 2000]"
+AutoDeepAR,random_seed,1,Integer(1 ~ 20)
+AutoDeepAR,scaler_type,identity,"['robust', 'minmax1']"
+AutoDeepAR,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoDeepNPTS,batch_size,32,"[32, 64, 128, 256]"
+AutoDeepNPTS,dropout,0.1,"Float(0.0 ~ 0.99, Uniform)"
+AutoDeepNPTS,h,REQUIRED,None
+AutoDeepNPTS,hidden_size,32,"[16, 32, 64]"
+AutoDeepNPTS,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoDeepNPTS,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoDeepNPTS,loss,MAE(),None
+AutoDeepNPTS,max_steps,1000,"Float(500 ~ 1500, Uniform)"
+AutoDeepNPTS,n_layers,2,"[1, 2, 4]"
+AutoDeepNPTS,random_seed,1,Integer(1 ~ 20)
+AutoDeepNPTS,scaler_type,standard,"[None, 'robust', 'standard']"
+AutoDeepNPTS,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoDilatedRNN,batch_size,32,"[16, 32]"
+AutoDilatedRNN,cell_type,LSTM,"['LSTM', 'GRU']"
+AutoDilatedRNN,context_size,10,"[5, 10, 50]"
+AutoDilatedRNN,decoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoDilatedRNN,dilations,"[[1, 2], [4, 8]]","[[[1, 2], [4, 8]], [[1, 2, 4, 8]]]"
+AutoDilatedRNN,encoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoDilatedRNN,h,REQUIRED,None
+AutoDilatedRNN,inference_input_size_multiplier,Not in Base Init,[-1]
+AutoDilatedRNN,input_size_multiplier,Not in Base Init,"[-1, 4, 16, 64]"
+AutoDilatedRNN,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoDilatedRNN,loss,MAE(),None
+AutoDilatedRNN,max_steps,1000,"[500, 1000]"
+AutoDilatedRNN,random_seed,1,Integer(1 ~ 20)
+AutoFEDformer,batch_size,32,"[32, 64, 128, 256]"
+AutoFEDformer,h,REQUIRED,None
+AutoFEDformer,hidden_size,128,"[64, 128, 256]"
+AutoFEDformer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoFEDformer,learning_rate,0.0001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoFEDformer,loss,MAE(),None
+AutoFEDformer,max_steps,5000,"[500, 1000, 2000]"
+AutoFEDformer,random_seed,1,Integer(1 ~ 20)
+AutoFEDformer,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoFEDformer,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoGRU,batch_size,32,"[16, 32]"
+AutoGRU,context_size,None,"[5, 10, 50]"
+AutoGRU,decoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoGRU,encoder_hidden_size,200,"[16, 32, 64, 128]"
+AutoGRU,encoder_n_layers,2,Integer(1 ~ 4)
+AutoGRU,h,REQUIRED,None
+AutoGRU,inference_input_size_multiplier,Not in Base Init,[-1]
+AutoGRU,input_size_multiplier,Not in Base Init,"[-1, 4, 16, 64]"
+AutoGRU,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoGRU,loss,MAE(),None
+AutoGRU,max_steps,1000,"[500, 1000]"
+AutoGRU,random_seed,1,Integer(1 ~ 20)
+AutoInformer,batch_size,32,"[32, 64, 128, 256]"
+AutoInformer,h,REQUIRED,None
+AutoInformer,hidden_size,128,"[64, 128, 256]"
+AutoInformer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoInformer,learning_rate,0.0001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoInformer,loss,MAE(),None
+AutoInformer,max_steps,5000,"[500, 1000, 2000]"
+AutoInformer,n_head,4,"[4, 8]"
+AutoInformer,random_seed,1,Integer(1 ~ 20)
+AutoInformer,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoInformer,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoKAN,batch_size,32,"[32, 64, 128, 256]"
+AutoKAN,grid_size,5,"[5, 10, 15]"
+AutoKAN,h,REQUIRED,None
+AutoKAN,hidden_size,512,"[64, 128, 256, 512]"
+AutoKAN,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoKAN,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoKAN,loss,MAE(),None
+AutoKAN,max_steps,1000,"Float(500 ~ 1500, Uniform)"
+AutoKAN,random_seed,1,Integer(1 ~ 20)
+AutoKAN,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoKAN,spline_order,3,"[2, 3, 4]"
+AutoKAN,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoLSTM,batch_size,32,"[16, 32]"
+AutoLSTM,context_size,None,"[5, 10, 50]"
+AutoLSTM,decoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoLSTM,encoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoLSTM,encoder_n_layers,2,Integer(1 ~ 4)
+AutoLSTM,h,REQUIRED,None
+AutoLSTM,inference_input_size_multiplier,Not in Base Init,[-1]
+AutoLSTM,input_size_multiplier,Not in Base Init,"[-1, 4, 16, 64]"
+AutoLSTM,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoLSTM,loss,MAE(),None
+AutoLSTM,max_steps,1000,"[500, 1000]"
+AutoLSTM,random_seed,1,Integer(1 ~ 20)
+AutoMLP,batch_size,Not in Base Init,"[32, 64, 128, 256]"
+AutoMLP,h,Not in Base Init,None
+AutoMLP,hidden_size,REQUIRED,"[256, 512, 1024]"
+AutoMLP,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoMLP,learning_rate,Not in Base Init,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoMLP,loss,Not in Base Init,None
+AutoMLP,max_steps,Not in Base Init,"[500, 1000]"
+AutoMLP,num_layers,REQUIRED,Integer(2 ~ 6)
+AutoMLP,random_seed,Not in Base Init,Integer(1 ~ 20)
+AutoMLP,scaler_type,Not in Base Init,"[None, 'robust', 'standard']"
+AutoMLP,windows_batch_size,Not in Base Init,"[128, 256, 512, 1024]"
+AutoMLPMultivariate,batch_size,32,"[32, 64, 128, 256]"
+AutoMLPMultivariate,h,REQUIRED,None
+AutoMLPMultivariate,hidden_size,1024,"[256, 512, 1024]"
+AutoMLPMultivariate,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoMLPMultivariate,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoMLPMultivariate,loss,MAE(),None
+AutoMLPMultivariate,max_steps,1000,"[500, 1000]"
+AutoMLPMultivariate,n_series,REQUIRED,None
+AutoMLPMultivariate,num_layers,2,Integer(2 ~ 6)
+AutoMLPMultivariate,random_seed,1,Integer(1 ~ 20)
+AutoMLPMultivariate,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoNBEATS,batch_size,32,"[32, 64, 128, 256]"
+AutoNBEATS,h,REQUIRED,None
+AutoNBEATS,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoNBEATS,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoNBEATS,loss,MAE(),None
+AutoNBEATS,max_steps,1000,"[500, 1000]"
+AutoNBEATS,random_seed,1,Integer(1 ~ 20)
+AutoNBEATS,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoNBEATS,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoNBEATSx,batch_size,32,"[32, 64, 128, 256]"
+AutoNBEATSx,h,REQUIRED,None
+AutoNBEATSx,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoNBEATSx,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoNBEATSx,loss,MAE(),None
+AutoNBEATSx,max_steps,1000,"[500, 1000]"
+AutoNBEATSx,random_seed,1,Integer(1 ~ 20)
+AutoNBEATSx,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoNBEATSx,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoNHITS,batch_size,32,"[32, 64, 128, 256]"
+AutoNHITS,h,REQUIRED,None
+AutoNHITS,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoNHITS,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoNHITS,loss,MAE(),None
+AutoNHITS,max_steps,1000,"Float(500 ~ 1500, Uniform)"
+AutoNHITS,n_freq_downsample,"[4, 2, 1]","[[168, 24, 1], [24, 12, 1], [180, 60, 1], [60, 8, 1], [40, 20, 1], [1, 1, 1]]"
+AutoNHITS,n_pool_kernel_size,"[2, 2, 1]","[[2, 2, 1], [1, 1, 1], [2, 2, 2], [4, 4, 4], [8, 4, 1], [16, 8, 1]]"
+AutoNHITS,random_seed,1,Integer(1 ~ 20)
+AutoNHITS,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoNHITS,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoNLinear,batch_size,32,"[32, 64, 128, 256]"
+AutoNLinear,h,REQUIRED,None
+AutoNLinear,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoNLinear,learning_rate,0.0001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoNLinear,loss,MAE(),None
+AutoNLinear,max_steps,5000,"Float(500 ~ 1500, Uniform)"
+AutoNLinear,random_seed,1,Integer(1 ~ 20)
+AutoNLinear,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoNLinear,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoPatchTST,batch_size,32,"[32, 64, 128, 256]"
+AutoPatchTST,h,REQUIRED,None
+AutoPatchTST,hidden_size,128,"[16, 128, 256]"
+AutoPatchTST,input_size_multiplier,Not in Base Init,"[1, 2, 3]"
+AutoPatchTST,learning_rate,0.0001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoPatchTST,loss,MAE(),None
+AutoPatchTST,max_steps,5000,"[500, 1000, 5000]"
+AutoPatchTST,n_heads,16,"[4, 16]"
+AutoPatchTST,patch_len,16,"[16, 24]"
+AutoPatchTST,random_seed,1,Integer(1 ~ 20)
+AutoPatchTST,revin,True,"[False, True]"
+AutoPatchTST,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoPatchTST,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoRMoK,batch_size,32,"[32, 64, 128, 256]"
+AutoRMoK,h,REQUIRED,None
+AutoRMoK,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoRMoK,jacobi_degree,6,"[4, 5, 6]"
+AutoRMoK,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoRMoK,loss,MAE(),None
+AutoRMoK,max_steps,1000,"[500, 1000, 2000]"
+AutoRMoK,n_series,REQUIRED,None
+AutoRMoK,random_seed,1,Integer(1 ~ 20)
+AutoRMoK,scaler_type,identity,"[None, 'robust', 'standard', 'identity']"
+AutoRMoK,taylor_order,3,"[3, 4, 5]"
+AutoRMoK,wavelet_function,mexican_hat,"['mexican_hat', 'morlet', 'dog', 'meyer', 'shannon']"
+AutoRNN,batch_size,32,"[16, 32]"
+AutoRNN,context_size,None,"[5, 10, 50]"
+AutoRNN,decoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoRNN,encoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoRNN,encoder_n_layers,2,Integer(1 ~ 4)
+AutoRNN,h,REQUIRED,None
+AutoRNN,inference_input_size_multiplier,Not in Base Init,[-1]
+AutoRNN,input_size_multiplier,Not in Base Init,"[-1, 4, 16, 64]"
+AutoRNN,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoRNN,loss,MAE(),None
+AutoRNN,max_steps,1000,"[500, 1000]"
+AutoRNN,random_seed,1,Integer(1 ~ 20)
+AutoSOFTS,batch_size,32,"[32, 64, 128, 256]"
+AutoSOFTS,d_core,512,"[64, 128, 256, 512]"
+AutoSOFTS,h,REQUIRED,None
+AutoSOFTS,hidden_size,512,"[64, 128, 256, 512]"
+AutoSOFTS,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoSOFTS,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoSOFTS,loss,MAE(),None
+AutoSOFTS,max_steps,1000,"[500, 1000, 2000]"
+AutoSOFTS,n_series,REQUIRED,None
+AutoSOFTS,random_seed,1,Integer(1 ~ 20)
+AutoSOFTS,scaler_type,identity,"[None, 'robust', 'standard', 'identity']"
+AutoStemGNN,batch_size,32,"[32, 64, 128, 256]"
+AutoStemGNN,h,REQUIRED,None
+AutoStemGNN,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4]"
+AutoStemGNN,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoStemGNN,loss,MAE(),None
+AutoStemGNN,max_steps,1000,"[500, 1000, 2000]"
+AutoStemGNN,multi_layer,5,"[3, 5, 7]"
+AutoStemGNN,n_series,REQUIRED,None
+AutoStemGNN,n_stacks,2,[2]
+AutoStemGNN,random_seed,1,Integer(1 ~ 20)
+AutoStemGNN,scaler_type,robust,"[None, 'robust', 'standard']"
+AutoTCN,batch_size,32,"[16, 32]"
+AutoTCN,context_size,10,"[5, 10, 50]"
+AutoTCN,decoder_hidden_size,128,"[32, 64]"
+AutoTCN,encoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoTCN,h,REQUIRED,None
+AutoTCN,inference_input_size_multiplier,Not in Base Init,[-1]
+AutoTCN,input_size_multiplier,Not in Base Init,"[-1, 4, 16, 64]"
+AutoTCN,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoTCN,loss,MAE(),None
+AutoTCN,max_steps,1000,"[500, 1000]"
+AutoTCN,random_seed,1,Integer(1 ~ 20)
+AutoTFT,batch_size,32,"[32, 64, 128, 256]"
+AutoTFT,h,REQUIRED,None
+AutoTFT,hidden_size,128,"[64, 128, 256]"
+AutoTFT,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoTFT,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoTFT,loss,MAE(),None
+AutoTFT,max_steps,1000,"[500, 1000, 2000]"
+AutoTFT,n_head,4,"[4, 8]"
+AutoTFT,random_seed,1,Integer(1 ~ 20)
+AutoTFT,scaler_type,robust,"[None, 'robust', 'standard']"
+AutoTFT,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoTSMixer,batch_size,32,"[32, 64, 128, 256]"
+AutoTSMixer,dropout,0.9,"Float(0.0 ~ 0.99, Uniform)"
+AutoTSMixer,ff_dim,64,"[32, 64, 128]"
+AutoTSMixer,h,REQUIRED,None
+AutoTSMixer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4]"
+AutoTSMixer,learning_rate,0.001,"Float(0.0001 ~ 0.01, LogUniform)"
+AutoTSMixer,loss,MAE(),None
+AutoTSMixer,max_steps,1000,"[500, 1000, 2000]"
+AutoTSMixer,n_block,2,"[1, 2, 4, 6, 8]"
+AutoTSMixer,n_series,REQUIRED,None
+AutoTSMixer,random_seed,1,Integer(1 ~ 20)
+AutoTSMixer,scaler_type,identity,"['identity', 'robust', 'standard']"
+AutoTSMixerx,batch_size,32,"[32, 64, 128, 256]"
+AutoTSMixerx,dropout,0.0,"Float(0.0 ~ 0.99, Uniform)"
+AutoTSMixerx,ff_dim,64,"[32, 64, 128]"
+AutoTSMixerx,h,REQUIRED,None
+AutoTSMixerx,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4]"
+AutoTSMixerx,learning_rate,0.001,"Float(0.0001 ~ 0.01, LogUniform)"
+AutoTSMixerx,loss,MAE(),None
+AutoTSMixerx,max_steps,1000,"[500, 1000, 2000]"
+AutoTSMixerx,n_block,2,"[1, 2, 4, 6, 8]"
+AutoTSMixerx,n_series,REQUIRED,None
+AutoTSMixerx,random_seed,1,Integer(1 ~ 20)
+AutoTSMixerx,scaler_type,identity,"['identity', 'robust', 'standard']"
+AutoTiDE,batch_size,32,"[32, 64, 128, 256]"
+AutoTiDE,decoder_output_dim,32,"[8, 16, 32]"
+AutoTiDE,dropout,0.3,"[0.0, 0.1, 0.2, 0.3, 0.5]"
+AutoTiDE,h,REQUIRED,None
+AutoTiDE,hidden_size,512,"[256, 512, 1024]"
+AutoTiDE,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoTiDE,layernorm,True,"[True, False]"
+AutoTiDE,learning_rate,0.001,"Float(1e-05 ~ 0.01, LogUniform)"
+AutoTiDE,loss,MAE(),None
+AutoTiDE,max_steps,1000,"Float(500 ~ 1500, Uniform)"
+AutoTiDE,num_decoder_layers,1,"[1, 2, 3]"
+AutoTiDE,num_encoder_layers,1,"[1, 2, 3]"
+AutoTiDE,random_seed,1,Integer(1 ~ 20)
+AutoTiDE,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoTiDE,temporal_decoder_dim,128,"[32, 64, 128]"
+AutoTiDE,temporal_width,4,"[4, 8, 16]"
+AutoTiDE,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoTimeMixer,batch_size,32,"[32, 64, 128, 256]"
+AutoTimeMixer,d_ff,32,"[16, 32, 64]"
+AutoTimeMixer,d_model,32,"[16, 32, 64]"
+AutoTimeMixer,down_sampling_layers,1,"[1, 2]"
+AutoTimeMixer,h,REQUIRED,None
+AutoTimeMixer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoTimeMixer,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoTimeMixer,loss,MAE(),None
+AutoTimeMixer,max_steps,1000,"[500, 1000, 2000]"
+AutoTimeMixer,n_series,REQUIRED,None
+AutoTimeMixer,random_seed,1,Integer(1 ~ 20)
+AutoTimeMixer,scaler_type,identity,"[None, 'robust', 'standard', 'identity']"
+AutoTimeXer,batch_size,32,"[32, 64, 128, 256]"
+AutoTimeXer,h,REQUIRED,None
+AutoTimeXer,hidden_size,512,"[128, 256, 512]"
+AutoTimeXer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoTimeXer,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoTimeXer,loss,MAE(),None
+AutoTimeXer,max_steps,1000,"[500, 1000, 2000]"
+AutoTimeXer,n_heads,8,"[4, 8]"
+AutoTimeXer,n_series,REQUIRED,None
+AutoTimeXer,random_seed,1,Integer(1 ~ 20)
+AutoTimeXer,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoTimesNet,batch_size,32,"[32, 64, 128]"
+AutoTimesNet,conv_hidden_size,64,"[32, 64, 128]"
+AutoTimesNet,h,REQUIRED,None
+AutoTimesNet,hidden_size,64,"[32, 64, 128]"
+AutoTimesNet,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoTimesNet,learning_rate,0.0001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoTimesNet,loss,MAE(),None
+AutoTimesNet,max_steps,1000,"[500, 1000, 2000]"
+AutoTimesNet,random_seed,1,Integer(1 ~ 20)
+AutoTimesNet,scaler_type,standard,"['robust', 'standard']"
+AutoTimesNet,windows_batch_size,64,"[32, 64, 128, 256]"
+AutoVanillaTransformer,batch_size,32,"[32, 64, 128, 256]"
+AutoVanillaTransformer,h,REQUIRED,None
+AutoVanillaTransformer,hidden_size,128,"[64, 128, 256]"
+AutoVanillaTransformer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoVanillaTransformer,learning_rate,0.0001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoVanillaTransformer,loss,MAE(),None
+AutoVanillaTransformer,max_steps,5000,"[500, 1000, 2000]"
+AutoVanillaTransformer,n_head,4,"[4, 8]"
+AutoVanillaTransformer,random_seed,1,Integer(1 ~ 20)
+AutoVanillaTransformer,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoVanillaTransformer,windows_batch_size,1024,"[128, 256, 512, 1024]"
+AutoiTransformer,batch_size,32,"[32, 64, 128, 256]"
+AutoiTransformer,h,REQUIRED,None
+AutoiTransformer,hidden_size,512,"[64, 128, 256]"
+AutoiTransformer,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoiTransformer,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoiTransformer,loss,MAE(),None
+AutoiTransformer,max_steps,1000,"[500, 1000, 2000]"
+AutoiTransformer,n_heads,8,"[4, 8]"
+AutoiTransformer,n_series,REQUIRED,None
+AutoiTransformer,random_seed,1,Integer(1 ~ 20)
+AutoiTransformer,scaler_type,identity,"[None, 'robust', 'standard']"
+AutoxLSTM,batch_size,32,"[32, 64, 128, 256]"
+AutoxLSTM,decoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoxLSTM,encoder_dropout,0.1,"Float(0.0 ~ 0.99, Uniform)"
+AutoxLSTM,encoder_hidden_size,128,"[16, 32, 64, 128]"
+AutoxLSTM,encoder_n_blocks,2,Integer(1 ~ 4)
+AutoxLSTM,h,REQUIRED,None
+AutoxLSTM,input_size_multiplier,Not in Base Init,"[1, 2, 3, 4, 5]"
+AutoxLSTM,learning_rate,0.001,"Float(0.0001 ~ 0.1, LogUniform)"
+AutoxLSTM,loss,MAE(),None
+AutoxLSTM,max_steps,1000,"[500, 1000, 2000]"
+AutoxLSTM,random_seed,1,Integer(1 ~ 20)
+AutoxLSTM,scaler_type,robust,"[None, 'robust', 'standard']"
+AutoxLSTM,windows_batch_size,128,"[128, 256, 512, 1024]"

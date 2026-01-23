@@ -1,0 +1,205 @@
+Model,Loss,Status,Note
+AutoAutoformer,MAE,✅,
+AutoAutoformer,MSE,✅,
+AutoAutoformer,Huber,✅,
+AutoAutoformer,MQLoss,✅,
+AutoAutoformer,Dist_Norm,✅,
+AutoAutoformer,GMM,✅,
+AutoBiTCN,MAE,✅,
+AutoBiTCN,MSE,✅,
+AutoBiTCN,Huber,✅,
+AutoBiTCN,MQLoss,✅,
+AutoBiTCN,Dist_Norm,✅,
+AutoBiTCN,GMM,✅,
+AutoDLinear,MAE,✅,
+AutoDLinear,MSE,✅,
+AutoDLinear,Huber,✅,
+AutoDLinear,MQLoss,✅,
+AutoDLinear,Dist_Norm,✅,
+AutoDLinear,GMM,✅,
+AutoDeepAR,MAE,✅,
+AutoDeepAR,MSE,✅,
+AutoDeepAR,Huber,✅,
+AutoDeepAR,MQLoss,✅,
+AutoDeepAR,Dist_Norm,✅,
+AutoDeepAR,GMM,✅,
+AutoDeepNPTS,MAE,✅,
+AutoDeepNPTS,MSE,✅,
+AutoDeepNPTS,Huber,✅,
+AutoDeepNPTS,MQLoss,✅,
+AutoDeepNPTS,Dist_Norm,✅,
+AutoDeepNPTS,GMM,✅,
+AutoDilatedRNN,MAE,✅,
+AutoDilatedRNN,MSE,✅,
+AutoDilatedRNN,Huber,✅,
+AutoDilatedRNN,MQLoss,✅,
+AutoDilatedRNN,Dist_Norm,✅,
+AutoDilatedRNN,GMM,✅,
+AutoFEDformer,MAE,✅,
+AutoFEDformer,MSE,✅,
+AutoFEDformer,Huber,✅,
+AutoFEDformer,MQLoss,✅,
+AutoFEDformer,Dist_Norm,✅,
+AutoFEDformer,GMM,✅,
+AutoGRU,MAE,✅,
+AutoGRU,MSE,✅,
+AutoGRU,Huber,✅,
+AutoGRU,MQLoss,✅,
+AutoGRU,Dist_Norm,✅,
+AutoGRU,GMM,✅,
+AutoHINT,MAE,❌,AutoHINT.__init__() missing 3 required p...
+AutoHINT,MSE,❌,AutoHINT.__init__() missing 3 required p...
+AutoHINT,Huber,❌,AutoHINT.__init__() missing 3 required p...
+AutoHINT,MQLoss,❌,AutoHINT.__init__() missing 3 required p...
+AutoHINT,Dist_Norm,❌,AutoHINT.__init__() missing 3 required p...
+AutoHINT,GMM,❌,AutoHINT.__init__() missing 3 required p...
+AutoInformer,MAE,✅,
+AutoInformer,MSE,✅,
+AutoInformer,Huber,✅,
+AutoInformer,MQLoss,✅,
+AutoInformer,Dist_Norm,✅,
+AutoInformer,GMM,✅,
+AutoKAN,MAE,✅,
+AutoKAN,MSE,✅,
+AutoKAN,Huber,✅,
+AutoKAN,MQLoss,✅,
+AutoKAN,Dist_Norm,✅,
+AutoKAN,GMM,✅,
+AutoLSTM,MAE,✅,
+AutoLSTM,MSE,✅,
+AutoLSTM,Huber,✅,
+AutoLSTM,MQLoss,✅,
+AutoLSTM,Dist_Norm,✅,
+AutoLSTM,GMM,✅,
+AutoMLP,MAE,✅,
+AutoMLP,MSE,✅,
+AutoMLP,Huber,✅,
+AutoMLP,MQLoss,✅,
+AutoMLP,Dist_Norm,✅,
+AutoMLP,GMM,✅,
+AutoMLPMultivariate,MAE,❌,AutoMLPMultivariate.__init__() missing 1...
+AutoMLPMultivariate,MSE,❌,AutoMLPMultivariate.__init__() missing 1...
+AutoMLPMultivariate,Huber,❌,AutoMLPMultivariate.__init__() missing 1...
+AutoMLPMultivariate,MQLoss,❌,AutoMLPMultivariate.__init__() missing 1...
+AutoMLPMultivariate,Dist_Norm,❌,AutoMLPMultivariate.__init__() missing 1...
+AutoMLPMultivariate,GMM,❌,AutoMLPMultivariate.__init__() missing 1...
+AutoNBEATS,MAE,✅,
+AutoNBEATS,MSE,✅,
+AutoNBEATS,Huber,✅,
+AutoNBEATS,MQLoss,✅,
+AutoNBEATS,Dist_Norm,✅,
+AutoNBEATS,GMM,✅,
+AutoNBEATSx,MAE,✅,
+AutoNBEATSx,MSE,✅,
+AutoNBEATSx,Huber,✅,
+AutoNBEATSx,MQLoss,✅,
+AutoNBEATSx,Dist_Norm,✅,
+AutoNBEATSx,GMM,✅,
+AutoNHITS,MAE,✅,
+AutoNHITS,MSE,✅,
+AutoNHITS,Huber,✅,
+AutoNHITS,MQLoss,✅,
+AutoNHITS,Dist_Norm,✅,
+AutoNHITS,GMM,✅,
+AutoNLinear,MAE,✅,
+AutoNLinear,MSE,✅,
+AutoNLinear,Huber,✅,
+AutoNLinear,MQLoss,✅,
+AutoNLinear,Dist_Norm,✅,
+AutoNLinear,GMM,✅,
+AutoPatchTST,MAE,✅,
+AutoPatchTST,MSE,✅,
+AutoPatchTST,Huber,✅,
+AutoPatchTST,MQLoss,✅,
+AutoPatchTST,Dist_Norm,✅,
+AutoPatchTST,GMM,✅,
+AutoRMoK,MAE,❌,AutoRMoK.__init__() missing 1 required p...
+AutoRMoK,MSE,❌,AutoRMoK.__init__() missing 1 required p...
+AutoRMoK,Huber,❌,AutoRMoK.__init__() missing 1 required p...
+AutoRMoK,MQLoss,❌,AutoRMoK.__init__() missing 1 required p...
+AutoRMoK,Dist_Norm,❌,AutoRMoK.__init__() missing 1 required p...
+AutoRMoK,GMM,❌,AutoRMoK.__init__() missing 1 required p...
+AutoRNN,MAE,✅,
+AutoRNN,MSE,✅,
+AutoRNN,Huber,✅,
+AutoRNN,MQLoss,✅,
+AutoRNN,Dist_Norm,✅,
+AutoRNN,GMM,✅,
+AutoSOFTS,MAE,❌,AutoSOFTS.__init__() missing 1 required ...
+AutoSOFTS,MSE,❌,AutoSOFTS.__init__() missing 1 required ...
+AutoSOFTS,Huber,❌,AutoSOFTS.__init__() missing 1 required ...
+AutoSOFTS,MQLoss,❌,AutoSOFTS.__init__() missing 1 required ...
+AutoSOFTS,Dist_Norm,❌,AutoSOFTS.__init__() missing 1 required ...
+AutoSOFTS,GMM,❌,AutoSOFTS.__init__() missing 1 required ...
+AutoStemGNN,MAE,❌,AutoStemGNN.__init__() missing 1 require...
+AutoStemGNN,MSE,❌,AutoStemGNN.__init__() missing 1 require...
+AutoStemGNN,Huber,❌,AutoStemGNN.__init__() missing 1 require...
+AutoStemGNN,MQLoss,❌,AutoStemGNN.__init__() missing 1 require...
+AutoStemGNN,Dist_Norm,❌,AutoStemGNN.__init__() missing 1 require...
+AutoStemGNN,GMM,❌,AutoStemGNN.__init__() missing 1 require...
+AutoTCN,MAE,✅,
+AutoTCN,MSE,✅,
+AutoTCN,Huber,✅,
+AutoTCN,MQLoss,✅,
+AutoTCN,Dist_Norm,✅,
+AutoTCN,GMM,✅,
+AutoTFT,MAE,✅,
+AutoTFT,MSE,✅,
+AutoTFT,Huber,✅,
+AutoTFT,MQLoss,✅,
+AutoTFT,Dist_Norm,✅,
+AutoTFT,GMM,✅,
+AutoTSMixer,MAE,❌,AutoTSMixer.__init__() missing 1 require...
+AutoTSMixer,MSE,❌,AutoTSMixer.__init__() missing 1 require...
+AutoTSMixer,Huber,❌,AutoTSMixer.__init__() missing 1 require...
+AutoTSMixer,MQLoss,❌,AutoTSMixer.__init__() missing 1 require...
+AutoTSMixer,Dist_Norm,❌,AutoTSMixer.__init__() missing 1 require...
+AutoTSMixer,GMM,❌,AutoTSMixer.__init__() missing 1 require...
+AutoTSMixerx,MAE,❌,AutoTSMixerx.__init__() missing 1 requir...
+AutoTSMixerx,MSE,❌,AutoTSMixerx.__init__() missing 1 requir...
+AutoTSMixerx,Huber,❌,AutoTSMixerx.__init__() missing 1 requir...
+AutoTSMixerx,MQLoss,❌,AutoTSMixerx.__init__() missing 1 requir...
+AutoTSMixerx,Dist_Norm,❌,AutoTSMixerx.__init__() missing 1 requir...
+AutoTSMixerx,GMM,❌,AutoTSMixerx.__init__() missing 1 requir...
+AutoTiDE,MAE,✅,
+AutoTiDE,MSE,✅,
+AutoTiDE,Huber,✅,
+AutoTiDE,MQLoss,✅,
+AutoTiDE,Dist_Norm,✅,
+AutoTiDE,GMM,✅,
+AutoTimeMixer,MAE,❌,AutoTimeMixer.__init__() missing 1 requi...
+AutoTimeMixer,MSE,❌,AutoTimeMixer.__init__() missing 1 requi...
+AutoTimeMixer,Huber,❌,AutoTimeMixer.__init__() missing 1 requi...
+AutoTimeMixer,MQLoss,❌,AutoTimeMixer.__init__() missing 1 requi...
+AutoTimeMixer,Dist_Norm,❌,AutoTimeMixer.__init__() missing 1 requi...
+AutoTimeMixer,GMM,❌,AutoTimeMixer.__init__() missing 1 requi...
+AutoTimeXer,MAE,❌,AutoTimeXer.__init__() missing 1 require...
+AutoTimeXer,MSE,❌,AutoTimeXer.__init__() missing 1 require...
+AutoTimeXer,Huber,❌,AutoTimeXer.__init__() missing 1 require...
+AutoTimeXer,MQLoss,❌,AutoTimeXer.__init__() missing 1 require...
+AutoTimeXer,Dist_Norm,❌,AutoTimeXer.__init__() missing 1 require...
+AutoTimeXer,GMM,❌,AutoTimeXer.__init__() missing 1 require...
+AutoTimesNet,MAE,✅,
+AutoTimesNet,MSE,✅,
+AutoTimesNet,Huber,✅,
+AutoTimesNet,MQLoss,✅,
+AutoTimesNet,Dist_Norm,✅,
+AutoTimesNet,GMM,✅,
+AutoVanillaTransformer,MAE,✅,
+AutoVanillaTransformer,MSE,✅,
+AutoVanillaTransformer,Huber,✅,
+AutoVanillaTransformer,MQLoss,✅,
+AutoVanillaTransformer,Dist_Norm,✅,
+AutoVanillaTransformer,GMM,✅,
+AutoiTransformer,MAE,❌,AutoiTransformer.__init__() missing 1 re...
+AutoiTransformer,MSE,❌,AutoiTransformer.__init__() missing 1 re...
+AutoiTransformer,Huber,❌,AutoiTransformer.__init__() missing 1 re...
+AutoiTransformer,MQLoss,❌,AutoiTransformer.__init__() missing 1 re...
+AutoiTransformer,Dist_Norm,❌,AutoiTransformer.__init__() missing 1 re...
+AutoiTransformer,GMM,❌,AutoiTransformer.__init__() missing 1 re...
+AutoxLSTM,MAE,✅,
+AutoxLSTM,MSE,✅,
+AutoxLSTM,Huber,✅,
+AutoxLSTM,MQLoss,✅,
+AutoxLSTM,Dist_Norm,✅,
+AutoxLSTM,GMM,✅,

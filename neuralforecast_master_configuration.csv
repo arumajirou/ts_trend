@@ -1,0 +1,749 @@
+Model_Class,Target_Loss,Status,Recommended_Backend,Supported_Search_Algs,Min_H_Constraint,Required_Direct_Args,Recommended_Config,Loss_Init_Snippet,Notes
+AutoAutoformer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoAutoformer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoAutoformer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoAutoformer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoAutoformer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoAutoformer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoAutoformer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoAutoformer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoAutoformer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoAutoformer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoAutoformer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoAutoformer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoAutoformer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoAutoformer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoAutoformer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoAutoformer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoAutoformer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoAutoformer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoAutoformer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoAutoformer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoAutoformer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoAutoformer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoBiTCN,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoBiTCN,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoBiTCN,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoBiTCN,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoBiTCN,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoBiTCN,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoBiTCN,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoBiTCN,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoBiTCN,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoBiTCN,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoBiTCN,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoBiTCN,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoBiTCN,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoBiTCN,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoBiTCN,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoBiTCN,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoBiTCN,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoBiTCN,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoBiTCN,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoBiTCN,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoBiTCN,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoBiTCN,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoDLinear,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoDLinear,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoDLinear,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoDLinear,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoDLinear,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoDLinear,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoDLinear,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoDLinear,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoDLinear,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoDLinear,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoDLinear,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoDLinear,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoDLinear,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoDLinear,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoDLinear,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoDLinear,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoDLinear,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoDLinear,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoDLinear,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoDLinear,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoDLinear,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoDLinear,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoDeepAR,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoDeepAR,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoDeepAR,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoDeepAR,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoDeepAR,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoDeepAR,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoDeepAR,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoDeepAR,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoDeepAR,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoDeepAR,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoDeepAR,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoDeepAR,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoDeepAR,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoDeepAR,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoDeepAR,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoDeepAR,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoDeepAR,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoDeepAR,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoDeepAR,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoDeepAR,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoDeepAR,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoDeepAR,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoDeepNPTS,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoDeepNPTS,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoDeepNPTS,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoDeepNPTS,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoDeepNPTS,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoDeepNPTS,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoDeepNPTS,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoDeepNPTS,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoDeepNPTS,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoDeepNPTS,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoDeepNPTS,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoDeepNPTS,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoDeepNPTS,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoDeepNPTS,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoDeepNPTS,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoDeepNPTS,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoDeepNPTS,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoDeepNPTS,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoDeepNPTS,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoDeepNPTS,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoDeepNPTS,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoDeepNPTS,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoDilatedRNN,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoDilatedRNN,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoDilatedRNN,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoDilatedRNN,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoDilatedRNN,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoDilatedRNN,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoDilatedRNN,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoDilatedRNN,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoDilatedRNN,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoDilatedRNN,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoDilatedRNN,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoDilatedRNN,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoDilatedRNN,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoDilatedRNN,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoDilatedRNN,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoDilatedRNN,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoDilatedRNN,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoDilatedRNN,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoDilatedRNN,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoDilatedRNN,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoDilatedRNN,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoDilatedRNN,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoFEDformer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoFEDformer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoFEDformer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoFEDformer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoFEDformer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoFEDformer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoFEDformer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoFEDformer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoFEDformer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoFEDformer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoFEDformer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoFEDformer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoFEDformer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoFEDformer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoFEDformer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoFEDformer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoFEDformer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoFEDformer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoFEDformer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoFEDformer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoFEDformer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoFEDformer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoGRU,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoGRU,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoGRU,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoGRU,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoGRU,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoGRU,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoGRU,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoGRU,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoGRU,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoGRU,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoGRU,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoGRU,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoGRU,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoGRU,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoGRU,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoGRU,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoGRU,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoGRU,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoGRU,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoGRU,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoGRU,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoGRU,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoHINT,Accuracy,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},Accuracy(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,DistributionLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,GMM,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},GMM(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,HuberIQLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},HuberIQLoss(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,HuberLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},HuberLoss(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,HuberMQLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},HuberMQLoss(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,HuberQLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,IQLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},IQLoss(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,MAE,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},MAE(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,MAPE,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},MAPE(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,MASE,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},MASE(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,MQLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},MQLoss(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,MSE,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},MSE(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,NBMM,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},NBMM(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,PMM,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},PMM(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,QuantileLayer,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,QuantileLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,RMSE,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},RMSE(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,SMAPE,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},SMAPE(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,TukeyLoss,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},TukeyLoss(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,relMSE,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},relMSE(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoHINT,sCRPS,Complex Setup (See Notes),ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'cls_model': 'NHITS', 'S': 'np.array([...])', 'valid_loss': 'MAE()'}",{},sCRPS(),"Requires a model class (e.g. NHITS, NBEATS); Requires reconciliation matrix S; Requires valid_loss"
+AutoInformer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoInformer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoInformer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoInformer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoInformer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoInformer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoInformer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoInformer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoInformer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoInformer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoInformer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoInformer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoInformer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoInformer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoInformer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoInformer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoInformer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoInformer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoInformer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoInformer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoInformer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoInformer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoKAN,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoKAN,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoKAN,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoKAN,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoKAN,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoKAN,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoKAN,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoKAN,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoKAN,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoKAN,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoKAN,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoKAN,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoKAN,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoKAN,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoKAN,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoKAN,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoKAN,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoKAN,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoKAN,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoKAN,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoKAN,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoKAN,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoLSTM,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoLSTM,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoLSTM,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoLSTM,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoLSTM,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoLSTM,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoLSTM,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoLSTM,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoLSTM,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoLSTM,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoLSTM,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoLSTM,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoLSTM,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoLSTM,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoLSTM,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoLSTM,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoLSTM,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoLSTM,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoLSTM,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoLSTM,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoLSTM,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoLSTM,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoMLP,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoMLP,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoMLP,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoMLP,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoMLP,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoMLP,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoMLP,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoMLP,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoMLP,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoMLP,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoMLP,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoMLP,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoMLP,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoMLP,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoMLP,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoMLP,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoMLP,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoMLP,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoMLP,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoMLP,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoMLP,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoMLP,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoMLPMultivariate,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoMLPMultivariate,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoNBEATS,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoNBEATS,DistributionLoss,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoNBEATS,GMM,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoNBEATS,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoNBEATS,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoNBEATS,HuberMQLoss,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoNBEATS,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoNBEATS,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoNBEATS,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoNBEATS,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoNBEATS,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoNBEATS,MQLoss,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoNBEATS,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoNBEATS,NBMM,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoNBEATS,PMM,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoNBEATS,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoNBEATS,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoNBEATS,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoNBEATS,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoNBEATS,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoNBEATS,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoNBEATS,sCRPS,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoNBEATSx,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoNBEATSx,DistributionLoss,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoNBEATSx,GMM,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoNBEATSx,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoNBEATSx,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoNBEATSx,HuberMQLoss,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoNBEATSx,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoNBEATSx,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoNBEATSx,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoNBEATSx,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoNBEATSx,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoNBEATSx,MQLoss,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoNBEATSx,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoNBEATSx,NBMM,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoNBEATSx,PMM,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoNBEATSx,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoNBEATSx,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoNBEATSx,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoNBEATSx,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoNBEATSx,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoNBEATSx,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoNBEATSx,sCRPS,Warning: Shape Mismatch,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoNHITS,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoNHITS,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoNHITS,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoNHITS,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoNHITS,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoNHITS,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoNHITS,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoNHITS,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoNHITS,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoNHITS,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoNHITS,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoNHITS,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoNHITS,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoNHITS,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoNHITS,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoNHITS,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoNHITS,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoNHITS,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoNHITS,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoNHITS,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoNHITS,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoNHITS,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoNLinear,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoNLinear,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoNLinear,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoNLinear,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoNLinear,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoNLinear,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoNLinear,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoNLinear,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoNLinear,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoNLinear,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoNLinear,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoNLinear,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoNLinear,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoNLinear,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoNLinear,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoNLinear,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoNLinear,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoNLinear,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoNLinear,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoNLinear,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoNLinear,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoNLinear,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoPatchTST,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},Accuracy(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},DistributionLoss(distribution='Normal'),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},GMM(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},HuberIQLoss(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},HuberLoss(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},HuberMQLoss(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},HuberQLoss(q=0.5),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},IQLoss(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},MAE(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},MAPE(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},MASE(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},MQLoss(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},MSE(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},NBMM(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},PMM(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},QuantileLayer(num_output=1),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},QuantileLoss(q=0.5),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},RMSE(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},SMAPE(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},TukeyLoss(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},relMSE(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoPatchTST,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,{'valid_loss': 'MAE()'},{'patch_len': 8},sCRPS(),Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoRMoK,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoRMoK,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoRMoK,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoRMoK,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoRMoK,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoRMoK,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoRMoK,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoRMoK,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoRMoK,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoRMoK,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoRMoK,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoRMoK,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoRMoK,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoRMoK,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoRMoK,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoRMoK,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoRMoK,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoRMoK,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoRMoK,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoRMoK,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoRMoK,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoRMoK,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoRNN,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoRNN,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoRNN,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoRNN,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoRNN,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoRNN,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoRNN,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoRNN,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoRNN,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoRNN,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoRNN,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoRNN,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoRNN,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoRNN,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoRNN,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoRNN,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoRNN,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoRNN,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoRNN,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoRNN,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoRNN,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoRNN,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoSOFTS,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoSOFTS,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoSOFTS,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoSOFTS,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoSOFTS,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoSOFTS,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoStemGNN,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoStemGNN,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoStemGNN,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoStemGNN,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoStemGNN,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoTCN,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoTCN,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoTCN,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoTCN,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoTCN,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoTCN,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoTCN,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoTCN,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoTCN,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoTCN,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoTCN,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoTCN,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoTCN,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoTCN,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoTCN,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoTCN,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoTCN,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoTCN,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoTCN,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoTCN,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoTCN,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoTCN,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoTFT,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoTFT,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoTFT,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoTFT,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoTFT,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoTFT,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoTFT,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoTFT,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoTFT,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoTFT,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoTFT,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoTFT,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoTFT,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoTFT,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoTFT,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoTFT,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoTFT,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoTFT,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoTFT,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoTFT,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoTFT,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoTFT,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoTSMixer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoTSMixer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoTSMixer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoTSMixer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoTSMixer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoTSMixer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoTSMixerx,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoTiDE,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoTiDE,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoTiDE,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoTiDE,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoTiDE,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoTiDE,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoTiDE,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoTiDE,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoTiDE,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoTiDE,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoTiDE,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoTiDE,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoTiDE,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoTiDE,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoTiDE,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoTiDE,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoTiDE,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoTiDE,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoTiDE,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoTiDE,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoTiDE,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoTiDE,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoTimeMixer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoTimeMixer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoTimeXer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},Accuracy(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},GMM(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},HuberIQLoss(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},HuberLoss(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},HuberMQLoss(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},IQLoss(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},MAE(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},MAPE(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},MASE(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},MQLoss(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},MSE(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},NBMM(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},PMM(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},RMSE(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},SMAPE(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},TukeyLoss(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},relMSE(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimeXer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",16,"{'n_series': 2, 'valid_loss': 'MAE()'}",{'patch_len': 8},sCRPS(),Requires n_series (int); Requires valid_loss; Constraint: h >= patch_len (default 16)
+AutoTimesNet,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoTimesNet,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoTimesNet,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoTimesNet,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoTimesNet,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoTimesNet,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoTimesNet,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoTimesNet,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoTimesNet,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoTimesNet,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoTimesNet,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoTimesNet,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoTimesNet,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoTimesNet,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoTimesNet,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoTimesNet,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoTimesNet,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoTimesNet,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoTimesNet,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoTimesNet,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoTimesNet,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoTimesNet,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoVanillaTransformer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoVanillaTransformer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoVanillaTransformer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoVanillaTransformer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoVanillaTransformer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoVanillaTransformer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoVanillaTransformer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoVanillaTransformer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoVanillaTransformer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoVanillaTransformer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoVanillaTransformer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoVanillaTransformer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoVanillaTransformer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoVanillaTransformer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoVanillaTransformer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoVanillaTransformer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoVanillaTransformer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoVanillaTransformer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoVanillaTransformer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoVanillaTransformer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoVanillaTransformer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoVanillaTransformer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss
+AutoiTransformer,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},Accuracy(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},DistributionLoss(distribution='Normal'),Requires n_series (int); Requires valid_loss
+AutoiTransformer,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},GMM(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberIQLoss(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberLoss(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberMQLoss(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},HuberQLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoiTransformer,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},IQLoss(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAE(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MAPE(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MASE(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MQLoss(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},MSE(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},NBMM(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},PMM(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLayer(num_output=1),Requires n_series (int); Requires valid_loss
+AutoiTransformer,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},QuantileLoss(q=0.5),Requires n_series (int); Requires valid_loss
+AutoiTransformer,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},RMSE(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},SMAPE(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},TukeyLoss(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},relMSE(),Requires n_series (int); Requires valid_loss
+AutoiTransformer,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,"{'n_series': 2, 'valid_loss': 'MAE()'}",{},sCRPS(),Requires n_series (int); Requires valid_loss
+AutoxLSTM,Accuracy,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},Accuracy(),Requires valid_loss
+AutoxLSTM,DistributionLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},DistributionLoss(distribution='Normal'),Requires valid_loss
+AutoxLSTM,GMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},GMM(),Requires valid_loss
+AutoxLSTM,HuberIQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberIQLoss(),Requires valid_loss
+AutoxLSTM,HuberLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberLoss(),Requires valid_loss
+AutoxLSTM,HuberMQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberMQLoss(),Requires valid_loss
+AutoxLSTM,HuberQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},HuberQLoss(q=0.5),Requires valid_loss
+AutoxLSTM,IQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},IQLoss(),Requires valid_loss
+AutoxLSTM,MAE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAE(),Requires valid_loss
+AutoxLSTM,MAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MAPE(),Requires valid_loss
+AutoxLSTM,MASE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MASE(),Requires valid_loss
+AutoxLSTM,MQLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MQLoss(),Requires valid_loss
+AutoxLSTM,MSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},MSE(),Requires valid_loss
+AutoxLSTM,NBMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},NBMM(),Requires valid_loss
+AutoxLSTM,PMM,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},PMM(),Requires valid_loss
+AutoxLSTM,QuantileLayer,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLayer(num_output=1),Requires valid_loss
+AutoxLSTM,QuantileLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},QuantileLoss(q=0.5),Requires valid_loss
+AutoxLSTM,RMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},RMSE(),Requires valid_loss
+AutoxLSTM,SMAPE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},SMAPE(),Requires valid_loss
+AutoxLSTM,TukeyLoss,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},TukeyLoss(),Requires valid_loss
+AutoxLSTM,relMSE,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},relMSE(),Requires valid_loss
+AutoxLSTM,sCRPS,Ready,ray,"['Basic', 'Optuna', 'HyperOpt']",1,{'valid_loss': 'MAE()'},{},sCRPS(),Requires valid_loss

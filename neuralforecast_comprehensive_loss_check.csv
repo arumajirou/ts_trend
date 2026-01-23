@@ -1,0 +1,613 @@
+Model,Loss_Function,Status,Required_Config_Args,Error_Detail
+AutoAutoformer,Accuracy,✅ OK,[],
+AutoAutoformer,GMM,✅ OK,[],
+AutoAutoformer,HuberIQLoss,✅ OK,[],
+AutoAutoformer,HuberLoss,✅ OK,[],
+AutoAutoformer,HuberMQLoss,✅ OK,[],
+AutoAutoformer,IQLoss,✅ OK,[],
+AutoAutoformer,MAE,✅ OK,[],
+AutoAutoformer,MAPE,✅ OK,[],
+AutoAutoformer,MQLoss,✅ OK,[],
+AutoAutoformer,MSE,✅ OK,[],
+AutoAutoformer,NBMM,✅ OK,[],
+AutoAutoformer,PMM,✅ OK,[],
+AutoAutoformer,QuantileLayer,✅ OK,[],
+AutoAutoformer,RMSE,✅ OK,[],
+AutoAutoformer,SMAPE,✅ OK,[],
+AutoAutoformer,TukeyLoss,✅ OK,[],
+AutoAutoformer,relMSE,✅ OK,[],
+AutoAutoformer,sCRPS,✅ OK,[],
+AutoBiTCN,Accuracy,✅ OK,[],
+AutoBiTCN,GMM,✅ OK,[],
+AutoBiTCN,HuberIQLoss,✅ OK,[],
+AutoBiTCN,HuberLoss,✅ OK,[],
+AutoBiTCN,HuberMQLoss,✅ OK,[],
+AutoBiTCN,IQLoss,✅ OK,[],
+AutoBiTCN,MAE,✅ OK,[],
+AutoBiTCN,MAPE,✅ OK,[],
+AutoBiTCN,MQLoss,✅ OK,[],
+AutoBiTCN,MSE,✅ OK,[],
+AutoBiTCN,NBMM,✅ OK,[],
+AutoBiTCN,PMM,✅ OK,[],
+AutoBiTCN,QuantileLayer,✅ OK,[],
+AutoBiTCN,RMSE,✅ OK,[],
+AutoBiTCN,SMAPE,✅ OK,[],
+AutoBiTCN,TukeyLoss,✅ OK,[],
+AutoBiTCN,relMSE,✅ OK,[],
+AutoBiTCN,sCRPS,✅ OK,[],
+AutoDLinear,Accuracy,✅ OK,[],
+AutoDLinear,GMM,✅ OK,[],
+AutoDLinear,HuberIQLoss,✅ OK,[],
+AutoDLinear,HuberLoss,✅ OK,[],
+AutoDLinear,HuberMQLoss,✅ OK,[],
+AutoDLinear,IQLoss,✅ OK,[],
+AutoDLinear,MAE,✅ OK,[],
+AutoDLinear,MAPE,✅ OK,[],
+AutoDLinear,MQLoss,✅ OK,[],
+AutoDLinear,MSE,✅ OK,[],
+AutoDLinear,NBMM,✅ OK,[],
+AutoDLinear,PMM,✅ OK,[],
+AutoDLinear,QuantileLayer,✅ OK,[],
+AutoDLinear,RMSE,✅ OK,[],
+AutoDLinear,SMAPE,✅ OK,[],
+AutoDLinear,TukeyLoss,✅ OK,[],
+AutoDLinear,relMSE,✅ OK,[],
+AutoDLinear,sCRPS,✅ OK,[],
+AutoDeepAR,Accuracy,✅ OK,[],
+AutoDeepAR,GMM,✅ OK,[],
+AutoDeepAR,HuberIQLoss,✅ OK,[],
+AutoDeepAR,HuberLoss,✅ OK,[],
+AutoDeepAR,HuberMQLoss,✅ OK,[],
+AutoDeepAR,IQLoss,✅ OK,[],
+AutoDeepAR,MAE,✅ OK,[],
+AutoDeepAR,MAPE,✅ OK,[],
+AutoDeepAR,MQLoss,✅ OK,[],
+AutoDeepAR,MSE,✅ OK,[],
+AutoDeepAR,NBMM,✅ OK,[],
+AutoDeepAR,PMM,✅ OK,[],
+AutoDeepAR,QuantileLayer,✅ OK,[],
+AutoDeepAR,RMSE,✅ OK,[],
+AutoDeepAR,SMAPE,✅ OK,[],
+AutoDeepAR,TukeyLoss,✅ OK,[],
+AutoDeepAR,relMSE,✅ OK,[],
+AutoDeepAR,sCRPS,✅ OK,[],
+AutoDeepNPTS,Accuracy,✅ OK,[],
+AutoDeepNPTS,GMM,✅ OK,[],
+AutoDeepNPTS,HuberIQLoss,✅ OK,[],
+AutoDeepNPTS,HuberLoss,✅ OK,[],
+AutoDeepNPTS,HuberMQLoss,✅ OK,[],
+AutoDeepNPTS,IQLoss,✅ OK,[],
+AutoDeepNPTS,MAE,✅ OK,[],
+AutoDeepNPTS,MAPE,✅ OK,[],
+AutoDeepNPTS,MQLoss,✅ OK,[],
+AutoDeepNPTS,MSE,✅ OK,[],
+AutoDeepNPTS,NBMM,✅ OK,[],
+AutoDeepNPTS,PMM,✅ OK,[],
+AutoDeepNPTS,QuantileLayer,✅ OK,[],
+AutoDeepNPTS,RMSE,✅ OK,[],
+AutoDeepNPTS,SMAPE,✅ OK,[],
+AutoDeepNPTS,TukeyLoss,✅ OK,[],
+AutoDeepNPTS,relMSE,✅ OK,[],
+AutoDeepNPTS,sCRPS,✅ OK,[],
+AutoDilatedRNN,Accuracy,✅ OK,[],
+AutoDilatedRNN,GMM,✅ OK,[],
+AutoDilatedRNN,HuberIQLoss,✅ OK,[],
+AutoDilatedRNN,HuberLoss,✅ OK,[],
+AutoDilatedRNN,HuberMQLoss,✅ OK,[],
+AutoDilatedRNN,IQLoss,✅ OK,[],
+AutoDilatedRNN,MAE,✅ OK,[],
+AutoDilatedRNN,MAPE,✅ OK,[],
+AutoDilatedRNN,MQLoss,✅ OK,[],
+AutoDilatedRNN,MSE,✅ OK,[],
+AutoDilatedRNN,NBMM,✅ OK,[],
+AutoDilatedRNN,PMM,✅ OK,[],
+AutoDilatedRNN,QuantileLayer,✅ OK,[],
+AutoDilatedRNN,RMSE,✅ OK,[],
+AutoDilatedRNN,SMAPE,✅ OK,[],
+AutoDilatedRNN,TukeyLoss,✅ OK,[],
+AutoDilatedRNN,relMSE,✅ OK,[],
+AutoDilatedRNN,sCRPS,✅ OK,[],
+AutoFEDformer,Accuracy,✅ OK,[],
+AutoFEDformer,GMM,✅ OK,[],
+AutoFEDformer,HuberIQLoss,✅ OK,[],
+AutoFEDformer,HuberLoss,✅ OK,[],
+AutoFEDformer,HuberMQLoss,✅ OK,[],
+AutoFEDformer,IQLoss,✅ OK,[],
+AutoFEDformer,MAE,✅ OK,[],
+AutoFEDformer,MAPE,✅ OK,[],
+AutoFEDformer,MQLoss,✅ OK,[],
+AutoFEDformer,MSE,✅ OK,[],
+AutoFEDformer,NBMM,✅ OK,[],
+AutoFEDformer,PMM,✅ OK,[],
+AutoFEDformer,QuantileLayer,✅ OK,[],
+AutoFEDformer,RMSE,✅ OK,[],
+AutoFEDformer,SMAPE,✅ OK,[],
+AutoFEDformer,TukeyLoss,✅ OK,[],
+AutoFEDformer,relMSE,✅ OK,[],
+AutoFEDformer,sCRPS,✅ OK,[],
+AutoGRU,Accuracy,✅ OK,[],
+AutoGRU,GMM,✅ OK,[],
+AutoGRU,HuberIQLoss,✅ OK,[],
+AutoGRU,HuberLoss,✅ OK,[],
+AutoGRU,HuberMQLoss,✅ OK,[],
+AutoGRU,IQLoss,✅ OK,[],
+AutoGRU,MAE,✅ OK,[],
+AutoGRU,MAPE,✅ OK,[],
+AutoGRU,MQLoss,✅ OK,[],
+AutoGRU,MSE,✅ OK,[],
+AutoGRU,NBMM,✅ OK,[],
+AutoGRU,PMM,✅ OK,[],
+AutoGRU,QuantileLayer,✅ OK,[],
+AutoGRU,RMSE,✅ OK,[],
+AutoGRU,SMAPE,✅ OK,[],
+AutoGRU,TukeyLoss,✅ OK,[],
+AutoGRU,relMSE,✅ OK,[],
+AutoGRU,sCRPS,✅ OK,[],
+AutoHINT,Accuracy,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,GMM,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,HuberIQLoss,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,HuberLoss,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,HuberMQLoss,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,IQLoss,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,MAE,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,MAPE,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,MQLoss,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,MSE,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,NBMM,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,PMM,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,QuantileLayer,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,RMSE,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,SMAPE,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,TukeyLoss,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,relMSE,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoHINT,sCRPS,❌ Error,"['cls_model', 'S']","AutoHINT.__init__() missing 3 required positional arguments: 'cls_model', 'valid_loss', and 'S'"
+AutoInformer,Accuracy,✅ OK,[],
+AutoInformer,GMM,✅ OK,[],
+AutoInformer,HuberIQLoss,✅ OK,[],
+AutoInformer,HuberLoss,✅ OK,[],
+AutoInformer,HuberMQLoss,✅ OK,[],
+AutoInformer,IQLoss,✅ OK,[],
+AutoInformer,MAE,✅ OK,[],
+AutoInformer,MAPE,✅ OK,[],
+AutoInformer,MQLoss,✅ OK,[],
+AutoInformer,MSE,✅ OK,[],
+AutoInformer,NBMM,✅ OK,[],
+AutoInformer,PMM,✅ OK,[],
+AutoInformer,QuantileLayer,✅ OK,[],
+AutoInformer,RMSE,✅ OK,[],
+AutoInformer,SMAPE,✅ OK,[],
+AutoInformer,TukeyLoss,✅ OK,[],
+AutoInformer,relMSE,✅ OK,[],
+AutoInformer,sCRPS,✅ OK,[],
+AutoKAN,Accuracy,✅ OK,[],
+AutoKAN,GMM,✅ OK,[],
+AutoKAN,HuberIQLoss,✅ OK,[],
+AutoKAN,HuberLoss,✅ OK,[],
+AutoKAN,HuberMQLoss,✅ OK,[],
+AutoKAN,IQLoss,✅ OK,[],
+AutoKAN,MAE,✅ OK,[],
+AutoKAN,MAPE,✅ OK,[],
+AutoKAN,MQLoss,✅ OK,[],
+AutoKAN,MSE,✅ OK,[],
+AutoKAN,NBMM,✅ OK,[],
+AutoKAN,PMM,✅ OK,[],
+AutoKAN,QuantileLayer,✅ OK,[],
+AutoKAN,RMSE,✅ OK,[],
+AutoKAN,SMAPE,✅ OK,[],
+AutoKAN,TukeyLoss,✅ OK,[],
+AutoKAN,relMSE,✅ OK,[],
+AutoKAN,sCRPS,✅ OK,[],
+AutoLSTM,Accuracy,✅ OK,[],
+AutoLSTM,GMM,✅ OK,[],
+AutoLSTM,HuberIQLoss,✅ OK,[],
+AutoLSTM,HuberLoss,✅ OK,[],
+AutoLSTM,HuberMQLoss,✅ OK,[],
+AutoLSTM,IQLoss,✅ OK,[],
+AutoLSTM,MAE,✅ OK,[],
+AutoLSTM,MAPE,✅ OK,[],
+AutoLSTM,MQLoss,✅ OK,[],
+AutoLSTM,MSE,✅ OK,[],
+AutoLSTM,NBMM,✅ OK,[],
+AutoLSTM,PMM,✅ OK,[],
+AutoLSTM,QuantileLayer,✅ OK,[],
+AutoLSTM,RMSE,✅ OK,[],
+AutoLSTM,SMAPE,✅ OK,[],
+AutoLSTM,TukeyLoss,✅ OK,[],
+AutoLSTM,relMSE,✅ OK,[],
+AutoLSTM,sCRPS,✅ OK,[],
+AutoMLP,Accuracy,✅ OK,[],
+AutoMLP,GMM,✅ OK,[],
+AutoMLP,HuberIQLoss,✅ OK,[],
+AutoMLP,HuberLoss,✅ OK,[],
+AutoMLP,HuberMQLoss,✅ OK,[],
+AutoMLP,IQLoss,✅ OK,[],
+AutoMLP,MAE,✅ OK,[],
+AutoMLP,MAPE,✅ OK,[],
+AutoMLP,MQLoss,✅ OK,[],
+AutoMLP,MSE,✅ OK,[],
+AutoMLP,NBMM,✅ OK,[],
+AutoMLP,PMM,✅ OK,[],
+AutoMLP,QuantileLayer,✅ OK,[],
+AutoMLP,RMSE,✅ OK,[],
+AutoMLP,SMAPE,✅ OK,[],
+AutoMLP,TukeyLoss,✅ OK,[],
+AutoMLP,relMSE,✅ OK,[],
+AutoMLP,sCRPS,✅ OK,[],
+AutoMLPMultivariate,Accuracy,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,GMM,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,HuberIQLoss,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,HuberLoss,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,HuberMQLoss,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,IQLoss,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,MAE,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,MAPE,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,MQLoss,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,MSE,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,NBMM,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,PMM,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,QuantileLayer,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,RMSE,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,SMAPE,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,TukeyLoss,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,relMSE,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoMLPMultivariate,sCRPS,❌ Error,['n_series'],AutoMLPMultivariate.__init__() missing 1 required positional argument: 'n_series'
+AutoNBEATS,Accuracy,✅ OK,[],
+AutoNBEATS,GMM,✅ OK,[],
+AutoNBEATS,HuberIQLoss,✅ OK,[],
+AutoNBEATS,HuberLoss,✅ OK,[],
+AutoNBEATS,HuberMQLoss,✅ OK,[],
+AutoNBEATS,IQLoss,✅ OK,[],
+AutoNBEATS,MAE,✅ OK,[],
+AutoNBEATS,MAPE,✅ OK,[],
+AutoNBEATS,MQLoss,✅ OK,[],
+AutoNBEATS,MSE,✅ OK,[],
+AutoNBEATS,NBMM,✅ OK,[],
+AutoNBEATS,PMM,✅ OK,[],
+AutoNBEATS,QuantileLayer,✅ OK,[],
+AutoNBEATS,RMSE,✅ OK,[],
+AutoNBEATS,SMAPE,✅ OK,[],
+AutoNBEATS,TukeyLoss,✅ OK,[],
+AutoNBEATS,relMSE,✅ OK,[],
+AutoNBEATS,sCRPS,✅ OK,[],
+AutoNBEATSx,Accuracy,✅ OK,[],
+AutoNBEATSx,GMM,✅ OK,[],
+AutoNBEATSx,HuberIQLoss,✅ OK,[],
+AutoNBEATSx,HuberLoss,✅ OK,[],
+AutoNBEATSx,HuberMQLoss,✅ OK,[],
+AutoNBEATSx,IQLoss,✅ OK,[],
+AutoNBEATSx,MAE,✅ OK,[],
+AutoNBEATSx,MAPE,✅ OK,[],
+AutoNBEATSx,MQLoss,✅ OK,[],
+AutoNBEATSx,MSE,✅ OK,[],
+AutoNBEATSx,NBMM,✅ OK,[],
+AutoNBEATSx,PMM,✅ OK,[],
+AutoNBEATSx,QuantileLayer,✅ OK,[],
+AutoNBEATSx,RMSE,✅ OK,[],
+AutoNBEATSx,SMAPE,✅ OK,[],
+AutoNBEATSx,TukeyLoss,✅ OK,[],
+AutoNBEATSx,relMSE,✅ OK,[],
+AutoNBEATSx,sCRPS,✅ OK,[],
+AutoNHITS,Accuracy,✅ OK,[],
+AutoNHITS,GMM,✅ OK,[],
+AutoNHITS,HuberIQLoss,✅ OK,[],
+AutoNHITS,HuberLoss,✅ OK,[],
+AutoNHITS,HuberMQLoss,✅ OK,[],
+AutoNHITS,IQLoss,✅ OK,[],
+AutoNHITS,MAE,✅ OK,[],
+AutoNHITS,MAPE,✅ OK,[],
+AutoNHITS,MQLoss,✅ OK,[],
+AutoNHITS,MSE,✅ OK,[],
+AutoNHITS,NBMM,✅ OK,[],
+AutoNHITS,PMM,✅ OK,[],
+AutoNHITS,QuantileLayer,✅ OK,[],
+AutoNHITS,RMSE,✅ OK,[],
+AutoNHITS,SMAPE,✅ OK,[],
+AutoNHITS,TukeyLoss,✅ OK,[],
+AutoNHITS,relMSE,✅ OK,[],
+AutoNHITS,sCRPS,✅ OK,[],
+AutoNLinear,Accuracy,✅ OK,[],
+AutoNLinear,GMM,✅ OK,[],
+AutoNLinear,HuberIQLoss,✅ OK,[],
+AutoNLinear,HuberLoss,✅ OK,[],
+AutoNLinear,HuberMQLoss,✅ OK,[],
+AutoNLinear,IQLoss,✅ OK,[],
+AutoNLinear,MAE,✅ OK,[],
+AutoNLinear,MAPE,✅ OK,[],
+AutoNLinear,MQLoss,✅ OK,[],
+AutoNLinear,MSE,✅ OK,[],
+AutoNLinear,NBMM,✅ OK,[],
+AutoNLinear,PMM,✅ OK,[],
+AutoNLinear,QuantileLayer,✅ OK,[],
+AutoNLinear,RMSE,✅ OK,[],
+AutoNLinear,SMAPE,✅ OK,[],
+AutoNLinear,TukeyLoss,✅ OK,[],
+AutoNLinear,relMSE,✅ OK,[],
+AutoNLinear,sCRPS,✅ OK,[],
+AutoPatchTST,Accuracy,✅ OK,[],
+AutoPatchTST,GMM,✅ OK,[],
+AutoPatchTST,HuberIQLoss,✅ OK,[],
+AutoPatchTST,HuberLoss,✅ OK,[],
+AutoPatchTST,HuberMQLoss,✅ OK,[],
+AutoPatchTST,IQLoss,✅ OK,[],
+AutoPatchTST,MAE,✅ OK,[],
+AutoPatchTST,MAPE,✅ OK,[],
+AutoPatchTST,MQLoss,✅ OK,[],
+AutoPatchTST,MSE,✅ OK,[],
+AutoPatchTST,NBMM,✅ OK,[],
+AutoPatchTST,PMM,✅ OK,[],
+AutoPatchTST,QuantileLayer,✅ OK,[],
+AutoPatchTST,RMSE,✅ OK,[],
+AutoPatchTST,SMAPE,✅ OK,[],
+AutoPatchTST,TukeyLoss,✅ OK,[],
+AutoPatchTST,relMSE,✅ OK,[],
+AutoPatchTST,sCRPS,✅ OK,[],
+AutoRMoK,Accuracy,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,GMM,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,HuberIQLoss,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,HuberLoss,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,HuberMQLoss,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,IQLoss,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,MAE,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,MAPE,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,MQLoss,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,MSE,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,NBMM,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,PMM,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,QuantileLayer,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,RMSE,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,SMAPE,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,TukeyLoss,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,relMSE,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRMoK,sCRPS,❌ Error,['n_series'],AutoRMoK.__init__() missing 1 required positional argument: 'n_series'
+AutoRNN,Accuracy,✅ OK,[],
+AutoRNN,GMM,✅ OK,[],
+AutoRNN,HuberIQLoss,✅ OK,[],
+AutoRNN,HuberLoss,✅ OK,[],
+AutoRNN,HuberMQLoss,✅ OK,[],
+AutoRNN,IQLoss,✅ OK,[],
+AutoRNN,MAE,✅ OK,[],
+AutoRNN,MAPE,✅ OK,[],
+AutoRNN,MQLoss,✅ OK,[],
+AutoRNN,MSE,✅ OK,[],
+AutoRNN,NBMM,✅ OK,[],
+AutoRNN,PMM,✅ OK,[],
+AutoRNN,QuantileLayer,✅ OK,[],
+AutoRNN,RMSE,✅ OK,[],
+AutoRNN,SMAPE,✅ OK,[],
+AutoRNN,TukeyLoss,✅ OK,[],
+AutoRNN,relMSE,✅ OK,[],
+AutoRNN,sCRPS,✅ OK,[],
+AutoSOFTS,Accuracy,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,GMM,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,HuberIQLoss,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,HuberLoss,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,HuberMQLoss,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,IQLoss,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,MAE,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,MAPE,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,MQLoss,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,MSE,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,NBMM,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,PMM,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,QuantileLayer,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,RMSE,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,SMAPE,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,TukeyLoss,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,relMSE,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoSOFTS,sCRPS,❌ Error,['n_series'],AutoSOFTS.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,Accuracy,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,GMM,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,HuberIQLoss,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,HuberLoss,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,HuberMQLoss,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,IQLoss,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,MAE,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,MAPE,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,MQLoss,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,MSE,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,NBMM,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,PMM,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,QuantileLayer,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,RMSE,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,SMAPE,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,TukeyLoss,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,relMSE,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoStemGNN,sCRPS,❌ Error,['n_series'],AutoStemGNN.__init__() missing 1 required positional argument: 'n_series'
+AutoTCN,Accuracy,✅ OK,[],
+AutoTCN,GMM,✅ OK,[],
+AutoTCN,HuberIQLoss,✅ OK,[],
+AutoTCN,HuberLoss,✅ OK,[],
+AutoTCN,HuberMQLoss,✅ OK,[],
+AutoTCN,IQLoss,✅ OK,[],
+AutoTCN,MAE,✅ OK,[],
+AutoTCN,MAPE,✅ OK,[],
+AutoTCN,MQLoss,✅ OK,[],
+AutoTCN,MSE,✅ OK,[],
+AutoTCN,NBMM,✅ OK,[],
+AutoTCN,PMM,✅ OK,[],
+AutoTCN,QuantileLayer,✅ OK,[],
+AutoTCN,RMSE,✅ OK,[],
+AutoTCN,SMAPE,✅ OK,[],
+AutoTCN,TukeyLoss,✅ OK,[],
+AutoTCN,relMSE,✅ OK,[],
+AutoTCN,sCRPS,✅ OK,[],
+AutoTFT,Accuracy,✅ OK,[],
+AutoTFT,GMM,✅ OK,[],
+AutoTFT,HuberIQLoss,✅ OK,[],
+AutoTFT,HuberLoss,✅ OK,[],
+AutoTFT,HuberMQLoss,✅ OK,[],
+AutoTFT,IQLoss,✅ OK,[],
+AutoTFT,MAE,✅ OK,[],
+AutoTFT,MAPE,✅ OK,[],
+AutoTFT,MQLoss,✅ OK,[],
+AutoTFT,MSE,✅ OK,[],
+AutoTFT,NBMM,✅ OK,[],
+AutoTFT,PMM,✅ OK,[],
+AutoTFT,QuantileLayer,✅ OK,[],
+AutoTFT,RMSE,✅ OK,[],
+AutoTFT,SMAPE,✅ OK,[],
+AutoTFT,TukeyLoss,✅ OK,[],
+AutoTFT,relMSE,✅ OK,[],
+AutoTFT,sCRPS,✅ OK,[],
+AutoTSMixer,Accuracy,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,GMM,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,HuberIQLoss,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,HuberLoss,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,HuberMQLoss,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,IQLoss,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,MAE,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,MAPE,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,MQLoss,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,MSE,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,NBMM,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,PMM,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,QuantileLayer,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,RMSE,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,SMAPE,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,TukeyLoss,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,relMSE,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixer,sCRPS,❌ Error,['n_series'],AutoTSMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,Accuracy,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,GMM,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,HuberIQLoss,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,HuberLoss,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,HuberMQLoss,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,IQLoss,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,MAE,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,MAPE,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,MQLoss,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,MSE,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,NBMM,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,PMM,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,QuantileLayer,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,RMSE,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,SMAPE,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,TukeyLoss,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,relMSE,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTSMixerx,sCRPS,❌ Error,['n_series'],AutoTSMixerx.__init__() missing 1 required positional argument: 'n_series'
+AutoTiDE,Accuracy,✅ OK,[],
+AutoTiDE,GMM,✅ OK,[],
+AutoTiDE,HuberIQLoss,✅ OK,[],
+AutoTiDE,HuberLoss,✅ OK,[],
+AutoTiDE,HuberMQLoss,✅ OK,[],
+AutoTiDE,IQLoss,✅ OK,[],
+AutoTiDE,MAE,✅ OK,[],
+AutoTiDE,MAPE,✅ OK,[],
+AutoTiDE,MQLoss,✅ OK,[],
+AutoTiDE,MSE,✅ OK,[],
+AutoTiDE,NBMM,✅ OK,[],
+AutoTiDE,PMM,✅ OK,[],
+AutoTiDE,QuantileLayer,✅ OK,[],
+AutoTiDE,RMSE,✅ OK,[],
+AutoTiDE,SMAPE,✅ OK,[],
+AutoTiDE,TukeyLoss,✅ OK,[],
+AutoTiDE,relMSE,✅ OK,[],
+AutoTiDE,sCRPS,✅ OK,[],
+AutoTimeMixer,Accuracy,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,GMM,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,HuberIQLoss,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,HuberLoss,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,HuberMQLoss,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,IQLoss,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,MAE,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,MAPE,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,MQLoss,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,MSE,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,NBMM,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,PMM,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,QuantileLayer,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,RMSE,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,SMAPE,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,TukeyLoss,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,relMSE,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeMixer,sCRPS,❌ Error,['n_series'],AutoTimeMixer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,Accuracy,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,GMM,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,HuberIQLoss,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,HuberLoss,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,HuberMQLoss,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,IQLoss,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,MAE,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,MAPE,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,MQLoss,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,MSE,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,NBMM,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,PMM,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,QuantileLayer,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,RMSE,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,SMAPE,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,TukeyLoss,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,relMSE,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimeXer,sCRPS,❌ Error,['n_series'],AutoTimeXer.__init__() missing 1 required positional argument: 'n_series'
+AutoTimesNet,Accuracy,✅ OK,[],
+AutoTimesNet,GMM,✅ OK,[],
+AutoTimesNet,HuberIQLoss,✅ OK,[],
+AutoTimesNet,HuberLoss,✅ OK,[],
+AutoTimesNet,HuberMQLoss,✅ OK,[],
+AutoTimesNet,IQLoss,✅ OK,[],
+AutoTimesNet,MAE,✅ OK,[],
+AutoTimesNet,MAPE,✅ OK,[],
+AutoTimesNet,MQLoss,✅ OK,[],
+AutoTimesNet,MSE,✅ OK,[],
+AutoTimesNet,NBMM,✅ OK,[],
+AutoTimesNet,PMM,✅ OK,[],
+AutoTimesNet,QuantileLayer,✅ OK,[],
+AutoTimesNet,RMSE,✅ OK,[],
+AutoTimesNet,SMAPE,✅ OK,[],
+AutoTimesNet,TukeyLoss,✅ OK,[],
+AutoTimesNet,relMSE,✅ OK,[],
+AutoTimesNet,sCRPS,✅ OK,[],
+AutoVanillaTransformer,Accuracy,✅ OK,[],
+AutoVanillaTransformer,GMM,✅ OK,[],
+AutoVanillaTransformer,HuberIQLoss,✅ OK,[],
+AutoVanillaTransformer,HuberLoss,✅ OK,[],
+AutoVanillaTransformer,HuberMQLoss,✅ OK,[],
+AutoVanillaTransformer,IQLoss,✅ OK,[],
+AutoVanillaTransformer,MAE,✅ OK,[],
+AutoVanillaTransformer,MAPE,✅ OK,[],
+AutoVanillaTransformer,MQLoss,✅ OK,[],
+AutoVanillaTransformer,MSE,✅ OK,[],
+AutoVanillaTransformer,NBMM,✅ OK,[],
+AutoVanillaTransformer,PMM,✅ OK,[],
+AutoVanillaTransformer,QuantileLayer,✅ OK,[],
+AutoVanillaTransformer,RMSE,✅ OK,[],
+AutoVanillaTransformer,SMAPE,✅ OK,[],
+AutoVanillaTransformer,TukeyLoss,✅ OK,[],
+AutoVanillaTransformer,relMSE,✅ OK,[],
+AutoVanillaTransformer,sCRPS,✅ OK,[],
+AutoiTransformer,Accuracy,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,GMM,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,HuberIQLoss,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,HuberLoss,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,HuberMQLoss,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,IQLoss,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,MAE,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,MAPE,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,MQLoss,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,MSE,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,NBMM,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,PMM,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,QuantileLayer,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,RMSE,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,SMAPE,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,TukeyLoss,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,relMSE,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoiTransformer,sCRPS,❌ Error,['n_series'],AutoiTransformer.__init__() missing 1 required positional argument: 'n_series'
+AutoxLSTM,Accuracy,✅ OK,[],
+AutoxLSTM,GMM,✅ OK,[],
+AutoxLSTM,HuberIQLoss,✅ OK,[],
+AutoxLSTM,HuberLoss,✅ OK,[],
+AutoxLSTM,HuberMQLoss,✅ OK,[],
+AutoxLSTM,IQLoss,✅ OK,[],
+AutoxLSTM,MAE,✅ OK,[],
+AutoxLSTM,MAPE,✅ OK,[],
+AutoxLSTM,MQLoss,✅ OK,[],
+AutoxLSTM,MSE,✅ OK,[],
+AutoxLSTM,NBMM,✅ OK,[],
+AutoxLSTM,PMM,✅ OK,[],
+AutoxLSTM,QuantileLayer,✅ OK,[],
+AutoxLSTM,RMSE,✅ OK,[],
+AutoxLSTM,SMAPE,✅ OK,[],
+AutoxLSTM,TukeyLoss,✅ OK,[],
+AutoxLSTM,relMSE,✅ OK,[],
+AutoxLSTM,sCRPS,✅ OK,[],

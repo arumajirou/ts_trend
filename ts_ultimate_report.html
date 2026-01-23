@@ -1,0 +1,2043 @@
+
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ultimate Time Series Analysis Trends</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f0f2f5; display: flex; height: 100vh; overflow: hidden; }
+            
+            /* Sidebar */
+            .sidebar { width: 260px; background: #2c3e50; color: #ecf0f1; display: flex; flex-direction: column; flex-shrink: 0; }
+            .sidebar-header { padding: 20px; background: #1a252f; text-align: center; border-bottom: 1px solid #34495e; }
+            .tab-list { overflow-y: auto; flex: 1; }
+            .tab-item { padding: 15px; cursor: pointer; border-bottom: 1px solid #34495e; transition: 0.2s; display: flex; justify-content: space-between; font-size: 0.9em; }
+            .tab-item:hover { background: #34495e; }
+            .tab-item.active { background: #3498db; color: white; border-left: 5px solid #2980b9; }
+            .badge { background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 10px; font-size: 0.8em; }
+            
+            /* Main */
+            .main { flex: 1; overflow-y: auto; padding: 20px; }
+            .tab-content { background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 20px; }
+            .section-title { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; color: #2c3e50; }
+            
+            /* Filter Bar */
+            .filter-bar { padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+            .filter-btn { background: #f8f9fa; border: 1px solid #ddd; padding: 6px 12px; border-radius: 20px; cursor: pointer; font-size: 0.85em; transition: 0.2s; color: #555; }
+            .filter-btn:hover { background: #e2e6ea; }
+            .filter-btn.active { background: #3498db; color: white; border-color: #3498db; box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3); }
+
+            /* Table */
+            table { width: 100%; border-collapse: collapse; }
+            th { background: #f8f9fa; color: #666; text-align: left; padding: 10px; }
+            td { padding: 12px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+            .stars { color: #f1c40f; font-weight: bold; }
+            .date { color: #999; font-size: 0.85em; }
+            .title a { text-decoration: none; color: #0366d6; font-weight: bold; font-size: 1.1em; }
+            .desc { font-size: 0.9em; color: #555; margin: 5px 0; }
+            .method-label { font-size: 0.75em; font-weight: bold; color: #888; text-transform: uppercase; margin-right: 5px; }
+            .tag { background: #e1ecf4; color: #0366d6; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; margin-right: 4px; display: inline-block; margin-bottom: 2px; }
+            
+            .gh-color { color: #24292e; }
+            .hf-color { color: #ff9d00; }
+        </style>
+        <script>
+            // タブ切り替え
+            function openTab(evt, tabId) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; }
+                tablinks = document.getElementsByClassName("tab-item");
+                for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); }
+                document.getElementById(tabId).style.display = "block";
+                evt.currentTarget.className += " active";
+                
+                // タブ切り替え時にフィルタをAllにリセット
+                resetFilters(tabId);
+            }
+
+            // フィルタ適用
+            function applyFilter(filterClass) {
+                // アクティブなタブ内の要素を取得
+                var activeTab = document.querySelector('.tab-content[style*="block"]');
+                if (!activeTab) return;
+                
+                // ボタンのアクティブ状態更新
+                var buttons = activeTab.querySelectorAll('.filter-btn');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                // クリックされたボタンをアクティブに(テキスト一致で判定)
+                event.target.classList.add('active');
+
+                var rows = activeTab.getElementsByClassName("item-row");
+                var visibleCount = 0;
+
+                for (var i = 0; i < rows.length; i++) {
+                    if (filterClass === 'all') {
+                        rows[i].style.display = "";
+                        visibleCount++;
+                    } else {
+                        if (rows[i].classList.contains(filterClass)) {
+                            rows[i].style.display = "";
+                            visibleCount++;
+                        } else {
+                            rows[i].style.display = "none";
+                        }
+                    }
+                }
+                
+                // 該当なしメッセージの表示制御
+                var noResults = activeTab.querySelector('.no-results');
+                if (visibleCount === 0) {
+                    noResults.style.display = "block";
+                } else {
+                    noResults.style.display = "none";
+                }
+            }
+            
+            function resetFilters(tabId) {
+                var tab = document.getElementById(tabId);
+                var allBtn = tab.querySelector('.filter-btn'); // 最初のボタン(All)
+                if(allBtn) allBtn.click();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>TS Trend Ultimate</h3>
+                <small>AI & Method Analysis</small>
+            </div>
+            <div class="tab-list">
+                <div class="tab-item active" onclick="openTab(event, '1Forecasting')">1. Forecasting (予測) <span class="badge">21</span></div><div class="tab-item " onclick="openTab(event, '2AnomalyDetection')">2. Anomaly Detection (異常検知) <span class="badge">30</span></div><div class="tab-item " onclick="openTab(event, '3Classification')">3. Classification (分類) <span class="badge">1</span></div><div class="tab-item " onclick="openTab(event, '4FoundationModels')">4. Foundation Models (基盤モデル) <span class="badge">1</span></div><div class="tab-item " onclick="openTab(event, '5Transformers')">5. Transformers <span class="badge">30</span></div><div class="tab-item " onclick="openTab(event, '6Generation')">6. Generation (生成) <span class="badge">0</span></div><div class="tab-item " onclick="openTab(event, '7Preprocessing')">7. Preprocessing (前処理) <span class="badge">10</span></div><div class="tab-item " onclick="openTab(event, '8ToolsViz')">8. Tools & Viz (ツール) <span class="badge">16</span></div><div class="tab-item " onclick="openTab(event, '9Finance')">9. Finance (金融) <span class="badge">1</span></div>
+            </div>
+        </div>
+        <div class="main">
+            
+        <div id="1Forecasting" class="tab-content" style="display: block;">
+            <h2 class="section-title">1. Forecasting (予測)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-1Forecasting">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Supervised Deep-Learning">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 21</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/keras-io/timeseries_forecasting_for_weather" target="_blank">keras-io/timeseries_forecasting_for_weather</a>
+                    </div>
+                    <div class="desc">Tags: tf-keras, tensorboard, time-series, time-series-forecasting, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>2</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 1</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ankur87/Llama2_Time_series_forecasting_7.0" target="_blank">Ankur87/Llama2_Time_series_forecasting_7.0</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, llama, text-generation, conversational</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>3</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Pankaj001/TimeSeriesForecasting-PumpSensor" target="_blank">Pankaj001/TimeSeriesForecasting-PumpSensor</a>
+                    </div>
+                    <div class="desc">Tags: license:apache-2.0, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>4</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Pankaj001/TimeSeries-Forecasting-ML-Model" target="_blank">Pankaj001/TimeSeries-Forecasting-ML-Model</a>
+                    </div>
+                    <div class="desc">Tags: license:apache-2.0, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>5</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Pankaj001/TimeSeries-Forecasting-DL-Model" target="_blank">Pankaj001/TimeSeries-Forecasting-DL-Model</a>
+                    </div>
+                    <div class="desc">Tags: license:apache-2.0, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>6</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ankur87/Llama2_Time_series_forecasting" target="_blank">Ankur87/Llama2_Time_series_forecasting</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, llama, text-generation, conversational</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>7</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ankur87/Llama2_Time_series_forecasting_2.0" target="_blank">Ankur87/Llama2_Time_series_forecasting_2.0</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, llama, text-generation, conversational</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>8</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ankur87/Llama2_Time_series_forecasting_3.0" target="_blank">Ankur87/Llama2_Time_series_forecasting_3.0</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, llama, text-generation, conversational</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>9</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ankur87/Llama2_Time_series_forecasting_4.0" target="_blank">Ankur87/Llama2_Time_series_forecasting_4.0</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, llama, text-generation, conversational</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>10</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ankur87/Llama2_Time_series_forecasting_5.0" target="_blank">Ankur87/Llama2_Time_series_forecasting_5.0</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, llama, text-generation, conversational</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>11</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ankur87/Llama2_Time_series_forecasting_6.0" target="_blank">Ankur87/Llama2_Time_series_forecasting_6.0</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, llama, text-generation, conversational</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>12</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/skumar310/time-series-forecasting-for-advertisement" target="_blank">skumar310/time-series-forecasting-for-advertisement</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>13</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/RichardErkhov/Ankur87_-_Llama2_Time_series_forecasting_7.0-4bits" target="_blank">RichardErkhov/Ankur87_-_Llama2_Time_series_forecasting_7.0-4bits</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, llama, arxiv:1910.09700, 4-bit, bitsandbytes</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>14</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/RichardErkhov/Ankur87_-_Llama2_Time_series_forecasting_7.0-8bits" target="_blank">RichardErkhov/Ankur87_-_Llama2_Time_series_forecasting_7.0-8bits</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, llama, arxiv:1910.09700, 8-bit, bitsandbytes</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>15</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Vitthal/time-series-forecasting" target="_blank">Vitthal/time-series-forecasting</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>16</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Prasoon-05/Time_Series_Forecasting" target="_blank">Prasoon-05/Time_Series_Forecasting</a>
+                    </div>
+                    <div class="desc">Tags: license:mit, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>17</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/handecarkci/Bitcoin_Fiyat_Tahmini_Time_Series_Forecasting" target="_blank">handecarkci/Bitcoin_Fiyat_Tahmini_Time_Series_Forecasting</a>
+                    </div>
+                    <div class="desc">Tags: keras, time-series, bitcoin, lstm, forecasting</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning">
+                <td>18</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Okcan/time_series_forecasting_model" target="_blank">Okcan/time_series_forecasting_model</a>
+                    </div>
+                    <div class="desc">Tags: keras, bitcoin, lstm, time-series, price-prediction</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>19</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/khandaker-atik/Time_Series_Forecasting-and-Model_Generalization" target="_blank">khandaker-atik/Time_Series_Forecasting-and-Model_Generalization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>20</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/sheryarkayani12/time-series-forecasting-models" target="_blank">sheryarkayani12/time-series-forecasting-models</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>21</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/iioos/time-series-forecast-model" target="_blank">iioos/time-series-forecast-model</a>
+                    </div>
+                    <div class="desc">Tags: time-series, forecasting, analytics, en, license:mit</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="2AnomalyDetection" class="tab-content" style="display: none;">
+            <h2 class="section-title">2. Anomaly Detection (異常検知)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-2AnomalyDetection">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Supervised Deep-Learning Unsupervised">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 76</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/keras-io/timeseries-anomaly-detection" target="_blank">keras-io/timeseries-anomaly-detection</a>
+                    </div>
+                    <div class="desc">Tags: tf-keras, tensorboard, tabular-regression, time-series, anomaly-detection</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>2</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 15</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/keras-io/time-series-anomaly-detection-autoencoder" target="_blank">keras-io/time-series-anomaly-detection-autoencoder</a>
+                    </div>
+                    <div class="desc">Tags: tf-keras, autoencoder, time series, anomaly detection, license:cc0-1.0</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>3</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 2</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Keyven/AnomalyDetection-MVTech-Metal" target="_blank">Keyven/AnomalyDetection-MVTech-Metal</a>
+                    </div>
+                    <div class="desc">Tags: openvino, anomaly-detection, industrial-inspection, mvtec-ad, deep-learning</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>4</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 1</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/AbdulManaf12/YOLOv8-Pediatric-Wrist-Anomaly-Detection" target="_blank">AbdulManaf12/YOLOv8-Pediatric-Wrist-Anomaly-Detection</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>5</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 1</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/abhi26/video-anomaly-detection" target="_blank">abhi26/video-anomaly-detection</a>
+                    </div>
+                    <div class="desc">Tags: license:mit, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>6</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 1</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-short-generic-obfuscated-backdoor-model" target="_blank">Mechanistic-Anomaly-Detection/llama3-short-generic-obfuscated-backdoor-model</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>7</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 1</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Dumi2025/log-anomaly-detection-model-llama" target="_blank">Dumi2025/log-anomaly-detection-model-llama</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning Unsupervised">
+                <td>8</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 1</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Dumi2025/log-anomaly-detection-model-new" target="_blank">Dumi2025/log-anomaly-detection-model-new</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, roberta, text-classification, arxiv:1910.09700</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Unsupervised">
+                <td>9</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/sklearn-docs/anomaly-detection" target="_blank">sklearn-docs/anomaly-detection</a>
+                    </div>
+                    <div class="desc">Tags: sklearn, skops, tabular-classification, license:mit, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>10</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Charmi06/Anomaly-Detection-CNN" target="_blank">Charmi06/Anomaly-Detection-CNN</a>
+                    </div>
+                    <div class="desc">Tags: doi:10.57967/hf/0505, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>11</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/imklchen/anomaly_detection" target="_blank">imklchen/anomaly_detection</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>12</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/rajeshwarr055/uw_anomaly_detection" target="_blank">rajeshwarr055/uw_anomaly_detection</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>13</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/laaraap/anomaly-detection-using-autoencoders" target="_blank">laaraap/anomaly-detection-using-autoencoders</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>14</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/jayclifford345/robot_anomaly_detection" target="_blank">jayclifford345/robot_anomaly_detection</a>
+                    </div>
+                    <div class="desc">Tags: keras, tensorboard, tf-keras, anomaly-detection, robot</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised Deep-Learning Unsupervised">
+                <td>15</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/SrimathiE21ALR044/Anomaly-detection" target="_blank">SrimathiE21ALR044/Anomaly-detection</a>
+                    </div>
+                    <div class="desc">Tags: transformers, pytorch, distilbert, text-classification, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>16</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/SrimathiE21ALR044/Anomaly_detection" target="_blank">SrimathiE21ALR044/Anomaly_detection</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>17</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/FloodWatch/anomalydetection" target="_blank">FloodWatch/anomalydetection</a>
+                    </div>
+                    <div class="desc">Tags: endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>18</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ramirces/anomalydetectiondataset" target="_blank">ramirces/anomalydetectiondataset</a>
+                    </div>
+                    <div class="desc">Tags: keras, tf-keras, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>19</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ramirces/anomalydetectiondataset1" target="_blank">ramirces/anomalydetectiondataset1</a>
+                    </div>
+                    <div class="desc">Tags: keras, tf-keras, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>20</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/hangyeol522/anomaly-detection" target="_blank">hangyeol522/anomaly-detection</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>21</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/hangyeol522/anomaly-detection-model" target="_blank">hangyeol522/anomaly-detection-model</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Unsupervised">
+                <td>22</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/finalproject123/Anomaly_Detection_I3D_Model" target="_blank">finalproject123/Anomaly_Detection_I3D_Model</a>
+                    </div>
+                    <div class="desc">Tags: arxiv:1910.09700, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>23</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-long-generic-backdoor-model" target="_blank">Mechanistic-Anomaly-Detection/llama3-long-generic-backdoor-model</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>24</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model" target="_blank">Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>25</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-software-engineer-bio-backdoor-model-yzv3bkub" target="_blank">Mechanistic-Anomaly-Detection/llama3-software-engineer-bio-backdoor-model-yzv3bkub</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>26</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-1l8ag8ed" target="_blank">Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-1l8ag8ed</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>27</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-57895uxf" target="_blank">Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-57895uxf</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>28</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-ut8khnt8" target="_blank">Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-ut8khnt8</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>29</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-x702nn3e" target="_blank">Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-x702nn3e</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning Unsupervised">
+                <td>30</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-vi6evhcz" target="_blank">Mechanistic-Anomaly-Detection/llama3-short-generic-backdoor-model-vi6evhcz</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span><span class="tag">Unsupervised</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="3Classification" class="tab-content" style="display: none;">
+            <h2 class="section-title">3. Classification (分類)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-3Classification">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Supervised Deep-Learning">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 3</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/keras-io/timeseries-classification-from-scratch" target="_blank">keras-io/timeseries-classification-from-scratch</a>
+                    </div>
+                    <div class="desc">Tags: tf-keras, tensorboard, timeseries, arxiv:1611.06455, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="4FoundationModels" class="tab-content" style="display: none;">
+            <h2 class="section-title">4. Foundation Models (基盤モデル)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-4FoundationModels">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Supervised Foundation-Model">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 252</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-foundation-models/Lag-Llama" target="_blank">time-series-foundation-models/Lag-Llama</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, time series, forecasting, pretrained models, foundation models</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Foundation Model</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="5Transformers" class="tab-content" style="display: none;">
+            <h2 class="section-title">5. Transformers</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-5Transformers">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Supervised Deep-Learning">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 27</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/huggingface/time-series-transformer-tourism-monthly" target="_blank">huggingface/time-series-transformer-tourism-monthly</a>
+                    </div>
+                    <div class="desc">Tags: transformers, pytorch, safetensors, time_series_transformer, time-series-forecasting</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>2</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 7</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/scirik/time-series-transformer-electricity-load-diagrams" target="_blank">scirik/time-series-transformer-electricity-load-diagrams</a>
+                    </div>
+                    <div class="desc">Tags: transformers, pytorch, time_series_transformer, dataset:electricity_load_diagrams, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>3</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 2</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/SeyedAli/Tourism-monthly-Time-series-transformer" target="_blank">SeyedAli/Tourism-monthly-Time-series-transformer</a>
+                    </div>
+                    <div class="desc">Tags: transformers, pytorch, time_series_transformer, dataset:monash_tsf, arxiv:2106.13008</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row RL Deep-Learning">
+                <td>4</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/kashif/time-series-transformer-traffic-hourly" target="_blank">kashif/time-series-transformer-traffic-hourly</a>
+                    </div>
+                    <div class="desc">Tags: transformers, pytorch, time_series_transformer, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">RL</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row RL Deep-Learning">
+                <td>5</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/kashif/time-series-transformer-mv-traffic-hourly" target="_blank">kashif/time-series-transformer-mv-traffic-hourly</a>
+                    </div>
+                    <div class="desc">Tags: transformers, pytorch, time_series_transformer, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">RL</span><span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>6</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/helenqu/astro-time-series-transformer" target="_blank">helenqu/astro-time-series-transformer</a>
+                    </div>
+                    <div class="desc">Tags: license:mit, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>7</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_99Mp_20Bt" target="_blank">time-series-transformers/17_99Mp_20Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>8</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_99Mp_40Bt" target="_blank">time-series-transformers/17_99Mp_40Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>9</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_99Mp_75Bt" target="_blank">time-series-transformers/17_99Mp_75Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>10</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_99Mp_150Bt" target="_blank">time-series-transformers/17_99Mp_150Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>11</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_99Mp_300Bt" target="_blank">time-series-transformers/17_99Mp_300Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>12</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_190Mp_20Bt" target="_blank">time-series-transformers/17_190Mp_20Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>13</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_190Mp_40Bt" target="_blank">time-series-transformers/17_190Mp_40Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>14</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_190Mp_75Bt" target="_blank">time-series-transformers/17_190Mp_75Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>15</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_190Mp_150Bt" target="_blank">time-series-transformers/17_190Mp_150Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>16</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_190Mp_300Bt" target="_blank">time-series-transformers/17_190Mp_300Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>17</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_390Mp_20Bt" target="_blank">time-series-transformers/17_390Mp_20Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>18</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_390Mp_40Bt" target="_blank">time-series-transformers/17_390Mp_40Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>19</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_390Mp_75Bt" target="_blank">time-series-transformers/17_390Mp_75Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>20</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_390Mp_150Bt" target="_blank">time-series-transformers/17_390Mp_150Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>21</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_390Mp_300Bt" target="_blank">time-series-transformers/17_390Mp_300Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>22</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_560Mp_20Bt" target="_blank">time-series-transformers/17_560Mp_20Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>23</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_560Mp_40Bt" target="_blank">time-series-transformers/17_560Mp_40Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>24</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_560Mp_75Bt" target="_blank">time-series-transformers/17_560Mp_75Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>25</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_560Mp_150Bt" target="_blank">time-series-transformers/17_560Mp_150Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>26</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_560Mp_300Bt" target="_blank">time-series-transformers/17_560Mp_300Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>27</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_1100Mp_20Bt" target="_blank">time-series-transformers/17_1100Mp_20Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>28</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_1100Mp_75Bt" target="_blank">time-series-transformers/17_1100Mp_75Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>29</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_1100Mp_40Bt" target="_blank">time-series-transformers/17_1100Mp_40Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>30</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/time-series-transformers/17_1100Mp_150Bt" target="_blank">time-series-transformers/17_1100Mp_150Bt</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="6Generation" class="tab-content" style="display: none;">
+            <h2 class="section-title">6. Generation (生成)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-6Generation">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="7Preprocessing" class="tab-content" style="display: none;">
+            <h2 class="section-title">7. Preprocessing (前処理)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-7Preprocessing">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Deep-Learning">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ml233/no_position_embedding_finetune_imputation_ETTh1" target="_blank">ml233/no_position_embedding_finetune_imputation_ETTh1</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, model_hub_mixin, pytorch_model_hub_mixin, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>2</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ml233/no_position_embedding_finetune_imputation_ETTh2" target="_blank">ml233/no_position_embedding_finetune_imputation_ETTh2</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, model_hub_mixin, pytorch_model_hub_mixin, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>3</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ml233/no_position_embedding_finetune_imputation_exchange_rate" target="_blank">ml233/no_position_embedding_finetune_imputation_exchange_rate</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, model_hub_mixin, pytorch_model_hub_mixin, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>4</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ml233/no_position_embedding_prompt_tuning_linear_imputation_ETTm1" target="_blank">ml233/no_position_embedding_prompt_tuning_linear_imputation_ETTm1</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, model_hub_mixin, pytorch_model_hub_mixin, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>5</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ml233/finetune_imputation_national_illness" target="_blank">ml233/finetune_imputation_national_illness</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, model_hub_mixin, pytorch_model_hub_mixin, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>6</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ml233/lora_imputation_national_illness" target="_blank">ml233/lora_imputation_national_illness</a>
+                    </div>
+                    <div class="desc">Tags: peft, arxiv:1910.09700, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>7</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/ml233/prompttune_attention_imputation_national_illness" target="_blank">ml233/prompttune_attention_imputation_national_illness</a>
+                    </div>
+                    <div class="desc">Tags: safetensors, model_hub_mixin, pytorch_model_hub_mixin, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>8</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/FIM4Science/fim-imputation-base" target="_blank">FIM4Science/fim-imputation-base</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, fimode, arxiv:1910.09700, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>9</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/FIM4Science/fim-imputation" target="_blank">FIM4Science/fim-imputation</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, fim_imputation, arxiv:1910.09700, endpoints_compatible</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Deep-Learning">
+                <td>10</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/FIM4Science/fim-windowed-imputation" target="_blank">FIM4Science/fim-windowed-imputation</a>
+                    </div>
+                    <div class="desc">Tags: transformers, safetensors, arxiv:1910.09700, endpoints_compatible, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="8ToolsViz" class="tab-content" style="display: none;">
+            <h2 class="section-title">8. Tools & Viz (ツール)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-8ToolsViz">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Deep-Learning">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 6</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/piebro/factorio-blueprint-visualizations-sdxl-lora" target="_blank">piebro/factorio-blueprint-visualizations-sdxl-lora</a>
+                    </div>
+                    <div class="desc">Tags: diffusers, text-to-image, stable-diffusion, lora, template:sd-lora</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>2</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/flashingtt/visualization" target="_blank">flashingtt/visualization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row RL">
+                <td>3</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/lokaspire/simplrops_data_visualization" target="_blank">lokaspire/simplrops_data_visualization</a>
+                    </div>
+                    <div class="desc">Tags: peft, safetensors, trl, sft, generated_from_trainer</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">RL</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>4</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/luomingshuang/3d_human_motion_visualization" target="_blank">luomingshuang/3d_human_motion_visualization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>5</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/zhiyang1/emu2_visualization" target="_blank">zhiyang1/emu2_visualization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row Supervised">
+                <td>6</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Sovego/ru_ner_visualization" target="_blank">Sovego/ru_ner_visualization</a>
+                    </div>
+                    <div class="desc">Tags: spacy, token-classification, ru, license:mit, model-index</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Supervised</span>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>7</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Rajav/csv_file_to_data_visualization" target="_blank">Rajav/csv_file_to_data_visualization</a>
+                    </div>
+                    <div class="desc">Tags: license:unknown, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>8</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/lkllkl/visualization" target="_blank">lkllkl/visualization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>9</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/OneFineStarstuff/SHAP_values_visualization" target="_blank">OneFineStarstuff/SHAP_values_visualization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>10</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/burcuonel/Graphic_Visualization" target="_blank">burcuonel/Graphic_Visualization</a>
+                    </div>
+                    <div class="desc">Tags: license:mit, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>11</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Vamsi2740/Gradient_Descent_Visualization-App" target="_blank">Vamsi2740/Gradient_Descent_Visualization-App</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>12</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/muneebnadeem1870/StyleGAN2-Image-Generation-and-Visualization" target="_blank">muneebnadeem1870/StyleGAN2-Image-Generation-and-Visualization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>13</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Ezhil24/Data_Visualization-SPOTIFY" target="_blank">Ezhil24/Data_Visualization-SPOTIFY</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>14</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/adriangar/netron_CLIP-RN50_ResNet50_visualizations" target="_blank">adriangar/netron_CLIP-RN50_ResNet50_visualizations</a>
+                    </div>
+                    <div class="desc">Tags: onnx, license:mit, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>15</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/aaaraafaat/Haberman_Dataset_Visualization_Dashboard" target="_blank">aaaraafaat/Haberman_Dataset_Visualization_Dashboard</a>
+                    </div>
+                    <div class="desc">Tags: license:mit, region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="item-row ">
+                <td>16</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/halley1812/multiple-steering-visualization" target="_blank">halley1812/multiple-steering-visualization</a>
+                    </div>
+                    <div class="desc">Tags: region:us</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> 
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        <div id="9Finance" class="tab-content" style="display: none;">
+            <h2 class="section-title">9. Finance (金融)</h2>
+            
+    <div class="filter-bar">
+        <span style="font-weight:bold; color:#555; margin-right:10px;"><i class="fas fa-filter"></i> Filter by Method:</span>
+        <button class="filter-btn active" onclick="applyFilter('all')">All</button>
+    <button class="filter-btn" onclick="applyFilter('Supervised')">Supervised</button><button class="filter-btn" onclick="applyFilter('Unsupervised')">Unsupervised</button><button class="filter-btn" onclick="applyFilter('RL')">RL</button><button class="filter-btn" onclick="applyFilter('Deep-Learning')">Deep Learning</button><button class="filter-btn" onclick="applyFilter('Foundation-Model')">Foundation Model</button><button class="filter-btn" onclick="applyFilter('Statistical/ML')">Statistical/ML</button></div>
+            <table id="table-9Finance">
+                <thead>
+                    <tr><th width="50">#</th><th width="80">Stars</th><th width="100">Date</th><th>Details</th></tr>
+                </thead>
+                <tbody>
+            <tr class="item-row Deep-Learning">
+                <td>1</td>
+                <td class="stars"><i class="fas fa-star" style="color:#f1c40f"></i> 0</td>
+                <td class="date">Recent</td>
+                <td>
+                    <div class="title">
+                        <i class="fas fa-brain hf-color"></i> 
+                        <a href="https://huggingface.co/Tasfiya025/Financial-Time-Series" target="_blank">Tasfiya025/Financial-Time-Series</a>
+                    </div>
+                    <div class="desc">Tags: time-series-transformer, time-series-prediction, transformer, cryptocurrency, finance</div>
+                    <div class="tags-container">
+                        <span class="method-label">Methods:</span> <span class="tag">Deep Learning</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+            <div class="no-results" style="display:none; padding:20px; text-align:center; color:#999;">
+                No items match the selected filter.
+            </div>
+        </div>
+        
+        </div>
+    </body>
+    </html>
+    
